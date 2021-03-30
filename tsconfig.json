@@ -1,0 +1,49 @@
+{
+    "exclude": [
+      ".next",
+      "dist",
+      "node_modules"
+    ],
+    "compilerOptions": {
+      "rootDir": "./",
+      "jsx": "preserve",
+      "types": [
+        "node",
+        "react",
+        "react-dom"
+      ],
+      "lib": [
+        "ES2020",
+        "DOM",
+        "DOM.Iterable"
+      ],
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "noEmit": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "target": "esnext",
+      "alwaysStrict": true,
+      "strict": true,
+      "allowJs": true,
+      "incremental": true,
+      "tsBuildInfoFile": ".tsbuildinfo",
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "inlineSources": true,
+      "noImplicitAny": false,
+      "pretty": true,
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ]
+}
+  

@@ -1,0 +1,4 @@
+.pnp.js
+next.config.js
+.yarn/*
+*.js

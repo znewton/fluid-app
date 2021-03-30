@@ -1,0 +1,34 @@
+:root {
+    --foreground: #131313;
+    --midforeground: #636363;
+    --midbackground: #f2f2f2;
+    --background: #fcfcfc;
+    --success-background: #2a9d8f;
+    --success-foreground: #fff;
+    --warn-background: #efb366;
+    --warn-foreground: #000;
+    --error-background: #e76f51;
+    --error-foreground: #fff;
+    --primary-background: #1346d2;
+    --primary-foreground: #fff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    background: var(--background);
+    color: var(--foreground);
+    margin: 0 auto;
+    padding: 0;
+    max-width: 680px;
+}
+
+a[target="_blank"]::after {
+    display: inline-block;
+    content: "";
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==)
+        no-repeat center;
+    width: 1em;
+    height: 1em;
+}
