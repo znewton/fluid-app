@@ -72,7 +72,7 @@ const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
                     border: none;
                     font: inherit;
                     font-weight: 300;
-                    font-size: 0.75em;
+                    font-size: 0.85em;
                 }
             `}</style>
         </div>
@@ -119,7 +119,9 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
     return (
         <div className="section-viewer">
             <div className="page-list">
-                <button onClick={addPage}>+ Add Page</button>
+                <div className="page-list-header">
+                    <button onClick={addPage}>+ Add Page</button>
+                </div>
                 <ul>
                     {keys.map((key) => (
                         <li
@@ -159,6 +161,8 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
                 .page-list ul {
                     list-style: none;
                     padding: 0;
+                    max-height: 27em;
+                    overflow-y: auto;
                 }
                 .page-list li {
                     padding: 1em 0.5em;
@@ -170,6 +174,9 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
                 }
                 li.open {
                     background-color: var(--midbackground);
+                }
+                .page-list-header {
+                    padding: 0.3em;
                 }
             `}</style>
         </div>
@@ -192,9 +199,12 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
     return (
         <div className="notebook-viewer">
             <div className="section-list">
-                <button onClick={props.onAddSection}>+ Add Section</button>
+                <div className="section-list-header">
+                    <button onClick={props.onAddSection}>+ Add Section</button>
+                    <span className="section-count">({props.maps.length})</span>
+                </div>
                 <ul>
-                    {props.maps.map(({ name }) => (
+                    {props.maps.map(({ name, map }) => (
                         <li
                             key={name}
                             onClick={() => handleSectionSelect(name)}
@@ -202,7 +212,10 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
                                 openSectionName === name ? "open" : "closed"
                             }
                         >
-                            {name}
+                            <span className="section-list-name">{name}</span>
+                            <span className="section-list-page-count">
+                                {map.size}
+                            </span>
                         </li>
                     ))}
                 </ul>
@@ -234,10 +247,14 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
                 .section-list ul {
                     list-style: none;
                     padding: 0;
+                    max-height: 27em;
+                    overflow-y: auto;
                 }
                 .section-list li {
                     padding: 1em 0.5em;
                     border-bottom: 1px solid var(--midbackground);
+                    display: flex;
+                    justify-content: space-between;
                 }
                 .section-list li:hover {
                     background-color: var(--primary-midbackground);
@@ -245,6 +262,18 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
                 }
                 li.open {
                     background-color: var(--midbackground);
+                }
+                .section-list-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0.3em;
+                }
+                .section-count {
+                    opacity: 0.5;
+                }
+                .section-list-page-count {
+                    opacity: 0.3;
                 }
             `}</style>
         </div>
