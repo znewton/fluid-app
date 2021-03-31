@@ -1,4 +1,10 @@
-import { FunctionComponent, useCallback, useMemo, useState } from "react";
+import {
+    ChangeEvent,
+    FunctionComponent,
+    useCallback,
+    useMemo,
+    useState,
+} from "react";
 import { IPerformanceStats } from "../definitions";
 
 interface ISessionPerformanceViewerProps {
@@ -26,8 +32,8 @@ export const SessionPerformanceViewer: FunctionComponent<ISessionPerformanceView
         [props.stats, filter]
     );
     const handleFilterChange = useCallback(
-        (e) => {
-            setFilter(e.target.value || "");
+        (e: ChangeEvent<HTMLInputElement>) => {
+            setFilter(e.currentTarget.value || "");
         },
         [setFilter]
     );

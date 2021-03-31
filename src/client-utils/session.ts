@@ -4,10 +4,11 @@ import { getContainer, startFluidApp } from "../fluid";
 import sillyname from "sillyname";
 
 export const joinSessionContainer = async (
-    rootId: string
+    rootId: string,
+    forceNewSession = false
 ): Promise<Container | undefined> => {
     const sessionResponse: ISessionResponse | undefined = await fetch(
-        `/api/session?action=open`
+        `/api/session?action=open&forceNew=${forceNewSession}`
     )
         .then((response) => {
             if (!response.ok) {

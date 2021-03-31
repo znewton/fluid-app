@@ -2207,6 +2207,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^2.17.1":
+  version: 2.20.3
+  resolution: "commander@npm:2.20.3"
+  checksum: b73428e97de7624323f81ba13f8ed9271de487017432d18b4da3f07cfc528ad754bbd199004bd5d14e0ccd67d1fdfe0ec8dbbd4c438b401df3c4cc387bfd1daa
+  languageName: node
+  linkType: hard
+
 "comment-json@npm:^2.2.0":
   version: 2.4.2
   resolution: "comment-json@npm:2.4.2"
@@ -3302,6 +3309,7 @@ __metadata:
     "@fluidframework/container-loader": ^0.37
     "@fluidframework/core-interfaces": ^0.37
     "@fluidframework/driver-definitions": ^0.37
+    "@fluidframework/map": ^0.37.2
     "@fluidframework/protocol-definitions": ^0.1021.0
     "@fluidframework/react-inputs": ^0.37
     "@fluidframework/routerlicious-driver": ^0.37
@@ -3328,6 +3336,7 @@ __metadata:
     eslint-plugin-react: ^7.22.0
     ioredis: ^4.24.6
     json-stringify-safe: ^5.0.1
+    lorem-ipsum: ^2.0.3
     next: ^10.0.9
     prettier: ^2.2.1
     react: ^17.0.1
@@ -4502,6 +4511,17 @@ fsevents@~2.3.1:
   bin:
     loose-envify: cli.js
   checksum: 5c3b47bbe5f597a3889fb001a3a98aaea2a3fafa48089c19034de1e0121bf57dbee609d184478514d74d5c5a7e9cfa3d846343455e5123b060040d46c39e91dc
+  languageName: node
+  linkType: hard
+
+"lorem-ipsum@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "lorem-ipsum@npm:2.0.3"
+  dependencies:
+    commander: ^2.17.1
+  bin:
+    lorem-ipsum: dist/bin/lorem-ipsum.bin.js
+  checksum: 0b930e8f864c2c8f9f5168096e9b300756bc95d7f9c95a1ae83e3d978eab5e6452e496a7058b3bcf12b8966117e1c19de46d305ef6165d33aec4a647246c0ded
   languageName: node
   linkType: hard
 

@@ -27,6 +27,10 @@ const handler = async (
     res: NextApiResponse
 ): Promise<void> => {
     const action = req.query.action as string;
+    const forceNew = (req.query.forceNew as string) === "true";
+    if (forceNew) {
+        await sessionStorage.clear();
+    }
     if (action === "open") {
         const session = await getOrCreateSession();
         session.connections++;
