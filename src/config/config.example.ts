@@ -1,4 +1,4 @@
-import { IFluidServiceConfig } from "../definitions";
+import { IFluidServiceConfig, IRedisConfig } from "../definitions";
 
 const serviceConfigs: { [key: string]: IFluidServiceConfig } = {
     local: {
@@ -10,3 +10,12 @@ const serviceConfigs: { [key: string]: IFluidServiceConfig } = {
 };
 
 export const serviceConfig = serviceConfigs.local;
+
+const redisConfigs: { [key: string]: IRedisConfig | undefined } = {
+    local: {
+        host: "127.0.0.1:6379",
+    },
+    none: undefined,
+};
+
+export const redisConfig = redisConfigs.local;

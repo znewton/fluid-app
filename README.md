@@ -16,11 +16,19 @@ Install dependencies:
 yarn
 ```
 
+(Optional) [Install and start Redis](https://redis.io/topics/quickstart) locally:
+
+```shell
+brew install redis
+redis-server
+```
+
 Setup the configs:
 
 ```shell
 cp src/config/config.example.ts src/config/config.ts
-# Update config in your favorite editor
+# Update config in your favorite editor.
+# Use "none" option for Redis to use environment vars to store session info.
 ```
 
 Run with live updates on change:

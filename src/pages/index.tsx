@@ -1,69 +1,29 @@
 import Head from "next/head";
-import { FunctionComponent, useEffect, useState } from "react";
-import { getContainer, startFluidApp } from "../fluid";
-import sillyname from "sillyname";
+import { FunctionComponent, useCallback, useEffect, useState } from "react";
 import type { Container } from "@fluidframework/container-loader";
 import { ConnectedIndicator } from "../components/ConnectedIndicator";
-import { ISessionResponse } from "../definitions";
 import { SessionPerformanceViewer } from "../components";
+import {
+    joinSessionContainer,
+    retrieveSessionPerformance,
+} from "../client-utils";
+import { IPerformanceStats } from "../definitions";
 
 const rootId = "fluid-content";
 
-const joinSessionContainer = async (): Promise<Container | undefined> => {
-    const sessionResponse: ISessionResponse | undefined = await fetch(
-        `/api/session?action=open`
-    )
-        .then((response) => {
-            if (!response.ok) {
-                console.error("Call to retrieve session info failed");
-                return undefined;
-            }
-            return response.json();
-        })
-        .catch((error) => {
-            console.error(error);
-            return undefined;
-        });
-    if (!sessionResponse) {
-        console.error("Failed to join session");
-        return undefined;
-    }
-    // TODO: replace with authentication
-    const userId = `${(sillyname() as string)
-        .split(" ")
-        .join("")
-        .toLowerCase()}@contoso.net`;
-    console.log({
-        createNew: sessionResponse.new,
-        documentId: sessionResponse.id,
-        userId,
-    });
-    let container: Container;
-    try {
-        container = await getContainer(
-            sessionResponse.id,
-            sessionResponse.new,
-            userId
-        );
-        const clientId = await startFluidApp(rootId, container);
-        console.log("Good to go 👌");
-        console.log(`Client id: ${clientId}`);
-    } catch (e) {
-        console.error(e);
-        void fetch(`/api/session?action=close`);
-        return undefined;
-    }
-    window.addEventListener("beforeunload", () => {
-        void fetch(`/api/session?action=close`);
-    });
-    return container;
-};
-
 const Home: FunctionComponent = () => {
     const [container, setContainer] = useState<Container | undefined>();
+    const [perfStats, setPerfStats] = useState<IPerformanceStats | undefined>();
+    const refreshSessionPerformance = useCallback(
+        () => retrieveSessionPerformance("/api/perf").then(setPerfStats),
+        [setPerfStats]
+    );
     useEffect(() => {
-        const containerP = joinSessionContainer();
+        const containerP = joinSessionContainer(rootId);
         containerP.then(setContainer).catch((error) => console.error(error));
+    }, []);
+    useEffect(() => {
+        refreshSessionPerformance();
     }, []);
     return (
         <div>
@@ -85,7 +45,9 @@ const Home: FunctionComponent = () => {
             </main>
 
             <footer>
-                <SessionPerformanceViewer endpoint="/api/perf" />
+                <h4>Performance Stats</h4>
+                <button onClick={refreshSessionPerformance}>Refresh</button>
+                <SessionPerformanceViewer stats={perfStats} />
             </footer>
         </div>
     );

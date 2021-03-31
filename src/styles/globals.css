@@ -32,3 +32,20 @@ a[target="_blank"]::after {
     width: 1em;
     height: 1em;
 }
+
+button {
+    background-color: var(--primary-background);
+    color: var(--primary-foreground);
+    font: inherit;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.5em 0.7em;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 5px 10px -5px rgba(0, 0, 0, 0.04);
+}
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1),
+        0 10px 15px -5px rgba(0, 0, 0, 0.04);
+    filter: brightness(110%);
+}

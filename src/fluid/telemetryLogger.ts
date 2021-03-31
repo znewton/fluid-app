@@ -12,7 +12,7 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
 
     constructor(
         private readonly endpoint: string,
-        private readonly batchLimit = 1,
+        private readonly batchLimit = 10,
         private readonly maxLogIntervalInMs = 1000000
     ) {
         window.addEventListener("beforeunload", () => {
@@ -21,9 +21,6 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
     }
 
     public send(event: ITelemetryBaseEvent): void {
-        if (event.eventName.includes("RouterliciousDriver")) {
-            console.log(event);
-        }
         if (!["generic", "error", "performance"].includes(event.category)) {
             return;
         }

@@ -10,6 +10,7 @@ export class SessionPerformanceLogger implements ILogger {
             return;
         }
         this.addEventToSessionPerfStats(session, data);
+        await sessionStorage.set(session);
     }
 
     public async logMany(data: unknown[]): Promise<void> {
@@ -21,6 +22,7 @@ export class SessionPerformanceLogger implements ILogger {
         data.forEach((dataItem) => {
             this.addEventToSessionPerfStats(session, dataItem);
         });
+        await sessionStorage.set(session);
     }
 
     private addEventToSessionPerfStats(session: ISession, event: unknown) {

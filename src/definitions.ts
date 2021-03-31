@@ -48,3 +48,7 @@ export interface IFluidServiceConfig {
     ordererUrl: string;
     storageUrl: string;
 }
+
+export interface IRedisConfig {
+    host: string;
+}

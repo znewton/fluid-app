@@ -114,3 +114,6 @@ dist
 
 # Config file
 config.ts
+
+# Redis side effects
+*.rdb
