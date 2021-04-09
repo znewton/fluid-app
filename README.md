@@ -28,8 +28,12 @@ Setup the configs:
 ```shell
 cp src/config/config.example.ts src/config/config.ts
 # Update config in your favorite editor.
-# Use "none" option for Redis to use environment vars to store session info.
 ```
+
+> Note: if not using Redis to store session info, set the redis config to `undefined` in config.ts
+> ```ts
+> export const redisConfig = redisConfigs.none; // or undefined
+> ```
 
 Run with live updates on change:
 
