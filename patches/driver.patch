@@ -1,0 +1,45 @@
+diff --git a/dist/errorUtils.js b/dist/errorUtils.js
+index b64c020b420a30f85cf68bff36ca58a9ef0b4e21..3bf9f1862b3e1aa6e2995c312b0c9246f4277bb4 100644
+--- a/dist/errorUtils.js
++++ b/dist/errorUtils.js
+@@ -11,7 +11,10 @@ var R11sErrorType;
+     R11sErrorType["fileNotFoundOrAccessDeniedError"] = "fileNotFoundOrAccessDeniedError";
+ })(R11sErrorType = exports.R11sErrorType || (exports.R11sErrorType = {}));
+ function createR11sNetworkError(errorMessage, statusCode, retryAfterSeconds) {
++    console.debug({ errorMessage })
+     switch (statusCode) {
++        case undefined:
++            return new driver_utils_1.GenericNetworkError(errorMessage, errorMessage === "Network Error", statusCode);
+         case 401:
+         case 403:
+             return new driver_utils_1.AuthorizationError(errorMessage, undefined, undefined, statusCode);
+diff --git a/lib/errorUtils.js b/lib/errorUtils.js
+index 07cf265d7d8caefd6ac821544dbe82c873032e0f..bbb46503265f08c593056354bac5ac5db151ac09 100644
+--- a/lib/errorUtils.js
++++ b/lib/errorUtils.js
+@@ -8,7 +8,10 @@ export var R11sErrorType;
+     R11sErrorType["fileNotFoundOrAccessDeniedError"] = "fileNotFoundOrAccessDeniedError";
+ })(R11sErrorType || (R11sErrorType = {}));
+ export function createR11sNetworkError(errorMessage, statusCode, retryAfterSeconds) {
++    console.debug({ errorMessage })
+     switch (statusCode) {
++        case undefined:
++            return new GenericNetworkError(errorMessage, errorMessage === "Network Error", statusCode);
+         case 401:
+         case 403:
+             return new AuthorizationError(errorMessage, undefined, undefined, statusCode);
+diff --git a/src/errorUtils.ts b/src/errorUtils.ts
+index bdb449d8f64ef5dbe843a45e14bc8f0ff929d383..a74f332fc99067c52097156099efec7a946141dc 100644
+--- a/src/errorUtils.ts
++++ b/src/errorUtils.ts
+@@ -51,7 +51,10 @@ export function createR11sNetworkError(
+     statusCode?: number,
+     retryAfterSeconds?: number,
+ ): R11sError {
++    console.debug({errorMessage})
+     switch (statusCode) {
++        case undefined:
++            return new GenericNetworkError(errorMessage, errorMessage === "Network Error", statusCode);
+         case 401:
+         case 403:
+             return new AuthorizationError(errorMessage, undefined, undefined, statusCode);

@@ -280,6 +280,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fluidframework/core-interfaces@npm:^0.37.4":
+  version: 0.37.4
+  resolution: "@fluidframework/core-interfaces@npm:0.37.4"
+  checksum: af415217ab16efc7fa72d97c6a0e597659460f1a100c7879c89cf0487d77b5abbe0c7f19f164b8270e138d3b5c1a5924c027b7d6afdb0d01866b6744760b4c55
+  languageName: node
+  linkType: hard
+
 "@fluidframework/datastore-definitions@npm:^0.37.2":
   version: 0.37.2
   resolution: "@fluidframework/datastore-definitions@npm:0.37.2"
@@ -321,18 +328,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/driver-base@npm:^0.37.2":
-  version: 0.37.2
-  resolution: "@fluidframework/driver-base@npm:0.37.2"
+"@fluidframework/driver-base@npm:^0.37.4":
+  version: 0.37.4
+  resolution: "@fluidframework/driver-base@npm:0.37.4"
   dependencies:
     "@fluidframework/common-definitions": ^0.19.1
     "@fluidframework/common-utils": ^0.29.0
-    "@fluidframework/driver-definitions": ^0.37.2
-    "@fluidframework/driver-utils": ^0.37.2
+    "@fluidframework/driver-definitions": ^0.37.4
+    "@fluidframework/driver-utils": ^0.37.4
     "@fluidframework/protocol-definitions": ^0.1022.0
     assert: ^2.0.0
     debug: ^4.1.1
-  checksum: 982534326cff7ee8ad88ddac8b31b6641d3ea6b476f4f363ec0f81876a0427b39b354c2dc68057612e99e93c6e33c4eade10388267b3b372661182a1fa67514d
+  checksum: a6817fb9eddd4edd6383dba74ff3186c01fa6c0585ea70bb4f9476292fdeb5579c493a2579ebe10be82f9f9f888f7e48186086933ecfc1ee53145c28c0003572
   languageName: node
   linkType: hard
 
@@ -344,6 +351,17 @@ __metadata:
     "@fluidframework/core-interfaces": ^0.37.2
     "@fluidframework/protocol-definitions": ^0.1022.0
   checksum: 757d49398852c01c4c90f23ae01992d9550002625fe9238e0ee230a889e888dba399d88909aed39bc0241ed0100a944fc8a85cf9b9ab6f9035dee4c42acf478a
+  languageName: node
+  linkType: hard
+
+"@fluidframework/driver-definitions@npm:^0.37.4":
+  version: 0.37.4
+  resolution: "@fluidframework/driver-definitions@npm:0.37.4"
+  dependencies:
+    "@fluidframework/common-definitions": ^0.19.1
+    "@fluidframework/core-interfaces": ^0.37.4
+    "@fluidframework/protocol-definitions": ^0.1022.0
+  checksum: 73eb527a25ed93157dcebb7cd73810480130b0c32091f8349c82a594d9105a2b42c8f696d3fa05bbed22536467191a6698e530a1fc8003a37a1ce2f0914d6123
   languageName: node
   linkType: hard
 
@@ -362,6 +380,24 @@ __metadata:
     assert: ^2.0.0
     uuid: ^8.3.1
   checksum: 41acaaa2df7c0c92f20846f51664662e81d592c850de67cf2f5e85e720023e9ad7e7e33da10abd2c463f2c2d8199e2f96d5998d381401164f9ae73fdbafdc44a
+  languageName: node
+  linkType: hard
+
+"@fluidframework/driver-utils@npm:^0.37.4":
+  version: 0.37.4
+  resolution: "@fluidframework/driver-utils@npm:0.37.4"
+  dependencies:
+    "@fluidframework/common-definitions": ^0.19.1
+    "@fluidframework/common-utils": ^0.29.0
+    "@fluidframework/core-interfaces": ^0.37.4
+    "@fluidframework/driver-definitions": ^0.37.4
+    "@fluidframework/gitresources": ^0.1022.0
+    "@fluidframework/protocol-base": ^0.1022.0
+    "@fluidframework/protocol-definitions": ^0.1022.0
+    "@fluidframework/telemetry-utils": ^0.37.4
+    assert: ^2.0.0
+    uuid: ^8.3.1
+  checksum: 4a60560961a3bd42dc2adce7538e78bcc83ef9bbd03488ccf67233a8a583a4c2dbaa3498af09347f9c98d67381ee043968c2acb0bfa4be40090f2b15d3ddedb7
   languageName: node
   linkType: hard
 
@@ -490,20 +526,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/routerlicious-driver@npm:^0.37":
-  version: 0.37.2
-  resolution: "@fluidframework/routerlicious-driver@npm:0.37.2"
+"@fluidframework/routerlicious-driver@^0.37":
+  version: 0.37.4
+  resolution: "@fluidframework/routerlicious-driver@npm:0.37.4"
   dependencies:
     "@fluidframework/common-definitions": ^0.19.1
     "@fluidframework/common-utils": ^0.29.0
-    "@fluidframework/driver-base": ^0.37.2
-    "@fluidframework/driver-definitions": ^0.37.2
-    "@fluidframework/driver-utils": ^0.37.2
+    "@fluidframework/driver-base": ^0.37.4
+    "@fluidframework/driver-definitions": ^0.37.4
+    "@fluidframework/driver-utils": ^0.37.4
     "@fluidframework/gitresources": ^0.1022.0
     "@fluidframework/protocol-base": ^0.1022.0
     "@fluidframework/protocol-definitions": ^0.1022.0
     "@fluidframework/server-services-client": ^0.1022.0
-    "@fluidframework/telemetry-utils": ^0.37.2
+    "@fluidframework/telemetry-utils": ^0.37.4
     assert: ^2.0.0
     axios: ^0.21.1
     debug: ^4.1.1
@@ -512,7 +548,33 @@ __metadata:
     socket.io-client: ^2.1.1
     uuid: ^8.3.1
     ws: ^6.1.2
-  checksum: f940572c3a56eddefd7429a03cc8eb760e1b32f6974930e673527be2fcf093d1f87ad0617acf7c7f165746dd53d08eb63db5f2ca3349c6043146476cceddbe00
+  checksum: 1746242e02313c313ee5bbe72f664bab5a5d18c2a410bb6f558da5298a7908bbb5de62c70e785d4d7bbfc1b09a2b90e364851ae81b90be258037a23aa989369f
+  languageName: node
+  linkType: hard
+
+"@fluidframework/routerlicious-driver@patch:@fluidframework/routerlicious-driver@^0.37#./patches/driver.patch::locator=fluid-app%40workspace%3A.":
+  version: 0.37.4
+  resolution: "@fluidframework/routerlicious-driver@patch:@fluidframework/routerlicious-driver@npm%3A0.37.4#./patches/driver.patch::version=0.37.4&hash=b27963&locator=fluid-app%40workspace%3A."
+  dependencies:
+    "@fluidframework/common-definitions": ^0.19.1
+    "@fluidframework/common-utils": ^0.29.0
+    "@fluidframework/driver-base": ^0.37.4
+    "@fluidframework/driver-definitions": ^0.37.4
+    "@fluidframework/driver-utils": ^0.37.4
+    "@fluidframework/gitresources": ^0.1022.0
+    "@fluidframework/protocol-base": ^0.1022.0
+    "@fluidframework/protocol-definitions": ^0.1022.0
+    "@fluidframework/server-services-client": ^0.1022.0
+    "@fluidframework/telemetry-utils": ^0.37.4
+    assert: ^2.0.0
+    axios: ^0.21.1
+    debug: ^4.1.1
+    isomorphic-ws: ^4.0.1
+    json-stringify-safe: 5.0.1
+    socket.io-client: ^2.1.1
+    uuid: ^8.3.1
+    ws: ^6.1.2
+  checksum: 0b281a14075bbcfedcb14a544621999bdfa3bde546833fa7d4a4ff8b7bf693af60606fdb8e9891c76f45ce43bea16e2857060020afe8ff1d75a47f5a9a765622
   languageName: node
   linkType: hard
 
@@ -661,6 +723,18 @@ __metadata:
     debug: ^4.1.1
     events: ^3.1.0
   checksum: 64d14884f563c165862bf0452e3b45623a313caaf688a5fcbd18853c4dea872bbc5c42b1bb9f5c9c58374b64137c8ea1abb07765d39c768f5a6625d15c062683
+  languageName: node
+  linkType: hard
+
+"@fluidframework/telemetry-utils@npm:^0.37.4":
+  version: 0.37.4
+  resolution: "@fluidframework/telemetry-utils@npm:0.37.4"
+  dependencies:
+    "@fluidframework/common-definitions": ^0.19.1
+    "@fluidframework/common-utils": ^0.29.0
+    debug: ^4.1.1
+    events: ^3.1.0
+  checksum: 14f8a5982655da612aa8b0a0905a6118b055127b1fab1475e67af1db031849adb18e102c8b9dde2e9b7467bdf4c61f165d29203ab71ff75f24786df6c1814a81
   languageName: node
   linkType: hard
 
@@ -3312,7 +3386,7 @@ __metadata:
     "@fluidframework/map": ^0.37.2
     "@fluidframework/protocol-definitions": ^0.1021.0
     "@fluidframework/react-inputs": ^0.37
-    "@fluidframework/routerlicious-driver": ^0.37
+    "@fluidframework/routerlicious-driver": "patch:@fluidframework/routerlicious-driver@^0.37#./patches/driver.patch"
     "@fluidframework/sequence": ^0.37
     "@fluidframework/server-services-utils": ^0.1022.0
     "@fluidframework/view-interfaces": ^0.37

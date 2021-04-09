@@ -196,11 +196,19 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
         },
         [setOpenSectionName]
     );
+    const addManySections = useCallback(() => {
+        for (let i = 0; i < 100; i++) {
+            props.onAddSection();
+        }
+    }, [props.onAddSection]);
     return (
         <div className="notebook-viewer">
             <div className="section-list">
                 <div className="section-list-header">
                     <button onClick={props.onAddSection}>+ Add Section</button>
+                    <button onClick={addManySections}>
+                        + Add Many Sections
+                    </button>
                     <span className="section-count">({props.maps.length})</span>
                 </div>
                 <ul>

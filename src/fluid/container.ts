@@ -20,7 +20,7 @@ export async function getContainer(
     const documentServiceFactory = new RouterliciousDocumentServiceFactory(
         tokenProvider
     );
-    const logger = new TelemetryLogger("/api/log");
+    const logger = new TelemetryLogger("/api/log", 30);
 
     const module = { fluidExport: containerRuntimeFactory };
     const codeLoader = { load: async () => module };
