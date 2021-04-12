@@ -7,14 +7,13 @@ export class RedisSessionStorage implements ISessionStorage {
     constructor(
         hostUrl: string,
         private readonly onSessionClear?: (session: ISession) => Promise<void>,
-        private readonly maxSessionLifetimeInMs = 24 * 60 * 60 * 1000,
-        private readonly sessionId = "fluid-app-session"
+        private readonly maxSessionLifetimeInMs = 24 * 60 * 60 * 1000 * 1000 // 1000 days
     ) {
         this.redisClient = new Redis(hostUrl);
     }
 
-    public async get(): Promise<ISession | undefined> {
-        const session = await this.redisClient.get(this.sessionId);
+    public async get(sessionId: string): Promise<ISession | undefined> {
+        const session = await this.redisClient.get(sessionId);
         // Try to retrieve session from process.env
         if (!session) {
             return undefined;
@@ -32,21 +31,31 @@ export class RedisSessionStorage implements ISessionStorage {
     }
 
     public async set(session: ISession): Promise<void> {
-        if (session.connections <= 0) {
-            return this.clear(session);
-        }
         const stringifiedSession = JSON.stringify(session);
-        await this.redisClient.set(this.sessionId, stringifiedSession);
+        await this.redisClient.set(session.id, stringifiedSession);
     }
 
-    public async clear(session?: ISession): Promise<void> {
-        const sessionToClear = session || (await this.get());
-        if (sessionToClear) {
-            sessionToClear.endedAt = Date.now();
-            if (this.onSessionClear) {
-                await this.onSessionClear(sessionToClear);
-            }
+    public async clear(session: ISession): Promise<void> {
+        session.endedAt = Date.now();
+        if (this.onSessionClear) {
+            await this.onSessionClear(session);
         }
-        await this.redisClient.del(this.sessionId);
+        await this.redisClient.del(session.id);
+    }
+
+    public async getOrCreate(sessionId: string): Promise<ISession> {
+        const existingSession = await this.get(sessionId);
+        if (existingSession) {
+            return existingSession;
+        }
+
+        const newSession = {
+            id: sessionId,
+            createdAt: Date.now(),
+            endedAt: undefined,
+            perfStats: {},
+        };
+        this.set(newSession);
+        return newSession;
     }
 }

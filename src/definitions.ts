@@ -7,8 +7,6 @@ export interface IPerformanceStats {
 
 export interface ISession {
     id: string;
-    connections: number;
-    maxConnections: number;
     createdAt: number;
     endedAt: number | undefined;
     perfStats: { [eventName: string]: IPerformanceStats };
@@ -22,7 +20,7 @@ export interface ISessionStorage {
     /**
      * Retrieves current session. Returns undefined if no current session.
      */
-    get(): Promise<ISession | undefined>;
+    get(id: string): Promise<ISession | undefined>;
     /**
      * Sets current session to provided session.
      */
@@ -31,11 +29,15 @@ export interface ISessionStorage {
      * Clears current (or provided) session.
      */
     clear(session?: ISession): Promise<void>;
+    /**
+     * Gets an existing session, or creates a new one if it doesn't exist.
+     */
+    getOrCreate(id: string): Promise<ISession>;
 }
 
 export interface ILogger {
-    log(data: unknown): Promise<void>;
-    logMany(data: unknown[]): Promise<void>;
+    log(data: unknown, ...args: any[]): Promise<void>;
+    logMany(data: unknown[], ...args: any[]): Promise<void>;
 }
 
 /**

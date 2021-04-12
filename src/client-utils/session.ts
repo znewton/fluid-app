@@ -1,47 +1,37 @@
 import { Container } from "@fluidframework/container-loader";
-import { IPerformanceStats, ISessionResponse } from "../definitions";
+import { IPerformanceStats } from "../definitions";
 import { getContainer, startFluidApp } from "../fluid";
 import sillyname from "sillyname";
 
-export const joinSessionContainer = async (
+const checkDocumentExists = async (docId): Promise<boolean> => {
+    const exists = await fetch(`/api/doc?docId=${docId}`).then((response) => {
+        if (!response.ok) {
+            throw new Error("Call to check doc exists failed");
+        }
+        return response.text();
+    });
+    return exists === "true";
+};
+
+export const getSessionContainer = async (
     rootId: string,
-    forceNewSession = false
+    docId: string
 ): Promise<Container | undefined> => {
-    const sessionResponse: ISessionResponse | undefined = await fetch(
-        `/api/session?action=open&forceNew=${forceNewSession}`
-    )
-        .then((response) => {
-            if (!response.ok) {
-                console.error("Call to retrieve session info failed");
-                return undefined;
-            }
-            return response.json();
-        })
-        .catch((error) => {
-            console.error(error);
-            return undefined;
-        });
-    if (!sessionResponse) {
-        console.error("Failed to join session");
-        return undefined;
-    }
-    // TODO: replace with authentication
     const userId = `${(sillyname() as string)
         .split(" ")
         .join("")
         .toLowerCase()}@contoso.net`;
+
+    const createNew = !(await checkDocumentExists(docId));
+
     console.log({
-        createNew: sessionResponse.new,
-        documentId: sessionResponse.id,
+        createNew: createNew,
+        documentId: docId,
         userId,
     });
     let container: Container;
     try {
-        container = await getContainer(
-            sessionResponse.id,
-            sessionResponse.new,
-            userId
-        );
+        container = await getContainer(docId, createNew, userId);
         const clientId = await startFluidApp(rootId, container);
         console.log("Good to go 👌");
         console.log(`Client id: ${clientId}`);
@@ -57,9 +47,10 @@ export const joinSessionContainer = async (
 };
 
 export const retrieveSessionPerformance = (
-    endpoint: string
+    endpoint: string,
+    docId: string
 ): Promise<IPerformanceStats | undefined> =>
-    fetch(endpoint)
+    fetch(`${endpoint}?id=${docId}`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Perf stats request failed");

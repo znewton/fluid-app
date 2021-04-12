@@ -11,10 +11,22 @@ const handler = async (
     if (!body) {
         return res.status(400).send("Empty request body");
     }
-    if (body instanceof Array) {
-        await sessionPerfLogger.logMany(body);
+    const sessionId = body.sessionId;
+    if (!sessionId) {
+        return res
+            .status(400)
+            .send("Missing/Empty sessionId property of request body");
+    }
+    const logBody = body.log;
+    if (!logBody) {
+        return res
+            .status(400)
+            .send("Missing/Empty log property of request body");
+    }
+    if (logBody instanceof Array) {
+        await sessionPerfLogger.logMany(logBody, sessionId);
     } else {
-        await sessionPerfLogger.log(body);
+        await sessionPerfLogger.log(logBody, sessionId);
     }
     res.status(200).send("Logged");
 };

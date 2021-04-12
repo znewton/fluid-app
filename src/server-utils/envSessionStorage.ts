@@ -30,9 +30,6 @@ export class EnvSessionStorage implements ISessionStorage {
     }
 
     public async set(session: ISession): Promise<void> {
-        if (session.connections <= 0) {
-            return this.clear(session);
-        }
         process.env.SESSION = JSON.stringify(session);
         this.session = session;
     }
@@ -47,5 +44,21 @@ export class EnvSessionStorage implements ISessionStorage {
         }
         this.session = undefined;
         delete process.env.SESSION;
+    }
+
+    public async getOrCreate(): Promise<ISession> {
+        const existingSession = await this.get();
+        if (existingSession) {
+            return existingSession;
+        }
+
+        const newSession = {
+            id: "env",
+            createdAt: Date.now(),
+            endedAt: undefined,
+            perfStats: {},
+        };
+        this.set(newSession);
+        return newSession;
     }
 }

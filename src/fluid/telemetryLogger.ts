@@ -12,6 +12,7 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
 
     constructor(
         private readonly endpoint: string,
+        private readonly docId: string,
         private readonly batchLimit = 10,
         private readonly maxLogIntervalInMs = 1000000
     ) {
@@ -50,7 +51,7 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: stringifySafe(events),
+            body: stringifySafe({ sessionId: this.docId, log: events }),
         })
             .then(async (response) => {
                 if (!response.ok) {

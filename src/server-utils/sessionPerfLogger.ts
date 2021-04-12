@@ -3,22 +3,14 @@ import { ILogger, IPerformanceStats, ISession } from "../definitions";
 import { sessionStorage } from "./sessionStorage";
 
 export class SessionPerformanceLogger implements ILogger {
-    public async log(data: unknown): Promise<void> {
-        const session = await sessionStorage.get();
-        if (!session) {
-            console.warn("No session to log to. Data loss occurring");
-            return;
-        }
+    public async log(data: unknown, sessionId: string): Promise<void> {
+        const session = await sessionStorage.getOrCreate(sessionId);
         this.addEventToSessionPerfStats(session, data);
         await sessionStorage.set(session);
     }
 
-    public async logMany(data: unknown[]): Promise<void> {
-        const session = await sessionStorage.get();
-        if (!session) {
-            console.warn("No session to log to. Data loss occurring");
-            return;
-        }
+    public async logMany(data: unknown[], sessionId: string): Promise<void> {
+        const session = await sessionStorage.getOrCreate(sessionId);
         data.forEach((dataItem) => {
             this.addEventToSessionPerfStats(session, dataItem);
         });
