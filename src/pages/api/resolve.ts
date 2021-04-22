@@ -48,6 +48,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse): void => {
             ordererUrl,
             storageUrl,
         },
+        id: queryDocId,
         tokens: { jwt: token },
         type: "fluid",
         url: fluidUrl,
