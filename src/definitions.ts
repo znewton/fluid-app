@@ -54,3 +54,16 @@ export interface IFluidServiceConfig {
 export interface IRedisConfig {
     host: string;
 }
+
+export interface IPerformanceMetrics {
+    durationsInMs: number[];
+    minDurationInMs: number;
+    maxDurationInMs: number;
+}
+
+export interface IPerformanceTracker extends EventTarget {
+    getPerformanceMetricsForEvent(
+        eventName: string
+    ): Map<string, IPerformanceMetrics>;
+    track(eventName: string, ...args): void;
+}
