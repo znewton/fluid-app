@@ -14,6 +14,8 @@ import {
 } from "react";
 import sillyname from "sillyname";
 import { LoremIpsum } from "lorem-ipsum";
+import { performanceTracker, useTrackLoad } from "../client-utils";
+// import { performanceTracker } from "../client-utils";
 
 const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -34,6 +36,7 @@ interface IPageViewerProps {
 }
 
 const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
+    useTrackLoad("PageViewer");
     const [mapValue, setMapValue] = useState<string>(
         props.map.get(props.mapKey) ?? ""
     );
@@ -82,6 +85,7 @@ const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
 type ISectionViewerProps = IMap;
 
 const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
+    useTrackLoad("SectionViewer");
     const [openPageName, setOpenPageName] = useState<string>("");
     const [keys, setKeys] = useState(Array.from(props.map.keys()));
     const refresh = useCallback(() => {
@@ -189,6 +193,7 @@ interface INotebookViewerProps {
 }
 
 const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
+    useTrackLoad("NoteBookViewer");
     const [openSectionName, setOpenSectionName] = useState<string>("");
     const handleSectionSelect = useCallback(
         (name: string) => {
@@ -327,6 +332,9 @@ export const CollaborativeNotebook: FunctionComponent<ICollaborativeNotebookProp
             props.mapDir.set(name, newSection.handle);
         }
     }, [props.mapCreate]);
+    useEffect(() => {
+        performanceTracker.track("map-length-change", "CollabNotebook");
+    }, [maps.length]);
     return (
         <div>
             <NotebookViewer maps={maps} onAddSection={handleAddSection} />

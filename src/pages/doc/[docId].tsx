@@ -10,6 +10,7 @@ import {
 import { IPerformanceStats } from "../../definitions";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 import sillyname from "sillyname";
+import { EventPerformanceViewer } from "../../components/EventPerformanceViewer";
 
 const rootId = "fluid-content";
 
@@ -51,7 +52,12 @@ const Doc: FunctionComponent<IDocPageProps> = ({ docId }) => {
             </main>
 
             <footer>
-                <h4>Performance Stats</h4>
+                <h4>Page Performance Stats</h4>
+                <h5>Map Length Change</h5>
+                <EventPerformanceViewer eventName={"map-length-change"} />
+                <h5>Component Load</h5>
+                <EventPerformanceViewer eventName={"component-load"} />
+                <h4>Session Performance Stats</h4>
                 <button onClick={refreshSessionPerformance}>Refresh</button>
                 <SessionPerformanceViewer stats={perfStats} />
             </footer>

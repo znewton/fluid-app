@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { IPerformanceTracker, IPerformanceMetrics } from "../definitions";
+import { EventEmitter } from "../shared-utils";
 
-class PerformanceTracker extends EventTarget implements IPerformanceTracker {
+class PerformanceTracker extends EventEmitter implements IPerformanceTracker {
     private readonly startTime = Date.now();
     /**
      * Map of component names to load metrics for that component.
@@ -16,9 +18,9 @@ class PerformanceTracker extends EventTarget implements IPerformanceTracker {
 
         metrics.durationsInMs.push(duration);
         metrics.maxDurationInMs = Math.max(metrics.maxDurationInMs, duration);
-        metrics.minDurationInMs = Math.max(metrics.minDurationInMs, duration);
+        metrics.minDurationInMs = Math.min(metrics.minDurationInMs, duration);
 
-        this.dispatchEvent(new Event(eventName));
+        this.emit(eventName);
     }
 
     public getPerformanceMetricsForEvent(
@@ -44,7 +46,7 @@ class PerformanceTracker extends EventTarget implements IPerformanceTracker {
         if (!performanceMetricsForId) {
             performanceMetricsForId = {
                 durationsInMs: [],
-                minDurationInMs: 0,
+                minDurationInMs: Number.MAX_SAFE_INTEGER,
                 maxDurationInMs: 0,
             };
             performanceMetricsForEvent.set(id, performanceMetricsForId);
@@ -70,3 +72,9 @@ class PerformanceTracker extends EventTarget implements IPerformanceTracker {
 }
 
 export const performanceTracker = new PerformanceTracker();
+
+export const useTrackLoad = (componentName: string) => {
+    useEffect(() => {
+        performanceTracker.track("component-load", componentName);
+    }, []);
+};

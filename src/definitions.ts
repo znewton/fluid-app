@@ -1,3 +1,5 @@
+import { EventEmitter } from "./shared-utils";
+
 export interface IPerformanceStats {
     count: number;
     avgDurationInMs: number;
@@ -61,7 +63,7 @@ export interface IPerformanceMetrics {
     maxDurationInMs: number;
 }
 
-export interface IPerformanceTracker extends EventTarget {
+export interface IPerformanceTracker extends EventEmitter {
     getPerformanceMetricsForEvent(
         eventName: string
     ): Map<string, IPerformanceMetrics>;
