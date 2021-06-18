@@ -37,12 +37,8 @@ export const getSessionContainer = async (
         console.log(`Client id: ${clientId}`);
     } catch (e) {
         console.error(e);
-        void fetch(`/api/session?action=close`);
         return undefined;
     }
-    window.addEventListener("beforeunload", () => {
-        void fetch(`/api/session?action=close`);
-    });
     return container;
 };
 

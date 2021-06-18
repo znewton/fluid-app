@@ -73,7 +73,7 @@ class PerformanceTracker extends EventEmitter implements IPerformanceTracker {
 
 export const performanceTracker = new PerformanceTracker();
 
-export const useTrackLoad = (componentName: string) => {
+export const useTrackLoad = (componentName: string): void => {
     useEffect(() => {
         performanceTracker.track("component-load", componentName);
     }, []);
