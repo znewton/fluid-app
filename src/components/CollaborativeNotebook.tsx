@@ -15,7 +15,6 @@ import {
 import sillyname from "sillyname";
 import { LoremIpsum } from "lorem-ipsum";
 import { performanceTracker, useTrackLoad } from "../client-utils";
-// import { performanceTracker } from "../client-utils";
 
 const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -82,7 +81,9 @@ const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
     );
 };
 
-type ISectionViewerProps = IMap;
+interface ISectionViewerProps extends IMap {
+    onAddPage: (map: ISharedMap) => Promise<void>;
+}
 
 const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
     useTrackLoad("SectionViewer");
@@ -107,12 +108,6 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
         });
     }, [props.map, setKeys]);
 
-    const addPage = useCallback(() => {
-        const key = (sillyname() as string).split(" ").join("-");
-        const value = lorem.generateParagraphs(2);
-        props.map.set(key, value);
-    }, [props.map]);
-
     const handlePageSelect = useCallback(
         (key: string) => {
             setOpenPageName(key);
@@ -120,11 +115,20 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
         [setOpenPageName]
     );
 
+    const addManyPages = useCallback(() => {
+        for (let i = 0; i < 100; i++) {
+            props.onAddPage(props.map);
+        }
+    }, [props.onAddPage, props.map]);
+
     return (
         <div className="section-viewer">
             <div className="page-list">
                 <div className="page-list-header">
-                    <button onClick={addPage}>+ Add Page</button>
+                    <button onClick={() => props.onAddPage(props.map)}>
+                        + Add Page
+                    </button>
+                    <button onClick={addManyPages}>+ Add Many Pages</button>
                 </div>
                 <ul>
                     {keys.map((key) => (
@@ -189,7 +193,8 @@ const SectionViewer: FunctionComponent<ISectionViewerProps> = (props) => {
 
 interface INotebookViewerProps {
     maps: IMap[];
-    onAddSection: () => void;
+    onAddSection: () => Promise<void>;
+    onAddPage: (map: ISharedMap) => Promise<void>;
 }
 
 const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
@@ -206,90 +211,117 @@ const NotebookViewer: FunctionComponent<INotebookViewerProps> = (props) => {
             props.onAddSection();
         }
     }, [props.onAddSection]);
-    return (
-        <div className="notebook-viewer">
-            <div className="section-list">
-                <div className="section-list-header">
-                    <button onClick={props.onAddSection}>+ Add Section</button>
-                    <button onClick={addManySections}>
-                        + Add Many Sections
-                    </button>
-                    <span className="section-count">({props.maps.length})</span>
-                </div>
-                <ul>
-                    {props.maps.map(({ name, map }) => (
-                        <li
-                            key={name}
-                            onClick={() => handleSectionSelect(name)}
-                            className={
-                                openSectionName === name ? "open" : "closed"
-                            }
-                        >
-                            <span className="section-list-name">{name}</span>
-                            <span className="section-list-page-count">
-                                {map.size}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+    const addPagesToAllSections = useCallback(() => {
+        for (const map of props.maps) {
+            for (let i = 0; i < 5; i++) {
+                props.onAddPage(map.map);
+            }
+        }
+    }, [props.onAddPage, props.maps]);
 
-            {props.maps.map(({ map, name }) => (
-                <section
-                    key={name}
-                    className={openSectionName === name ? "open" : "closed"}
-                >
-                    <SectionViewer map={map} name={name} />
-                </section>
-            ))}
-            <style jsx>{`
-                .notebook-viewer {
-                    display: flex;
-                    padding: 0.5em;
-                    background-color: var(--background);
-                    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
-                        0 5px 10px -5px rgba(0, 0, 0, 0.04);
-                    border-radius: 0.1em;
-                }
-                section {
-                    flex-grow: 1;
-                }
-                section.closed {
-                    display: none;
-                }
-                .section-list ul {
-                    list-style: none;
-                    padding: 0;
-                    max-height: 27em;
-                    overflow-y: auto;
-                }
-                .section-list li {
-                    padding: 1em 0.5em;
-                    border-bottom: 1px solid var(--midbackground);
-                    display: flex;
-                    justify-content: space-between;
-                }
-                .section-list li:hover {
-                    background-color: var(--primary-midbackground);
-                    cursor: pointer;
-                }
-                li.open {
-                    background-color: var(--midbackground);
-                }
-                .section-list-header {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    padding: 0.3em;
-                }
-                .section-count {
-                    opacity: 0.5;
-                }
-                .section-list-page-count {
-                    opacity: 0.3;
-                }
-            `}</style>
-        </div>
+    return (
+        <>
+            <div className="notebook-viewer-toolbar">
+                <button onClick={props.onAddSection}>+ Add Section</button>
+                <button onClick={addManySections}>+ Add Many Sections</button>
+                <button onClick={addPagesToAllSections}>
+                    + Add Pages To All Sections
+                </button>
+            </div>
+            <div className="notebook-viewer">
+                <div className="section-list">
+                    <div className="section-list-header">
+                        <span className="section-count">
+                            Sections: {props.maps.length}
+                        </span>
+                    </div>
+                    <ul>
+                        {props.maps.map(({ name, map }) => (
+                            <li
+                                key={name}
+                                onClick={() => handleSectionSelect(name)}
+                                className={
+                                    openSectionName === name ? "open" : "closed"
+                                }
+                            >
+                                <span className="section-list-name">
+                                    {name}
+                                </span>
+                                <span className="section-list-page-count">
+                                    {map.size}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {props.maps.map(({ map, name }) => (
+                    <section
+                        key={name}
+                        className={openSectionName === name ? "open" : "closed"}
+                    >
+                        <SectionViewer
+                            map={map}
+                            name={name}
+                            onAddPage={props.onAddPage}
+                        />
+                    </section>
+                ))}
+                <style jsx>{`
+                    .notebook-viewer-toolbar {
+                        display: flex;
+                    }
+                    .notebook-viewer-toolbar button:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                    .notebook-viewer {
+                        display: flex;
+                        padding: 0.5em;
+                        background-color: var(--background);
+                        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+                            0 5px 10px -5px rgba(0, 0, 0, 0.04);
+                        border-radius: 0.1em;
+                    }
+                    section {
+                        flex-grow: 1;
+                    }
+                    section.closed {
+                        display: none;
+                    }
+                    .section-list ul {
+                        list-style: none;
+                        padding: 0;
+                        max-height: 27em;
+                        overflow-y: auto;
+                    }
+                    .section-list li {
+                        padding: 1em 0.5em;
+                        border-bottom: 1px solid var(--midbackground);
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .section-list li:hover {
+                        background-color: var(--primary-midbackground);
+                        cursor: pointer;
+                    }
+                    li.open {
+                        background-color: var(--midbackground);
+                    }
+                    .section-list-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0.3em;
+                    }
+                    .section-count {
+                        opacity: 0.5;
+                    }
+                    .section-list-page-count {
+                        opacity: 0.3;
+                    }
+                `}</style>
+            </div>
+        </>
     );
 };
 
@@ -324,7 +356,7 @@ export const CollaborativeNotebook: FunctionComponent<ICollaborativeNotebookProp
         getMaps();
         props.listenValueChanged(() => getMaps());
     }, [props.listenValueChanged, getMaps]);
-    const handleAddSection = useCallback(() => {
+    const handleAddSection = useCallback(async () => {
         const name = (sillyname() as string).split(" ").join("-");
         if (props.mapDir.get(name) === undefined) {
             const newSection = props.mapCreate(name);
@@ -332,12 +364,22 @@ export const CollaborativeNotebook: FunctionComponent<ICollaborativeNotebookProp
             props.mapDir.set(name, newSection.handle);
         }
     }, [props.mapCreate]);
+
+    const handleAddPage = useCallback(async (map: ISharedMap) => {
+        const key = (sillyname() as string).split(" ").join("-");
+        const value = lorem.generateParagraphs(2);
+        map.set(key, value);
+    }, []);
     useEffect(() => {
         performanceTracker.track("map-length-change", "CollabNotebook");
     }, [maps.length]);
     return (
         <div>
-            <NotebookViewer maps={maps} onAddSection={handleAddSection} />
+            <NotebookViewer
+                maps={maps}
+                onAddSection={handleAddSection}
+                onAddPage={handleAddPage}
+            />
         </div>
     );
 };

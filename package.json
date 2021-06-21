@@ -16,19 +16,19 @@
     "start": "cross-env NODE_ENV=production next start"
   },
   "dependencies": {
-    "@fluidframework/aqueduct": "^0.39",
+    "@fluidframework/aqueduct": "^0.41",
     "@fluidframework/common-definitions": "latest",
-    "@fluidframework/container-definitions": "^0.39",
-    "@fluidframework/container-loader": "^0.39",
-    "@fluidframework/core-interfaces": "^0.39",
-    "@fluidframework/driver-definitions": "^0.39",
-    "@fluidframework/map": "^0.39",
-    "@fluidframework/protocol-definitions": "^0.1024",
-    "@fluidframework/react-inputs": "^0.39",
-    "@fluidframework/routerlicious-driver": "^0.39",
-    "@fluidframework/sequence": "^0.39",
-    "@fluidframework/server-services-utils": "^0.1025",
-    "@fluidframework/view-interfaces": "^0.39",
+    "@fluidframework/container-definitions": "latest",
+    "@fluidframework/container-loader": "^0.41",
+    "@fluidframework/core-interfaces": "latest",
+    "@fluidframework/driver-definitions": "latest",
+    "@fluidframework/map": "^0.41",
+    "@fluidframework/protocol-definitions": "latest",
+    "@fluidframework/react-inputs": "^0.41",
+    "@fluidframework/routerlicious-driver": "^0.41",
+    "@fluidframework/sequence": "^0.41",
+    "@fluidframework/server-services-utils": "^0.1027.0-0",
+    "@fluidframework/view-interfaces": "^0.41",
     "ioredis": "^4.24.6",
     "json-stringify-safe": "^5.0.1",
     "lorem-ipsum": "^2.0.3",
@@ -59,5 +59,12 @@
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
+  },
+  "resolutions": {
+    "@fluidframework/server-services-utils": "^0.1027.0-0",
+    "@fluidframework/server-services-client": "^0.1027.0-0",
+    "@fluidframework/server-services-core": "^0.1027.0-0",
+    "@fluidframework/protocol-base": "^0.1027.0-0",
+    "@fluidframework/gitresources": "^0.1027.0-0"
   }
 }
