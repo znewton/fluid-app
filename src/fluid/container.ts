@@ -19,7 +19,7 @@ export async function getContainer(
     const urlResolver = new UrlResolver("/api/resolve", documentId, userId);
     const documentServiceFactory = new RouterliciousDocumentServiceFactory(
         tokenProvider,
-        { enablePrefetch: true }
+        { enablePrefetch: false }
     );
     const logger = new TelemetryLogger("/api/log", documentId, 30);
 

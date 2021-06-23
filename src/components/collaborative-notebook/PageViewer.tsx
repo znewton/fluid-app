@@ -15,10 +15,9 @@ interface IPageViewerProps {
 
 export const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
     useTrackLoad("PageViewer");
-    const [mapValue, setMapValue] = useState<string>(
-        props.map.get(props.mapKey) ?? ""
-    );
+    const [mapValue, setMapValue] = useState<string | undefined>();
     useEffect(() => {
+        setMapValue(props.map.get(props.mapKey) ?? "");
         const handleChange = (changed) => {
             if (changed.key === props.mapKey) {
                 setMapValue(props.map.get(props.mapKey) ?? "");
