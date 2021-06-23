@@ -4,6 +4,7 @@ import {
 } from "@fluidframework/aqueduct";
 import type { Container } from "@fluidframework/container-loader";
 import type { IFluidHTMLView } from "@fluidframework/view-interfaces";
+import { getBlobCount } from "./utils";
 
 interface FluidHtmlViewDataObject extends DataObject, IFluidHTMLView {}
 
@@ -29,6 +30,9 @@ export async function startFluidApp<
                 reject(error);
             });
         }
+        getBlobCount(container.storage).then((blobCount) =>
+            console.log({ blobCount })
+        );
     });
 
     // Get the Default Object from the Container
