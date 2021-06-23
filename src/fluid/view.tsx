@@ -53,6 +53,7 @@ export class FluidView extends DataObject implements IFluidHTMLView {
         const mapListen = (
             listener: (changed: IDirectoryValueChanged) => void
         ) => {
+            console.log("mapListen called");
             this.root.on("valueChanged", (changed) => {
                 if (changed.path !== this.mapDir.absolutePath) {
                     return;
