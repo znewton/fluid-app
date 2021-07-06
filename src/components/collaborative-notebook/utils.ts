@@ -24,8 +24,9 @@ const lorem = new LoremIpsum({
     wordsPerSentence: { max: 16, min: 4 },
 });
 
-export const addPageToMap = async (map: ISharedMap): Promise<void> => {
-    const key = generateName();
-    const value = lorem.generateParagraphs(2);
-    map.set(key, value);
+export const generatePageContents = (): string => {
+    return lorem.generateParagraphs(2);
+};
+export const generatePageTitle = (): string => {
+    return lorem.generateWords(2);
 };

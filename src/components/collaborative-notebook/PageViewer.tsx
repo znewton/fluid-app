@@ -1,4 +1,5 @@
-import { ISharedMap } from "@fluidframework/map";
+import { IFluidHandle } from "@fluidframework/core-interfaces";
+import { ISharedMap, SharedMap } from "@fluidframework/map";
 import {
     ChangeEvent,
     FunctionComponent,
@@ -15,34 +16,65 @@ interface IPageViewerProps {
 
 export const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
     useTrackLoad("PageViewer");
-    const [mapValue, setMapValue] = useState<string | undefined>();
+    const [pageMap, setPageMap] = useState<SharedMap | undefined>();
+    const [pageTitle, setPageTitle] = useState<string | undefined>();
+    const [pageContents, setPageContents] = useState<string | undefined>();
     useEffect(() => {
-        setMapValue(props.map.get(props.mapKey) ?? "");
-        const handleChange = (changed) => {
-            if (changed.key === props.mapKey) {
-                setMapValue(props.map.get(props.mapKey) ?? "");
+        const loadPage = async () => {
+            setPageMap(
+                await props.map
+                    .get<IFluidHandle<SharedMap>>(props.mapKey)
+                    ?.get()
+            );
+        };
+        loadPage();
+    }, [props.map, props.mapKey, setPageMap]);
+    useEffect(() => {
+        setPageTitle(pageMap?.get<string>("title") ?? "");
+        setPageContents(pageMap?.get<string>("content") ?? "");
+        const handleChange = async (changed) => {
+            if (changed.key === "title") {
+                setPageTitle(pageMap?.get("title"));
+            } else if (changed.key === "content") {
+                setPageContents(pageMap?.get("content"));
             }
         };
-        props.map.on("valueChanged", handleChange);
+        pageMap?.on("valueChanged", handleChange);
         return () => {
-            props.map.off("valueChanged", handleChange);
+            pageMap?.off("valueChanged", handleChange);
         };
-    }, [props.map, props.mapKey]);
+    }, [pageMap]);
 
-    const handleChangeValue = useCallback(
+    const handleChangeTitleValue = useCallback(
         (e: ChangeEvent<HTMLTextAreaElement>) => {
-            props.map.set(props.mapKey, e.currentTarget.value);
+            pageMap?.set("title", e.currentTarget.value);
         },
-        [props.map, props.mapKey]
+        [pageMap]
+    );
+    const handleChangeContentsValue = useCallback(
+        (e: ChangeEvent<HTMLTextAreaElement>) => {
+            pageMap?.set("content", e.currentTarget.value);
+        },
+        [pageMap]
     );
 
     return (
         <div className="page-viewer">
-            <textarea value={mapValue} onChange={handleChangeValue} />
+            <textarea
+                className="title-textarea"
+                value={pageTitle}
+                onChange={handleChangeTitleValue}
+            />
+            <textarea
+                className="content-textarea"
+                value={pageContents}
+                onChange={handleChangeContentsValue}
+            />
             <style jsx>{`
                 .page-viewer {
                     height: 100%;
                     display: flex;
+                    flex-direction: column;
                     padding: 0.5em;
                     background-color: var(--background);
                     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
@@ -55,6 +87,13 @@ export const PageViewer: FunctionComponent<IPageViewerProps> = (props) => {
                     flex-grow: 1;
                     border: none;
                     font: inherit;
+                }
+                textarea.title-textarea {
+                    height: 3rem;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+                textarea.content-textarea {
                     font-weight: 300;
                     font-size: 0.85em;
                 }

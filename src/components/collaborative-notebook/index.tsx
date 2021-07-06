@@ -1,12 +1,13 @@
 import {
     IDirectory,
     IDirectoryValueChanged,
+    ISharedMap,
     SharedMap,
 } from "@fluidframework/map";
 import { FunctionComponent, useCallback, useEffect, useState } from "react";
 import { performanceTracker } from "../../client-utils";
 import { NotebookViewer } from "./NotebookViewer";
-import { generateName } from "./utils";
+import { generateName, generatePageContents, generatePageTitle } from "./utils";
 
 interface ICollaborativeNotebookProps {
     mapDir: IDirectory;
@@ -36,6 +37,16 @@ export const CollaborativeNotebook: FunctionComponent<ICollaborativeNotebookProp
             props.mapDir.set(name, newSection.handle);
         }
     }, [props.mapCreate]);
+    const handleAddPage = useCallback(async (parentSection: ISharedMap) => {
+        const name = generateName();
+        if (parentSection.get(name) === undefined) {
+            const newPage = props.mapCreate(name);
+            newPage.bindToContext();
+            newPage.set("title", generatePageTitle());
+            newPage.set("content", generatePageContents());
+            parentSection.set(name, newPage.handle);
+        }
+    }, []);
 
     useEffect(() => {
         performanceTracker.track("map-length-change", "CollabNotebook");
@@ -47,6 +58,7 @@ export const CollaborativeNotebook: FunctionComponent<ICollaborativeNotebookProp
                 maps={maps}
                 mapDir={props.mapDir}
                 onAddSection={handleAddSection}
+                onAddPage={handleAddPage}
             />
         </div>
     );

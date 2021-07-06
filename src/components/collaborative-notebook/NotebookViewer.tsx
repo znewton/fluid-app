@@ -1,13 +1,14 @@
-import { IDirectory } from "@fluidframework/map";
+import { IDirectory, ISharedMap } from "@fluidframework/map";
 import { FunctionComponent, useCallback, useState } from "react";
 import { useTrackLoad } from "../../client-utils";
 import { SectionViewer } from "./SectionViewer";
-import { addPageToMap, getMapFromDirectory } from "./utils";
+import { getMapFromDirectory } from "./utils";
 
 interface INotebookViewerProps {
     mapDir: IDirectory;
     maps: string[];
     onAddSection: () => Promise<void>;
+    onAddPage: (parentSection: ISharedMap) => Promise<void>;
 }
 
 export const NotebookViewer: FunctionComponent<INotebookViewerProps> = (
@@ -27,11 +28,12 @@ export const NotebookViewer: FunctionComponent<INotebookViewerProps> = (
         }
     }, [props.onAddSection]);
     const addPagesToAllSections = useCallback(() => {
+        // TODO: Rate limit this to not kill dev clusters
         const addPagesToMap = async (mapName: string) => {
             const map = await getMapFromDirectory(props.mapDir, mapName);
             if (map === undefined) return;
             for (let i = 0; i < 5; i++) {
-                addPageToMap(map);
+                void props.onAddPage(map);
             }
         };
         for (const mapName of props.maps) {
@@ -79,6 +81,7 @@ export const NotebookViewer: FunctionComponent<INotebookViewerProps> = (
                         <SectionViewer
                             mapDir={props.mapDir}
                             name={openSectionName}
+                            onAddPage={props.onAddPage}
                         />
                     )}
                 </section>

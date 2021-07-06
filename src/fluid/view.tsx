@@ -45,9 +45,6 @@ export class FluidView extends DataObject implements IFluidHTMLView {
      * Renders a new view into the provided div
      */
     public render(div: HTMLElement): HTMLElement {
-        if (this.internalMapDir === undefined) {
-            // throw new Error("The Map Directory was not initialized correctly");
-        }
         const mapCreate = (name: string) =>
             SharedMap.create(this.runtime, name);
         const mapListen = (

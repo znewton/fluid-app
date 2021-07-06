@@ -2,11 +2,12 @@ import { IDirectory, ISharedMap, IValueChanged } from "@fluidframework/map";
 import { FunctionComponent, useCallback, useEffect, useState } from "react";
 import { useTrackLoad } from "../../client-utils";
 import { PageViewer } from "./PageViewer";
-import { addPageToMap, getMapFromDirectory } from "./utils";
+import { getMapFromDirectory } from "./utils";
 
 interface ISectionViewerProps {
     name: string;
     mapDir: IDirectory;
+    onAddPage: (parentSection: ISharedMap) => Promise<void>;
 }
 
 export const SectionViewer: FunctionComponent<ISectionViewerProps> = (
@@ -60,14 +61,14 @@ export const SectionViewer: FunctionComponent<ISectionViewerProps> = (
         if (map === undefined) return;
 
         for (let i = 0; i < 100; i++) {
-            addPageToMap(map);
+            void props.onAddPage(map);
         }
     }, [map]);
 
     const addPage = useCallback(() => {
         if (map === undefined) return;
 
-        addPageToMap(map);
+        void props.onAddPage(map);
     }, [map]);
 
     if (map === undefined) return <div>Loading...</div>;

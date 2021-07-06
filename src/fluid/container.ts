@@ -17,11 +17,12 @@ export async function getContainer(
     );
     const tokenProvider = new TokenProvider("/api/token", userId);
     const urlResolver = new UrlResolver("/api/resolve", documentId, userId);
+    localStorage.FluidAggregateBlobs = "0";
     const documentServiceFactory = new RouterliciousDocumentServiceFactory(
         tokenProvider,
         { enablePrefetch: false }
     );
-    const logger = new TelemetryLogger("/api/log", documentId, 30);
+    const logger = new TelemetryLogger("/api/log", documentId, 100);
 
     const module = { fluidExport: containerRuntimeFactory };
     const codeLoader = { load: async () => module };
