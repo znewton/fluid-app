@@ -27,17 +27,21 @@ export const NotebookViewer: FunctionComponent<INotebookViewerProps> = (
             props.onAddSection();
         }
     }, [props.onAddSection]);
-    const addPagesToAllSections = useCallback(() => {
-        // TODO: Rate limit this to not kill dev clusters
+    const addPagesToAllSections = useCallback(async () => {
         const addPagesToMap = async (mapName: string) => {
             const map = await getMapFromDirectory(props.mapDir, mapName);
             if (map === undefined) return;
             for (let i = 0; i < 5; i++) {
-                void props.onAddPage(map);
+                console.log("add page");
+                props.onAddPage(map);
             }
         };
         for (const mapName of props.maps) {
             void addPagesToMap(mapName);
+            // Rate Limiting: wait 500ms between maps
+            await new Promise<void>((resolve) => {
+                setTimeout(resolve, 500);
+            });
         }
     }, [props.mapDir, props.maps]);
 
