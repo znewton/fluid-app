@@ -44,9 +44,6 @@ export async function getContainer(
         await container.attach({ url: documentId });
     } else {
         container = await loader.resolve({ url: documentId });
-        if (!container.existing) {
-            throw new Error("Attempted to load a non-existing container");
-        }
     }
     return container;
 }
