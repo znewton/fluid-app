@@ -30,9 +30,9 @@ cp src/config/config.example.ts src/config/config.ts
 # Update config in your favorite editor.
 ```
 
-> Note: if not using Redis to store session info, set the redis config to `undefined` in config.ts
+> Note: if not using Redis to store session info, set the redis config to `undefined` or "env" in config.ts
 > ```ts
-> export const redisConfig = redisConfigs.none; // or undefined
+> export const redisConfig = redisConfigs.none; // or undefined or "env"
 > ```
 
 Run with live updates on change:

@@ -11,11 +11,12 @@ const serviceConfigs: { [key: string]: IFluidServiceConfig } = {
 
 export const serviceConfig = serviceConfigs.local;
 
-const redisConfigs: { [key: string]: IRedisConfig | undefined } = {
+const redisConfigs: { [key: string]: IRedisConfig | "env" | undefined } = {
     local: {
         host: "127.0.0.1:6379",
     },
+    env: "env",
     none: undefined,
 };
 
-export const redisConfig = redisConfigs.local;
+export const redisConfig = redisConfigs.none;
