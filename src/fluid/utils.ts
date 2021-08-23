@@ -40,7 +40,8 @@ function getBlobCountCore(
 export async function getBlobCount(
     documentStorage: IDocumentStorageService
 ): Promise<number> {
-    const snapshotTree = (await documentStorage.getSnapshotTree()) as ISnapshotTreeEx | null;
+    const snapshotTree =
+        (await documentStorage.getSnapshotTree()) as ISnapshotTreeEx | null;
     const secondaryBlobs: string[] = [];
     const blobs: string[] = [];
 

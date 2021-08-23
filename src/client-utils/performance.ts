@@ -26,9 +26,8 @@ class PerformanceTracker extends EventEmitter implements IPerformanceTracker {
     public getPerformanceMetricsForEvent(
         eventName: string
     ): Map<string, IPerformanceMetrics> {
-        const performanceMetricsForEvent = this.eventPerformanceMetricsMap.get(
-            eventName
-        );
+        const performanceMetricsForEvent =
+            this.eventPerformanceMetricsMap.get(eventName);
         if (!performanceMetricsForEvent) {
             return new Map();
         }
@@ -39,9 +38,8 @@ class PerformanceTracker extends EventEmitter implements IPerformanceTracker {
         eventName: string,
         id: string
     ): IPerformanceMetrics {
-        const performanceMetricsForEvent = this.getOrCreatePerformanceMetricsForEvent(
-            eventName
-        );
+        const performanceMetricsForEvent =
+            this.getOrCreatePerformanceMetricsForEvent(eventName);
         let performanceMetricsForId = performanceMetricsForEvent.get(id);
         if (!performanceMetricsForId) {
             performanceMetricsForId = {
@@ -57,9 +55,8 @@ class PerformanceTracker extends EventEmitter implements IPerformanceTracker {
     private getOrCreatePerformanceMetricsForEvent(
         eventName: string
     ): Map<string, IPerformanceMetrics> {
-        let performanceMetricsForEvent = this.eventPerformanceMetricsMap.get(
-            eventName
-        );
+        let performanceMetricsForEvent =
+            this.eventPerformanceMetricsMap.get(eventName);
         if (!performanceMetricsForEvent) {
             performanceMetricsForEvent = new Map<string, IPerformanceMetrics>();
             this.eventPerformanceMetricsMap.set(

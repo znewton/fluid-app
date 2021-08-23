@@ -9,36 +9,38 @@ interface IEventPerformanceViewerProps {
     eventName: string;
 }
 
-export const EventPerformanceViewer: FunctionComponent<IEventPerformanceViewerProps> = ({
-    eventName,
-}) => {
-    const [performanceMetrics, setPerformanceMetrics] = useState<
-        Record<
-            string,
-            { id: string; minDurationInMs: number; maxDurationInMs: number }
-        >
-    >();
-    useEffect(() => {
-        const listener = () => {
-            const metrics = performanceTracker.getPerformanceMetricsForEvent(
-                eventName
-            );
-            const perfMetrics = Object.fromEntries(
-                Array.from(metrics.entries()).map(([id, metric]) => [
-                    id,
-                    {
+export const EventPerformanceViewer: FunctionComponent<IEventPerformanceViewerProps> =
+    ({ eventName }) => {
+        const [performanceMetrics, setPerformanceMetrics] = useState<
+            Record<
+                string,
+                {
+                    id: string;
+                    minDurationInMs: number;
+                    maxDurationInMs: number;
+                }
+            >
+        >();
+        useEffect(() => {
+            const listener = () => {
+                const metrics =
+                    performanceTracker.getPerformanceMetricsForEvent(eventName);
+                const perfMetrics = Object.fromEntries(
+                    Array.from(metrics.entries()).map(([id, metric]) => [
                         id,
-                        minDurationInMs: metric.minDurationInMs,
-                        maxDurationInMs: metric.maxDurationInMs,
-                    },
-                ])
-            );
-            setPerformanceMetrics(perfMetrics);
-        };
-        performanceTracker.on(eventName, listener);
-        return () => {
-            performanceTracker.off(eventName, listener);
-        };
-    }, []);
-    return <Table data={performanceMetrics ?? {}} />;
-};
+                        {
+                            id,
+                            minDurationInMs: metric.minDurationInMs,
+                            maxDurationInMs: metric.maxDurationInMs,
+                        },
+                    ])
+                );
+                setPerformanceMetrics(perfMetrics);
+            };
+            performanceTracker.on(eventName, listener);
+            return () => {
+                performanceTracker.off(eventName, listener);
+            };
+        }, []);
+        return <Table data={performanceMetrics ?? {}} />;
+    };

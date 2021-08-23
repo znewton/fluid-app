@@ -58,63 +58,65 @@ const CollaboratorCircle: FunctionComponent<ICollaborator> = (props) => (
     </div>
 );
 
-export const ConnectedIndicator: FunctionComponent<IConnectedIndicatorProps> = ({
-    container,
-}) => {
-    const [members, setMembers] = useState(new Map<string, ISequencedClient>());
-    useEffect(() => {
-        if (!container || !container.connected) return;
-        const quorum = container.getQuorum();
-        setMembers(quorum.getMembers());
-        quorum
-            .on("addMember", (clientId, details) => {
-                console.log("Member joined", { clientId, details });
-                setMembers(quorum.getMembers());
-            })
-            .on("removeMember", (clientId) => {
-                console.log("Member left", { clientId });
-                setMembers(quorum.getMembers());
-            });
-    }, [container]);
-    const collaboratorMap: Map<string, ICollaborator> = new Map();
-    members.forEach((sequencedClient, clientId) => {
-        const userId = sequencedClient.client.user.id;
-        const existingCollaborator = collaboratorMap.get(userId);
-        if (!existingCollaborator) {
-            collaboratorMap.set(userId, {
-                clientIds: [clientId],
-                clientDetails: [sequencedClient.client],
-                userId,
-                color: colorMap.getOrSet(userId, 0xffffff / 2) || "#030303",
-                isUser: clientId === container?.clientId,
-            });
-        } else {
-            existingCollaborator.clientIds.push(clientId);
-            existingCollaborator.clientDetails.push(sequencedClient.client);
-            existingCollaborator.isUser =
-                existingCollaborator.isUser || clientId === container?.clientId;
-        }
-    });
-    const collaboratorList: ICollaborator[] = [];
-    collaboratorMap.forEach((collaborator) => {
-        collaboratorList.push(collaborator);
-    });
-    return (
-        <div className="connected-indicator">
-            <ul className="connected-collaborators">
-                {collaboratorList.map((collaborator) => (
-                    <CollaboratorCircle
-                        key={collaborator.userId}
-                        {...collaborator}
-                    />
-                ))}
-            </ul>
-            <style jsx>{`
-                .connected-collaborators {
-                    padding-left: 0;
-                    display: flex;
-                }
-            `}</style>
-        </div>
-    );
-};
+export const ConnectedIndicator: FunctionComponent<IConnectedIndicatorProps> =
+    ({ container }) => {
+        const [members, setMembers] = useState(
+            new Map<string, ISequencedClient>()
+        );
+        useEffect(() => {
+            if (!container || !container.connected) return;
+            const quorum = container.getQuorum();
+            setMembers(quorum.getMembers());
+            quorum
+                .on("addMember", (clientId, details) => {
+                    console.log("Member joined", { clientId, details });
+                    setMembers(quorum.getMembers());
+                })
+                .on("removeMember", (clientId) => {
+                    console.log("Member left", { clientId });
+                    setMembers(quorum.getMembers());
+                });
+        }, [container]);
+        const collaboratorMap: Map<string, ICollaborator> = new Map();
+        members.forEach((sequencedClient, clientId) => {
+            const userId = sequencedClient.client.user.id;
+            const existingCollaborator = collaboratorMap.get(userId);
+            if (!existingCollaborator) {
+                collaboratorMap.set(userId, {
+                    clientIds: [clientId],
+                    clientDetails: [sequencedClient.client],
+                    userId,
+                    color: colorMap.getOrSet(userId, 0xffffff / 2) || "#030303",
+                    isUser: clientId === container?.clientId,
+                });
+            } else {
+                existingCollaborator.clientIds.push(clientId);
+                existingCollaborator.clientDetails.push(sequencedClient.client);
+                existingCollaborator.isUser =
+                    existingCollaborator.isUser ||
+                    clientId === container?.clientId;
+            }
+        });
+        const collaboratorList: ICollaborator[] = [];
+        collaboratorMap.forEach((collaborator) => {
+            collaboratorList.push(collaborator);
+        });
+        return (
+            <div className="connected-indicator">
+                <ul className="connected-collaborators">
+                    {collaboratorList.map((collaborator) => (
+                        <CollaboratorCircle
+                            key={collaborator.userId}
+                            {...collaborator}
+                        />
+                    ))}
+                </ul>
+                <style jsx>{`
+                    .connected-collaborators {
+                        padding-left: 0;
+                        display: flex;
+                    }
+                `}</style>
+            </div>
+        );
+    };

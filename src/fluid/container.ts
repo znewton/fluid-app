@@ -11,10 +11,11 @@ export async function getContainer(
     createNew: boolean,
     userId: string
 ): Promise<Container> {
-    const containerRuntimeFactory = new ContainerRuntimeFactoryWithDefaultDataStore(
-        FluidView.getFactory(),
-        [[FluidView.Name, Promise.resolve(FluidView.getFactory())]]
-    );
+    const containerRuntimeFactory =
+        new ContainerRuntimeFactoryWithDefaultDataStore(
+            FluidView.getFactory(),
+            [[FluidView.Name, Promise.resolve(FluidView.getFactory())]]
+        );
     const tokenProvider = new TokenProvider("/api/token", userId);
     const urlResolver = new UrlResolver("/api/resolve", documentId, userId);
     localStorage.FluidAggregateBlobs = "0";
