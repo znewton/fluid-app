@@ -8,10 +8,8 @@ const handler = (req: NextApiRequest, res: NextApiResponse): void => {
     const documentId = req.query.documentId as string;
     const scopes = req.query.scopes as ScopeType[];
     const userId = req.query.userId as string;
-    if (!tenantId || !documentId) {
-        return res
-            .status(400)
-            .send("Missing tenantId and documentId in query params");
+    if (!tenantId) {
+        return res.status(400).send("Missing tenantId in query params");
     }
     if (tenantId !== serviceConfig.tenantId) {
         return res.status(403).send("Invalid tenantId");

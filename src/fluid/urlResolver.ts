@@ -10,14 +10,14 @@ import qs from "querystring";
 export class UrlResolver implements IUrlResolver {
     constructor(
         private readonly endpoint: string,
-        private readonly documentId: string,
+        private readonly documentId: string | undefined,
         private readonly userId: string
     ) {}
 
     public async resolve(request: IRequest): Promise<IResolvedUrl> {
         const queryParams = qs.stringify({
             reqUrl: request.url,
-            docId: this.documentId,
+            docId: this.documentId ?? "",
             scopes: [
                 ScopeType.DocRead,
                 ScopeType.DocWrite,
@@ -29,7 +29,11 @@ export class UrlResolver implements IUrlResolver {
             `${this.endpoint}?${queryParams}`
         ).then((response) => {
             if (!response.ok) {
-                throw new Error("URL Resolution Request Failed");
+                return response.text().then((text) => {
+                    throw new Error(
+                        `URL Resolution Request Failed: ${JSON.stringify(text)}`
+                    );
+                });
             }
             return response.json();
         });

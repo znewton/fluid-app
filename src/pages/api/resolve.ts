@@ -6,15 +6,15 @@ import { generateToken } from "../../server-utils";
 
 const handler = (req: NextApiRequest, res: NextApiResponse): void => {
     const queryReqUrl = req.query.reqUrl as string;
-    const queryDocId = req.query.docId as string;
+    const queryDocId = (req.query.docId as string) || "";
     const queryScopes = req.query.scopes as ScopeType[];
     const queryUserId = req.query.userId as string;
-    if (!queryReqUrl || typeof queryReqUrl !== "string") {
-        return res.status(400).send("Missing reqUrl in query params");
-    }
-    if (!queryDocId || typeof queryDocId !== "string") {
-        return res.status(400).send("Missing docId in query params");
-    }
+    // if (!queryReqUrl || typeof queryReqUrl !== "string") {
+    //     return res.status(400).send("Missing reqUrl in query params");
+    // }
+    // if (!queryDocId || typeof queryDocId !== "string") {
+    //     return res.status(400).send("Missing docId in query params");
+    // }
     let requestedUrl = queryReqUrl;
     if (!requestedUrl.includes("://")) {
         if (requestedUrl.startsWith("/")) {

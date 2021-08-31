@@ -1,7 +1,10 @@
 import { Container } from "@fluidframework/container-loader";
 import { IPerformanceStats } from "../definitions";
-import { getContainer, startFluidApp } from "../fluid";
+import { createContainer, getContainer, startFluidApp } from "../fluid";
 import sillyname from "sillyname";
+
+const generateUserId = () =>
+    `${(sillyname() as string).split(" ").join("").toLowerCase()}@contoso.net`;
 
 const checkDocumentExists = async (docId): Promise<boolean> => {
     const exists = await fetch(`/api/doc?docId=${docId}`).then((response) => {
@@ -13,25 +16,32 @@ const checkDocumentExists = async (docId): Promise<boolean> => {
     return exists === "true";
 };
 
+export const createNewSessionContainer = async (): Promise<Container> => {
+    const userId = generateUserId();
+
+    const container: Container = await createContainer(userId);
+    console.log("Document created 👊");
+    console.log(container);
+    return container;
+};
+
 export const getSessionContainer = async (
     rootId: string,
-    docId: string
+    documentId: string
 ): Promise<Container | undefined> => {
-    const userId = `${(sillyname() as string)
-        .split(" ")
-        .join("")
-        .toLowerCase()}@contoso.net`;
+    const userId = generateUserId();
 
-    const createNew = !(await checkDocumentExists(docId));
+    if (!(await checkDocumentExists(documentId))) {
+        throw new Error("Document does not exist");
+    }
 
     console.log({
-        createNew: createNew,
-        documentId: docId,
+        documentId,
         userId,
     });
     let container: Container;
     try {
-        container = await getContainer(docId, createNew, userId);
+        container = await getContainer(documentId, userId);
         const clientId = await startFluidApp(rootId, container);
         console.log("Good to go 👌");
         console.log(`Client id: ${clientId}`);

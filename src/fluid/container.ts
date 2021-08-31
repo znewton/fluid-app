@@ -6,11 +6,7 @@ import { TokenProvider } from "./tokenProvider";
 import { UrlResolver } from "./urlResolver";
 import { FluidView } from "./view";
 
-export async function getContainer(
-    documentId: string,
-    createNew: boolean,
-    userId: string
-): Promise<Container> {
+function getLoader(userId: string, documentId?: string): Loader {
     const containerRuntimeFactory =
         new ContainerRuntimeFactoryWithDefaultDataStore(
             FluidView.getFactory(),
@@ -23,28 +19,37 @@ export async function getContainer(
         tokenProvider,
         { enablePrefetch: false }
     );
-    const logger = new TelemetryLogger("/api/log", documentId, 100);
+    const logger = new TelemetryLogger("/api/log", 100);
+    if (documentId) {
+        logger.setDocId(documentId);
+    }
 
     const module = { fluidExport: containerRuntimeFactory };
     const codeLoader = { load: async () => module };
 
-    const loader = new Loader({
+    return new Loader({
         urlResolver,
         documentServiceFactory,
         codeLoader,
         logger,
     });
+}
 
-    let container: Container;
-
-    if (createNew) {
-        container = await loader.createDetachedContainer({
-            package: "no-dynamic-package",
-            config: {},
-        });
-        await container.attach({ url: documentId });
-    } else {
-        container = await loader.resolve({ url: documentId });
-    }
+export async function createContainer(userId: string): Promise<Container> {
+    const loader = getLoader(userId);
+    const container = await loader.createDetachedContainer({
+        package: "no-dynamic-package",
+        config: {},
+    });
+    await container.attach({ url: "" });
     return container;
+}
+
+export async function getContainer(
+    documentId: string,
+    userId: string
+): Promise<Container> {
+    const loader = getLoader(userId, documentId);
+
+    return loader.resolve({ url: documentId });
 }

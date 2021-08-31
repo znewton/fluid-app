@@ -9,16 +9,20 @@ import stringifySafe from "json-stringify-safe";
 export class TelemetryLogger implements ITelemetryBaseLogger {
     private readonly pendingEvents: ITelemetryGenericEvent[] = [];
     private lastLogsSentAt: number = Date.now();
+    private docId: string | undefined;
 
     constructor(
         private readonly endpoint: string,
-        private readonly docId: string,
         private readonly batchLimit = 10,
         private readonly maxLogIntervalInMs = 1000000
     ) {
         window.addEventListener("beforeunload", () => {
             this.sendPending();
         });
+    }
+
+    public setDocId(docId: string): void {
+        this.docId = docId;
     }
 
     public send(event: ITelemetryBaseEvent): void {
@@ -39,6 +43,9 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
     }
 
     private async sendPending(): Promise<any> {
+        if (!this.docId) {
+            return;
+        }
         if (!this.pendingEvents.length || !this.endpoint) {
             return;
         }
