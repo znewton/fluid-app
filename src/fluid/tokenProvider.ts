@@ -10,7 +10,8 @@ export class TokenProvider implements ITokenProvider {
 
     constructor(
         private readonly endpoint: string,
-        private readonly userId: string
+        private readonly userId: string,
+        private readonly enableCache = true
     ) {}
 
     public async fetchOrdererToken(
@@ -35,18 +36,20 @@ export class TokenProvider implements ITokenProvider {
         documentId: string,
         refresh: boolean
     ): Promise<ITokenResponse> {
-        const cacheKey = this.getTokenCacheKey(type, tenantId, documentId);
-        const cachedToken = this.tokenCacheMap.get(cacheKey);
-        let fromCache = true;
-        let jwt: string;
-        if (refresh || cachedToken === undefined) {
-            jwt = await this.getSignedToken(tenantId, documentId);
-            fromCache = false;
-        } else {
-            jwt = cachedToken;
+        if (this.enableCache && !refresh) {
+            const cacheKey = this.getTokenCacheKey(type, tenantId, documentId);
+            const cachedToken = this.tokenCacheMap.get(cacheKey);
+            if (cachedToken !== undefined) {
+                return {
+                    fromCache: true,
+                    jwt: cachedToken,
+                };
+            }
         }
+
+        const jwt = await this.getSignedToken(tenantId, documentId);
         return {
-            fromCache,
+            fromCache: false,
             jwt,
         };
     }

@@ -16,12 +16,33 @@ export async function getContainer(
             FluidView.getFactory(),
             [[FluidView.Name, Promise.resolve(FluidView.getFactory())]]
         );
-    const tokenProvider = new TokenProvider("/api/token", userId);
+    const tokenProvider = new TokenProvider("/api/token", userId, false);
     const urlResolver = new UrlResolver("/api/resolve", documentId, userId);
-    localStorage.FluidAggregateBlobs = "0";
+    const url = new URL(window.location.toString());
+    const querySettings = {
+        enableBlobAggregation:
+            url.searchParams.get("enableBlobAggregation") !== null,
+        disablePrefetch: url.searchParams.get("disablePrefetch") !== null,
+        disableRateLimiting: url.searchParams.get("disableRateLimit") !== null,
+    };
+    console.log("Driver Settings:", querySettings);
+    localStorage.FluidAggregateBlobs = querySettings.enableBlobAggregation
+        ? "1"
+        : "0";
     const documentServiceFactory = new RouterliciousDocumentServiceFactory(
         tokenProvider,
-        { enablePrefetch: false }
+        {
+            enablePrefetch: querySettings.disablePrefetch ? false : true,
+            maxConcurrentStorageRequests: querySettings.disableRateLimiting
+                ? 1000000
+                : 100,
+            maxConcurrentOrdererRequests: querySettings.disableRateLimiting
+                ? 1000000
+                : 100,
+            aggregateBlobsSmallerThanBytes: querySettings.enableBlobAggregation
+                ? 2048
+                : undefined,
+        }
     );
     const logger = new TelemetryLogger("/api/log", documentId, 100);
 

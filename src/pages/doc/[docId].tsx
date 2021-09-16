@@ -6,6 +6,7 @@ import { SessionPerformanceViewer } from "../../components";
 import {
     getSessionContainer,
     retrieveSessionPerformance,
+    clearSessionPerformance,
 } from "../../client-utils";
 import { IPerformanceStats } from "../../definitions";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
@@ -24,6 +25,13 @@ const Doc: FunctionComponent<IDocPageProps> = ({ docId }) => {
     const refreshSessionPerformance = useCallback(
         () => retrieveSessionPerformance("/api/perf", docId).then(setPerfStats),
         [setPerfStats]
+    );
+    const resetSessionPerformance = useCallback(
+        () =>
+            clearSessionPerformance("/api/perf", docId).then(() =>
+                refreshSessionPerformance()
+            ),
+        [refreshSessionPerformance]
     );
     useEffect(() => {
         const containerP = getSessionContainer(rootId, docId);
@@ -58,7 +66,10 @@ const Doc: FunctionComponent<IDocPageProps> = ({ docId }) => {
                 <h5>Component Load</h5>
                 <EventPerformanceViewer eventName={"component-load"} />
                 <h4>Session Performance Stats</h4>
-                <button onClick={refreshSessionPerformance}>Refresh</button>
+                <div>
+                    <button onClick={refreshSessionPerformance}>Refresh</button>
+                    <button onClick={resetSessionPerformance}>Reset</button>
+                </div>
                 <SessionPerformanceViewer stats={perfStats} />
             </footer>
         </div>

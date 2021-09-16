@@ -17,6 +17,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse): void => {
         return res.status(403).send("Invalid tenantId");
     }
     const token = generateToken(documentId, scopes, userId);
+    res.setHeader("cache-control", "no-store;max-age=0");
     res.status(200).send(token);
 };
 

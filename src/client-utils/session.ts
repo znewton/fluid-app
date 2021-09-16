@@ -60,3 +60,19 @@ export const retrieveSessionPerformance = (
             console.error(error);
             return undefined;
         });
+
+export const clearSessionPerformance = (
+    endpoint: string,
+    docId: string
+): Promise<void> =>
+    fetch(`${endpoint}?id=${docId}`, { method: "DELETE" })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Perf stats request failed");
+            }
+            return;
+        })
+        .catch((error) => {
+            console.error(error);
+            return;
+        });

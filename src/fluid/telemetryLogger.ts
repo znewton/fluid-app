@@ -14,7 +14,7 @@ export class TelemetryLogger implements ITelemetryBaseLogger {
         private readonly endpoint: string,
         private readonly docId: string,
         private readonly batchLimit = 10,
-        private readonly maxLogIntervalInMs = 1000000
+        private readonly maxLogIntervalInMs = 10000
     ) {
         window.addEventListener("beforeunload", () => {
             this.sendPending();
