@@ -59,12 +59,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.12.5":
-  version: 7.12.5
-  resolution: "@babel/runtime@npm:7.12.5"
+"@babel/runtime@npm:7.15.3":
+  version: 7.15.3
+  resolution: "@babel/runtime@npm:7.15.3"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: 423fb0079353db2faa0dad0cbdf0a90fbc5b511d1f77e5645d1aa0b144a144e24502bb023c12a31d7dca63b6e16ae36afa59992f0404e92e21de211051c361e3
+  checksum: dfb5ba324d36b141f3ed5a6af8a4c03b6b5c94cc2453b265dbdd56ae3b5c28c1a44640b31fa9d7462d8278c7c8af967be8004024a87c795175c724cd77c5cce1
   languageName: node
   linkType: hard
 
@@ -117,27 +117,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/aqueduct@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/aqueduct@npm:0.45.4"
+"@fluidframework/aqueduct@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/aqueduct@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-    "@fluidframework/container-loader": ^0.45.4
-    "@fluidframework/container-runtime": ^0.45.4
-    "@fluidframework/container-runtime-definitions": ^0.45.4
+    "@fluidframework/container-loader": ^0.47.1
+    "@fluidframework/container-runtime": ^0.47.1
+    "@fluidframework/container-runtime-definitions": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": ^0.45.4
-    "@fluidframework/datastore-definitions": ^0.45.4
-    "@fluidframework/map": ^0.45.4
-    "@fluidframework/request-handler": ^0.45.4
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-    "@fluidframework/synthesize": ^0.45.4
-    "@fluidframework/view-interfaces": ^0.45.4
+    "@fluidframework/datastore": ^0.47.1
+    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/map": ^0.47.1
+    "@fluidframework/request-handler": ^0.47.1
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+    "@fluidframework/synthesize": ^0.47.1
+    "@fluidframework/view-interfaces": ^0.47.1
     uuid: ^8.3.1
-  checksum: 108e4716e199854af077dd88c4a031568d3b5173ce5a51998cc5f7175ac6fc3136715d40e7db21fd9ea8ecb1e12089b06b466da6046640a70cfc30aa30ad044b
+  checksum: f2d1d0aebbd4654abcd076d4961e0a3938a57da7f7f1155199ad2f7058c930a6066f2cf1a4c757f3ca331c75c748961f0bc943973dec938e0db8735f7451afbf
   languageName: node
   linkType: hard
 
@@ -145,20 +145,6 @@ __metadata:
   version: 0.20.1
   resolution: "@fluidframework/common-definitions@npm:0.20.1"
   checksum: 048b3b166e58199a4bdfc6c5c687aff701c4cff7e7d6e993062d888f48046db3486d5d8302d39eb9cac7094c3aa85f3eda287aa09c3099453745b69f526beea6
-  languageName: node
-  linkType: hard
-
-"@fluidframework/common-utils@npm:^0.31.0":
-  version: 0.31.0
-  resolution: "@fluidframework/common-utils@npm:0.31.0"
-  dependencies:
-    "@fluidframework/common-definitions": ^0.20.1
-    "@types/events": ^3.0.0
-    base64-js: ^1.3.1
-    events: ^3.1.0
-    lodash: ^4.17.21
-    sha.js: ^2.4.11
-  checksum: 001d7e5859d48198e9f87d5f4012b1edeb30a8c60b52a2b63b65a616ea6b7aa0e4949d36b3c147dd3da42bab721be98a84b174d5f3a7d372c6d3cb106e0b8acd
   languageName: node
   linkType: hard
 
@@ -188,80 +174,78 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/container-loader@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/container-loader@npm:0.45.4"
+"@fluidframework/container-loader@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/container-loader@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-    "@fluidframework/container-utils": ^0.45.4
+    "@fluidframework/container-utils": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.45.4
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.45.4
+    "@fluidframework/telemetry-utils": ^0.47.1
     abort-controller: ^3.0.0
-    debug: ^4.1.1
     double-ended-queue: ^2.1.0-0
     lodash: ^4.17.21
     uuid: ^8.3.1
-  checksum: 728d651ca96070d954bc4515542bede8a4b3f36ab79a667a3b543345cd4a76795ec66dbfd6538042c440d16fa814c46d604e983d6de69f1e2737c2b230eccb8d
+  checksum: e5874918a6a2b2f27863f0cdd959dfa249aa426981df0471a0824216e90213f1e9428b80d224ddd583d552b9d80a901e05012070f096b5d419600fd5b4210852
   languageName: node
   linkType: hard
 
-"@fluidframework/container-runtime-definitions@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/container-runtime-definitions@npm:0.45.4"
+"@fluidframework/container-runtime-definitions@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/container-runtime-definitions@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
+    "@fluidframework/runtime-definitions": ^0.47.1
     "@types/node": ^12.19.0
-  checksum: 43f2367f2f9ab5edc2aff5dda1899b06d8302591e65805e0993fd3c3246baca334f08825ca20fd9ee6df5cf1d599b14a94fc301fcda04c6de2e081d7fd86d4d1
+  checksum: 5713e597e2ec4faee6583a8532282a302382566c9d4b9099aefdb1beef9d458f2a53b8c90c4181e67a0fc5818a6c322d260dcda3cadca4db8b73bb375ec49c24
   languageName: node
   linkType: hard
 
-"@fluidframework/container-runtime@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/container-runtime@npm:0.45.4"
+"@fluidframework/container-runtime@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/container-runtime@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-    "@fluidframework/container-runtime-definitions": ^0.45.4
-    "@fluidframework/container-utils": ^0.45.4
+    "@fluidframework/container-runtime-definitions": ^0.47.1
+    "@fluidframework/container-utils": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": ^0.45.4
+    "@fluidframework/datastore": ^0.47.1
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.45.4
-    "@fluidframework/garbage-collector": ^0.45.4
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/garbage-collector": ^0.47.1
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-    "@fluidframework/telemetry-utils": ^0.45.4
-    debug: ^4.1.1
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+    "@fluidframework/telemetry-utils": ^0.47.1
     double-ended-queue: ^2.1.0-0
     uuid: ^8.3.1
-  checksum: e5101b0ed7a0a44d021c8eee28a9e1b77b2787b308ac8e7c360b1ce1315914e4a9f76aff324c4087d28c7fd37662e1c8019c60031abff7237e60660595cf6eda
+  checksum: c533dd41e59029eb0ddc9e245b61f0db672c8c148aadf0be0f086aada7e2f0ecb234118471bbdc01deea5e35c155a82da145d6dd127696180618bf3b091a4320
   languageName: node
   linkType: hard
 
-"@fluidframework/container-utils@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/container-utils@npm:0.45.4"
+"@fluidframework/container-utils@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/container-utils@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.45.4
-  checksum: 6d11180a19e2b9f88fb848c3360166df6b7542430fe99d622b8b5844f1ea501ed9189708494d04d9108c07fe94c0f8d21af0d73c9452dce5c6e5d4945c260389
+    "@fluidframework/telemetry-utils": ^0.47.1
+  checksum: db22ac5b429194b456a78e9107642fe0da49b39327fa590ab2af9f5c611ed95e6526c263b24f87a87e938d1eebf409f76e79ed427157a3483265fdd58c47a480
   languageName: node
   linkType: hard
 
@@ -272,58 +256,56 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/datastore-definitions@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/datastore-definitions@npm:0.45.4"
+"@fluidframework/datastore-definitions@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/datastore-definitions@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
+    "@fluidframework/runtime-definitions": ^0.47.1
     "@types/node": ^12.19.0
-  checksum: e9bbb5f906fd5f16f7c7d3f04aa6f2c1b1e60f0b685af2c6a3efbd2c77d543881cdb003afacc37fd1427f590814b68a0f4fd80dbc0ff9a619082c9313490c5c0
+  checksum: 3ccd126cd01166a5e3660d54ac284d949e41f9bac28f4f9a755e1ea05b4f00f43befda4b9508cb949240f470af458e80f310c5a7a96c120e3ce1f7dd7a382357
   languageName: node
   linkType: hard
 
-"@fluidframework/datastore@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/datastore@npm:0.45.4"
+"@fluidframework/datastore@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/datastore@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-    "@fluidframework/container-utils": ^0.45.4
+    "@fluidframework/container-utils": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.45.4
+    "@fluidframework/datastore-definitions": ^0.47.1
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.45.4
-    "@fluidframework/garbage-collector": ^0.45.4
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/garbage-collector": ^0.47.1
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-    "@fluidframework/telemetry-utils": ^0.45.4
-    debug: ^4.1.1
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+    "@fluidframework/telemetry-utils": ^0.47.1
     lodash: ^4.17.21
     uuid: ^8.3.1
-  checksum: 6d3a0074fcef1beaeedf73a54ee7eeeebe41e9d27a7ec2c5e0584b7c7548c9031f0f0409f48f58afba5d2c414da38ef54ad380e3f52cbc0e2d9a4ec43d8369b2
+  checksum: 4135df724202250b5e58a17b2e68cea8a9ed4c1cbdba3a1643d5f3def2757da9068cdde9226aa256979d0a8668a2afa4e06d3d10537bf9dc28d73ed1c38617e8
   languageName: node
   linkType: hard
 
-"@fluidframework/driver-base@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/driver-base@npm:0.45.4"
+"@fluidframework/driver-base@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/driver-base@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.45.4
+    "@fluidframework/driver-utils": ^0.47.1
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.45.4
-    debug: ^4.1.1
-  checksum: 07b4a78d9a51fe44c22e3a985513f5c871fc9a31859cb40f73826e425d5f92f12ce05181977bd22d758fcfae704b32c9563ca677ecb08ad01e5c5a60161f1d8b
+    "@fluidframework/telemetry-utils": ^0.47.1
+  checksum: 4e4d719dcfcf5a806dd5ed9e8067b794347ccdeb9772956e8a2b54553135880543119134e8cd9344b7b335836af81984d5ea8085388ff3534331808e28d7cec8
   languageName: node
   linkType: hard
 
@@ -338,135 +320,133 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluidframework/driver-utils@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/driver-utils@npm:0.45.4"
+"@fluidframework/driver-utils@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/driver-utils@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/gitresources": ^0.1028.1
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/gitresources": ^0.1030.0
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.45.4
+    "@fluidframework/telemetry-utils": ^0.47.1
     uuid: ^8.3.1
-  checksum: 7ffed43a0e663a1fdb3c5ebd495d085189fae101fee640e1f93f98cf50e99b92a76bc585a7d95efd71c642743a1415edc3b7866d3ac2e3732f954a06b4fe7889
+  checksum: b05aa592ccff07da7c7709b95dcdc7b02e7c9c5554f732892b2a80c2b05c72c7577156109cae89fe3a25827d41790f5529b4c8643796f08a1f433b3a897bc2fb
   languageName: node
   linkType: hard
 
-"@fluidframework/garbage-collector@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/garbage-collector@npm:0.45.4"
+"@fluidframework/garbage-collector@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/garbage-collector@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/runtime-definitions": ^0.45.4
-  checksum: 98b28eac1530ec49087bceffdb18d845bbefadcfcbd7277ad9ada480934da2bc04997c549f69986e56ac96ac0768dfe3a23dc0548b90e318812b75365f4e1548
+    "@fluidframework/runtime-definitions": ^0.47.1
+  checksum: 4b8ae6305eb673b467ab98982c3634b09a4a354ab5d41320c6bf7c8d85e66fff03e5ac188ee5c58621873619ae579001b52803bdb7764afdb53ef3b56b471ea0
   languageName: node
   linkType: hard
 
-"@fluidframework/gitresources@npm:^0.1027.0-0":
-  version: 0.1027.0
-  resolution: "@fluidframework/gitresources@npm:0.1027.0"
-  checksum: f58ea1a88640de3fe7872b089f924f646dafe78475b67a6e619c8dfeff51fa9dd18b0ac4a8870c081908c133f6073a617c0479e372682f54fd08776993d3be09
+"@fluidframework/gitresources@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/gitresources@npm:0.1030.0"
+  checksum: 16883bb7b72145a26637f5514309d4a3a1d8ee3dda82661af46b7e4210ffe8642efe9dec0c9d62eb07ebbb260946e652ba394c8514005c1f1bf1f85747d16d89
   languageName: node
   linkType: hard
 
-"@fluidframework/map@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/map@npm:0.45.4"
+"@fluidframework/map@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/map@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.45.4
-    "@fluidframework/driver-utils": ^0.45.4
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/shared-object-base": ^0.45.4
-    debug: ^4.1.1
+    "@fluidframework/shared-object-base": ^0.47.1
     path-browserify: ^1.0.1
-  checksum: 556857101c7eb0e65b4c0d0db76e8734625f746499135d98b6e3ba826a402b8b0249bb79b90a909bf282565b49e9bf03a9b594c24b9b7eab838e1e1f35f98556
+  checksum: b5d0550a18d779e336a22dfc9d7db13e26285c5e40cf6ced7157afbdfd716714802c0e84ab04b8aca90a8c65f48170dbede43785514abcca3125efe80d1769a2
   languageName: node
   linkType: hard
 
-"@fluidframework/merge-tree@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/merge-tree@npm:0.45.4"
+"@fluidframework/merge-tree@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/merge-tree@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.45.4
+    "@fluidframework/datastore-definitions": ^0.47.1
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.45.4
-  checksum: 1c4f7d9ac6e2fae3477b9745c0200c37f652b5c7770a65b65e7c1c3180bb11caa3fd3a2c06c614a33b85ada8f06fc0a24472297882ec0921bb422d11ec069ff2
+    "@fluidframework/telemetry-utils": ^0.47.1
+  checksum: 89601c7f45fd5c33c81fd5a1b680337d5be1da0e02db779b456e69becfe0a1bbcce40ffc6883150ea2a493d788da3d3f1dec74a5bbf7ab5c218fe6c2c10e76f6
   languageName: node
   linkType: hard
 
-"@fluidframework/protocol-base@npm:^0.1027.0-0":
-  version: 0.1027.0
-  resolution: "@fluidframework/protocol-base@npm:0.1027.0"
+"@fluidframework/protocol-base@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/protocol-base@npm:0.1030.0"
   dependencies:
-    "@fluidframework/common-utils": ^0.31.0
-    "@fluidframework/gitresources": ^0.1027.0
+    "@fluidframework/common-utils": ^0.32.1
+    "@fluidframework/gitresources": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    assert: ^2.0.0
     lodash: ^4.17.21
-  checksum: e3852ab66d1e38a91be5a997d0060f180be7c5934dfced3a421c749048a617070515af29705c43703e571f10b2bc149ed9cf609f37675b1714dc91334fd80706
+  checksum: ab0ea6e523372a759fea9843153c282d2f47700c19cd1e05be183274791fd1ff103d0741be91733e037e306ac154dee2eedf546fed5018ab67ffed7965f63f7f
   languageName: node
   linkType: hard
 
-"@fluidframework/protocol-definitions@npm:^0.1024.0":
-  version: 0.1024.0
-  resolution: "@fluidframework/protocol-definitions@npm:0.1024.0"
+"@fluidframework/protocol-definitions@npm:^0.1024.0, @fluidframework/protocol-definitions@npm:^0.1024.1":
+  version: 0.1024.1
+  resolution: "@fluidframework/protocol-definitions@npm:0.1024.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.0
-  checksum: f307e0784c38f788c8000b03626fbf46d902c340b98f61dc378388a59662222f3b555674baf4e5f6bc5d0d00891d3cf88079d01fc3f81a92dfde557e82294d6f
+  checksum: 1bee53dbf870eeceacdabc373a89438f7b0aef7191a9bdb4cf6db6c0f1ad88fc33504e30ee6e68d9f5e9e9760bdc65eef184983048452d3b84f6098aafb43361
   languageName: node
   linkType: hard
 
-"@fluidframework/request-handler@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/request-handler@npm:0.45.4"
+"@fluidframework/request-handler@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/request-handler@npm:0.47.1"
   dependencies:
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/container-runtime-definitions": ^0.45.4
+    "@fluidframework/container-runtime-definitions": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-  checksum: a5ba4836811473165f582528fb6a578440327bbb0feddcd36952d96689d948b0f8383fb1cecfc8c0aba284c55e7ee988a8594806a7dd04c2a1ce52a7f1f1923a
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+  checksum: fc781b8d27da6fe0369315b381ee36d0441f8453ab2c3faa721bb555e21f2f24ebca81c2c25783a526f34ac71fd355e2abaf04e8e2bc505d1515815372fbaf84
   languageName: node
   linkType: hard
 
-"@fluidframework/routerlicious-driver@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/routerlicious-driver@npm:0.45.4"
+"@fluidframework/routerlicious-driver@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/routerlicious-driver@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/driver-base": ^0.45.4
+    "@fluidframework/driver-base": ^0.47.1
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.45.4
-    "@fluidframework/gitresources": ^0.1028.1
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/gitresources": ^0.1030.0
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/server-services-client": ^0.1028.1
-    "@fluidframework/telemetry-utils": ^0.45.4
+    "@fluidframework/server-services-client": ^0.1030.0
+    "@fluidframework/telemetry-utils": ^0.47.1
     axios: ^0.21.1
-    debug: ^4.1.1
     json-stringify-safe: 5.0.1
     socket.io-client: ^2.4.0
+    url-parse: ^1.5.3
     uuid: ^8.3.1
-  checksum: 19a6814164fb1879b4bfcd56016bf613544998ec4866b7b39a8d00a48f478b4ac05dc2bced572a3853ca4aa3ce821d539dc339c5b576625799adedeedea4de26
+  checksum: e91e0cd76da5efe9dfadb07ae0b81f2490c94706ccab4fa49c334c74b43b26d7e37dc6aad26f60b360aa27afffa3cbab0620c5048cc1ee847e8b1601d7e99278
   languageName: node
   linkType: hard
 
-"@fluidframework/runtime-definitions@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/runtime-definitions@npm:0.45.4"
+"@fluidframework/runtime-definitions@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/runtime-definitions@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
@@ -475,90 +455,100 @@ __metadata:
     "@fluidframework/driver-definitions": ^0.39.6
     "@fluidframework/protocol-definitions": ^0.1024.0
     "@types/node": ^12.19.0
-  checksum: 73052690667d02c39cd37419ce4116355a784f302b51e186b306de5ee48ab2ec42aa2a6508c679c6f9742a0f5a614e81eeeecacce3d653b66f718036b74289de
+  checksum: 89081ec224a5500fbe056a5b2cdfa81dbb870ce0d887afd90a401c029289ee7e711ae9a4f93ddf5eaa391a00a2805e646d233148a23dd74d78bf95a28b6437fe
   languageName: node
   linkType: hard
 
-"@fluidframework/runtime-utils@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/runtime-utils@npm:0.45.4"
+"@fluidframework/runtime-utils@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/runtime-utils@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-    "@fluidframework/container-runtime-definitions": ^0.45.4
+    "@fluidframework/container-runtime-definitions": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.45.4
-    "@fluidframework/garbage-collector": ^0.45.4
-    "@fluidframework/protocol-base": ^0.1028.1
+    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/garbage-collector": ^0.47.1
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
-  checksum: 92ae255b76ad0448ffa9666c82870faf1216e86c37affb700e4d55781fc35e96dafb181080cb1bd0d8bcba54370241edc3d8a1f80fc3d3c42940e782e095ec42
+    "@fluidframework/runtime-definitions": ^0.47.1
+  checksum: 8a01bda8aca4586a1ef3c0b9e89ff4507d3f68974d9ae91aba92be5900906fd911b8b5e79ef61083ec7d4a381ee8a5538a66d876a84e9ba0c05b966008f67444
   languageName: node
   linkType: hard
 
-"@fluidframework/sequence@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/sequence@npm:0.45.4"
+"@fluidframework/sequence@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/sequence@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.45.4
-    "@fluidframework/merge-tree": ^0.45.4
+    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/merge-tree": ^0.47.1
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-    "@fluidframework/shared-object-base": ^0.45.4
-    "@fluidframework/telemetry-utils": ^0.45.4
-    debug: ^4.1.1
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+    "@fluidframework/shared-object-base": ^0.47.1
+    "@fluidframework/telemetry-utils": ^0.47.1
     uuid: ^8.3.1
-  checksum: d35a3017e9c6d6abfc1d3f53770e374d071d53b7ef0b52552f7f9903dd33f348a95c594f268cfa9b354b520f87a291c7605c74dbd372ee2e5fcbff14b88b5925
+  checksum: 68dec27b38fb92c1c8d9c0b1312c64669a3b96610b6abb5f40fcd21d0fe711a60a1f7a229b6686ae1dc7aac375f1649f1678932f4ce65827a43f4f5751542d00
   languageName: node
   linkType: hard
 
-"@fluidframework/server-services-client@npm:^0.1027.0-0":
-  version: 0.1027.0
-  resolution: "@fluidframework/server-services-client@npm:0.1027.0"
+"@fluidframework/server-services-client@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/server-services-client@npm:0.1030.0"
   dependencies:
-    "@fluidframework/common-utils": ^0.31.0
-    "@fluidframework/gitresources": ^0.1027.0
-    "@fluidframework/protocol-base": ^0.1027.0
+    "@fluidframework/common-utils": ^0.32.1
+    "@fluidframework/gitresources": ^0.1030.0
+    "@fluidframework/protocol-base": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@types/node": ^12.19.0
     axios: ^0.21.1
     debug: ^4.1.1
     jsrsasign: ^10.2.0
     jwt-decode: ^3.0.0
     sillyname: 0.1.0
     uuid: ^8.3.1
-  checksum: 846aebfb9bc86fdce20f9fa7f132f665dfc574b66dd26652a3546b7f4149ef2f41d1d4df45a504dd08f04900e316aecc63eb46dd46d4a108799c49c4d9723d95
+  checksum: 9396df72fcf72d81023dced8f7027417fcc38d5ad614991706286f289133e5e9e530c0d0700cbad7a5ac0845d7595ee3bb191a4ea57e6a9ae32d0b8672931a93
   languageName: node
   linkType: hard
 
-"@fluidframework/server-services-core@npm:^0.1027.0-0":
-  version: 0.1027.0
-  resolution: "@fluidframework/server-services-core@npm:0.1027.0"
+"@fluidframework/server-services-core@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/server-services-core@npm:0.1030.0"
   dependencies:
-    "@fluidframework/common-utils": ^0.31.0
-    "@fluidframework/gitresources": ^0.1027.0
+    "@fluidframework/common-utils": ^0.32.1
+    "@fluidframework/gitresources": ^0.1030.0
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/server-services-client": ^0.1027.0
+    "@fluidframework/server-services-client": ^0.1030.0
     "@types/nconf": ^0.10.0
     "@types/node": ^12.19.0
     debug: ^4.1.1
     nconf: ^0.11.0
-  checksum: b4761bfe366cb47d4f72a7f26b947525fcb7fa00c33d27b35e8200602b0d391592b360d5f0f79bef0059b8078e4981f065dec535b964c5a2880034995a7bacc1
+  checksum: 77704a01c98bc1952b1f099926b419afbad727841a21319f00293ce2d3f02018e85294e211ccf5edea7df1d44a97276baaf73d13400fc56a93faf9d91078b48f
   languageName: node
   linkType: hard
 
-"@fluidframework/server-services-utils@npm:^0.1027.0-0":
-  version: 0.1027.0
-  resolution: "@fluidframework/server-services-utils@npm:0.1027.0"
+"@fluidframework/server-services-telemetry@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/server-services-telemetry@npm:0.1030.0"
+  dependencies:
+    "@fluidframework/common-utils": ^0.32.1
+    path-browserify: ^1.0.1
+    uuid: ^8.3.1
+  checksum: 8672a100eb7d0e42af88081e14650657f2c896e02815e4cd142739285b18ade1b9532d3dacada1f417c70f8e4d861c1d1ab0c9d3883ff76de1ffe4381b4665b0
+  languageName: node
+  linkType: hard
+
+"@fluidframework/server-services-utils@npm:^0.1030.0":
+  version: 0.1030.0
+  resolution: "@fluidframework/server-services-utils@npm:0.1030.0"
   dependencies:
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/server-services-client": ^0.1027.0
-    "@fluidframework/server-services-core": ^0.1027.0
+    "@fluidframework/server-services-client": ^0.1030.0
+    "@fluidframework/server-services-core": ^0.1030.0
+    "@fluidframework/server-services-telemetry": ^0.1030.0
     debug: ^4.1.1
     express: ^4.16.3
     ioredis: ^4.24.2
@@ -568,57 +558,64 @@ __metadata:
     sillyname: 0.1.0
     uuid: ^8.3.1
     winston: ^3.3.3
-  checksum: 3a389f0180fca3655e962a011baac724cd1e730e49652ce96847905cd9771fd9a8848e5d3da84c1667c459df48cb12e2bf95244e2ad14298fcd828f24a402418
+  checksum: 137ccccb589dfa9adea2c94eaafbe068021f4e65318ba9e69d2424922dfe47827904d70ad150dae8b912be30dec86d0a3bcbe312cd2adb356403a3d4f50dfba9
   languageName: node
   linkType: hard
 
-"@fluidframework/shared-object-base@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/shared-object-base@npm:0.45.4"
+"@fluidframework/shared-object-base@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/shared-object-base@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": ^0.45.4
-    "@fluidframework/datastore-definitions": ^0.45.4
+    "@fluidframework/datastore": ^0.47.1
+    "@fluidframework/datastore-definitions": ^0.47.1
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.45.4
-    "@fluidframework/runtime-utils": ^0.45.4
-    "@fluidframework/telemetry-utils": ^0.45.4
-    debug: ^4.1.1
+    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-utils": ^0.47.1
+    "@fluidframework/telemetry-utils": ^0.47.1
     uuid: ^8.3.1
-  checksum: 969cafe8732ad0af77fba60ae4980640ec0f50d495f3dc369def68077b5acbfe82819b2c53a141f8484eb4de3290cfe62bf0a831ac213715c93f34818d468396
+  checksum: 2ec398e9e1bc7c2634e057ab216349e4aeb2166eae3ca1eff59a8fef82b22a104aebf13570f19a79783f87784f1c1b22687091857f5fa2c4ae673b32d0f0dd82
   languageName: node
   linkType: hard
 
-"@fluidframework/synthesize@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/synthesize@npm:0.45.4"
+"@fluidframework/synthesize@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/synthesize@npm:0.47.1"
   dependencies:
     "@fluidframework/core-interfaces": ^0.39.7
-  checksum: d4010ffff9c378e4d1ae77e452185c443f87d79aa1e834dbad67eb8cc834437934a7f86824105cce9ead49e52321e5ce9f6195f7e98079236e97a8a72ef022cf
+  checksum: 26b5c691a25f4cf9bd854b84bd8a9f9cb89c4d5d80410f4762fd6ee4b3d18b43bba95cc4d2dcae0556e96656009db2bba6cee26285e0f2904c33b9d6d304c394
   languageName: node
   linkType: hard
 
-"@fluidframework/telemetry-utils@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/telemetry-utils@npm:0.45.4"
+"@fluidframework/telemetry-utils@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/telemetry-utils@npm:0.47.1"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     debug: ^4.1.1
     events: ^3.1.0
-  checksum: d7518e5ac4454830eb2a21265e4e20d92f813440edd16b9eda0007fca81a6bbb6409a87007c6f70c4af70e00313007a8f8d1318bcf2ba5a9c78cae0d2ddcab9e
+    uuid: ^8.3.1
+  checksum: cb4d02e44000fe59a22a70edfa7d07d05cff092c7ad6266231b364959926cd5f2220343419e15173b590d40bc547be53bece6bbc6f04d0ad398c0bd7a8bace9e
   languageName: node
   linkType: hard
 
-"@fluidframework/view-interfaces@npm:^0.45.4":
-  version: 0.45.4
-  resolution: "@fluidframework/view-interfaces@npm:0.45.4"
+"@fluidframework/view-interfaces@npm:^0.47.1":
+  version: 0.47.1
+  resolution: "@fluidframework/view-interfaces@npm:0.47.1"
   dependencies:
     "@fluidframework/core-interfaces": ^0.39.7
-  checksum: 0876a509153c2d2db088f05198a8379c37a9d20425cffb022a8a07ba59ef2ca058cdbc5dba635a28b5b292e913020272522e3bd636c3fc068115e18e4647d380
+  checksum: 5ae51c2cf81b7e41336380a25893b4d19d47907e916b0d48d99e2375083a56476704e31d85a07accfadddd0ada781f86f0fd365d4d15e571cc0083a325671bef
+  languageName: node
+  linkType: hard
+
+"@gar/promisify@npm:^1.0.1":
+  version: 1.1.2
+  resolution: "@gar/promisify@npm:1.1.2"
+  checksum: 51f64c558516f776e2f8950fc70532a9a0d166a0493bf17b2c5b588f8f9ae6a6e80e330591554b52d97336094c6d4168b96972fb92ceb1e774176d79a0fbb236
   languageName: node
   linkType: hard
 
@@ -673,23 +670,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:11.1.0":
-  version: 11.1.0
-  resolution: "@next/env@npm:11.1.0"
-  checksum: 49352d8328c92dd5b017229220c7510985bcb1314381d2e32f008ba910892bdc4efa35cbc77841ceefe35e1e4e5d8ee7ba08abbb10ca85f43e25d0ada75b6ade
+"@next/env@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/env@npm:11.1.2"
+  checksum: e4c1cf3d0f36aa728af2f553610310fb7b7ec79e024c221f442dad6b3ee136748a99398240e0dd386c760eea9b19921d44b98bd4cdd149db0aaf733993b8b94f
   languageName: node
   linkType: hard
 
-"@next/polyfill-module@npm:11.1.0":
-  version: 11.1.0
-  resolution: "@next/polyfill-module@npm:11.1.0"
-  checksum: 1767725af5f8d799792c3f40223087af5c6e044b8936e890e0ae34e7b3ab6d9bc7aed04b2061d6dab8f4140961c72c2c2b2cc3251b304dfd210da78515d33786
+"@next/polyfill-module@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/polyfill-module@npm:11.1.2"
+  checksum: 0642c6df0251e99b7d2e54788d665674c6414fc3836418194f65912f0a8e96e130c73d75816261372b211c753a09c3b9df6b13e72215690f4b7b7055b69f3171
   languageName: node
   linkType: hard
 
-"@next/react-dev-overlay@npm:11.1.0":
-  version: 11.1.0
-  resolution: "@next/react-dev-overlay@npm:11.1.0"
+"@next/react-dev-overlay@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/react-dev-overlay@npm:11.1.2"
   dependencies:
     "@babel/code-frame": 7.12.11
     anser: 1.4.9
@@ -705,20 +702,48 @@ __metadata:
   peerDependencies:
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 25b17b2fc81e5544d94e4d6daefeefe12b271b2e3bdf94a9f81b0511d9ad85de7dda243e1e19938ad2346c173583f4f090feb5d941f2034953de41fe6888f048
+  checksum: 0bf6b47702c232125ecbd21af245b00a4b4edba05c079cca142b33e7c48df385402a90afc09f77af6e96244a28c3486793609cfbd3e2c652cad70112b2b69053
   languageName: node
   linkType: hard
 
-"@next/react-refresh-utils@npm:11.1.0":
-  version: 11.1.0
-  resolution: "@next/react-refresh-utils@npm:11.1.0"
+"@next/react-refresh-utils@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/react-refresh-utils@npm:11.1.2"
   peerDependencies:
     react-refresh: 0.8.3
     webpack: ^4 || ^5
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: ddfc75839de71dc92b074847c8cdba6c1130a6ff6984dd5fa46bbcb3db204648e165fb44e1eb8b75852e6da0c2c977edd8c0d582cb63ba26f171c7b937dd92c6
+  checksum: 284005a117d8c739b1a3bcb106e08b71d7f00a1decb8f572f5826e1804c622871d560a455db139ebdd042ccc414121e6dcdc9c0783df8400409e411938d0f13c
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-arm64@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/swc-darwin-arm64@npm:11.1.2"
+  checksum: bc9d03982fde59f851e623321663451d0f9cc3e43c767f75834cd82b492ea942c0dfdc87f4b545f2ae4e87e44d5ad5b9268e3fecd3479234f507c03be92ee691
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-x64@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/swc-darwin-x64@npm:11.1.2"
+  checksum: 3969a7da9625bb8be060282b3d82bf09028d6bd7ca36d7754fa60374a19454a5bf4c117ba7ad2fb9909a43e2a3810807485a54be4bc7ee0f2041051f67b8d820
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-gnu@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/swc-linux-x64-gnu@npm:11.1.2"
+  checksum: af04e5ee7d24c7e270c7db7304310c04f0cd6ccf3a3ca38ba9c69a68d2505cc87d2b560bfd62501f70a06a86cf84ee696a5bdbb2c50d8f1c07a3421226c39de8
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:11.1.2":
+  version: 11.1.2
+  resolution: "@next/swc-win32-x64-msvc@npm:11.1.2"
+  checksum: e8f02b315dc6665ca9600c741dfc04422a70564db775cfbb915cc47e6e9403bf30d7386ba42915be7ea6834edd298adb5bf8b75effa518e70c3b85d346e4e520
   languageName: node
   linkType: hard
 
@@ -758,6 +783,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@npmcli/fs@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@npmcli/fs@npm:1.0.0"
+  dependencies:
+    "@gar/promisify": ^1.0.1
+    semver: ^7.3.5
+  checksum: 9be7dcf9915fc5ab0bbcd7efaefad5fda43ccf06a80d69f8aea3e34f54a75e51cee17b4b42b02fc85864a33e4017e1f4cc23b321058746d91249d8d4c4bb0a0f
+  languageName: node
+  linkType: hard
+
 "@npmcli/move-file@npm:^1.0.1":
   version: 1.1.2
   resolution: "@npmcli/move-file@npm:1.1.2"
@@ -769,9 +804,9 @@ __metadata:
   linkType: hard
 
 "@sindresorhus/is@npm:^4.0.0":
-  version: 4.0.1
-  resolution: "@sindresorhus/is@npm:4.0.1"
-  checksum: 16908ae19a1ca54173594bfdc8f33c6b2203fc0592cd54d551999e5b7c937815b6127fbd131360fc2dd1b1e7fb6a6afcd3d0f977a630ee17d3c7afbe8e739c02
+  version: 4.2.0
+  resolution: "@sindresorhus/is@npm:4.2.0"
+  checksum: 162aa2e4135f329264939cf844e35ef63b71e73c4fd02361b3d9f7cf9321fa071cd6dc84277f3d78df59d5819363fe6207c8027fc2c250649c64a4eb0ce26ef3
   languageName: node
   linkType: hard
 
@@ -851,11 +886,11 @@ __metadata:
   linkType: hard
 
 "@types/ioredis@npm:^4":
-  version: 4.26.7
-  resolution: "@types/ioredis@npm:4.26.7"
+  version: 4.27.3
+  resolution: "@types/ioredis@npm:4.27.3"
   dependencies:
     "@types/node": "*"
-  checksum: af4e2a0abc55f905d2f80ba729d271b741c6f3669ad4e8d27de87fc433865430ea81c11a05d1aa42ba1e9d07cfa76581bba4cd0e62c0349f8939e37a28992d78
+  checksum: bb11be30e941a4e4614b8836dc3d11297b552a5c54a882680cd497690c386e80fafc7ef2a486cca214b41d8f4489f6a1d3376a388702ace5466d22665dc27655
   languageName: node
   linkType: hard
 
@@ -873,12 +908,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/json5@npm:^0.0.29":
+  version: 0.0.29
+  resolution: "@types/json5@npm:0.0.29"
+  checksum: 66e9ac0143ec521522c7bb670301e9836ee886207eeed1aab6d4854a1b19b404ab3a54cd8d449f9b1f13acc357f540be96f8ac2d1e86e301eab52ae0f9a4066f
+  languageName: node
+  linkType: hard
+
 "@types/keyv@npm:*":
-  version: 3.1.2
-  resolution: "@types/keyv@npm:3.1.2"
+  version: 3.1.3
+  resolution: "@types/keyv@npm:3.1.3"
   dependencies:
     "@types/node": "*"
-  checksum: e9a442bd9ed7070fa1740cf1c298939c8b8dc65dfe01aa87125d1fda0b944a0ba3132da2550b2ab5e76e67abc1e6d55fd7a7e572601d75061575e6002e372ca5
+  checksum: dc64162bd087f54b0ed453aacde9599de10a3e19c114c452e172afd8fc784f878ca8a13addda8ef2bdfbc7964b7ae5c33c43b1ca287783e4f397fb1bc8c06801
   languageName: node
   linkType: hard
 
@@ -890,16 +932,16 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 16.7.1
-  resolution: "@types/node@npm:16.7.1"
-  checksum: 65347e932d8dde3b94d5e24d17ba85e79763797b80da85af96a8c4b89e72f7aea1b61ea04f471a70c9db4ab9273fb678808e9400c539912c291819268622598f
+  version: 16.9.1
+  resolution: "@types/node@npm:16.9.1"
+  checksum: b9b9ee7e36004b09d56bf69703957ec4721f2e12f5d258bf2d92155e7d760ca1d73a04fe679856ef4d67fa56015bca71e9485c36ea99f04bc727c7a23cd91329
   languageName: node
   linkType: hard
 
 "@types/node@npm:^12.19.0":
-  version: 12.20.20
-  resolution: "@types/node@npm:12.20.20"
-  checksum: d3c842b7942d17cca20f9709782a2e4a485cdfd1265d83d49ef6750f8ad9282a54b290452c9a74377da8ae3d64e5484b10cfc0a50bb56151ced2ed2c71d81f2c
+  version: 12.20.25
+  resolution: "@types/node@npm:12.20.25"
+  checksum: b21813173a451fa5c82c5d2f888ba1df6c64781fd24de759f4c1410d1b1829c5bd5e4a85b09fb3fb6b93e64dd51f9bd11b00f01b44848f2e6e12590cea96e95f
   languageName: node
   linkType: hard
 
@@ -911,9 +953,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^14.14.35":
-  version: 14.17.11
-  resolution: "@types/node@npm:14.17.11"
-  checksum: c52c533d83602e232ec283c7527eaaf0c60e7b899bbced65799fbf76cf0a393ff7c22feb64c66d9f52e3a505e850a8d37cd64d790e295cbe8b0dacfdd504edc3
+  version: 14.17.16
+  resolution: "@types/node@npm:14.17.16"
+  checksum: 9df075e5362f19286a54199dbc5d5dbcb72a172f1bdc3f2173e0685bf6a51f732d10bc2bc914f385e01333fa617590e01ae68036ee96c82f3534fd8d3d9d3c53
   languageName: node
   linkType: hard
 
@@ -941,13 +983,13 @@ __metadata:
   linkType: hard
 
 "@types/react@npm:*, @types/react@npm:^17":
-  version: 17.0.19
-  resolution: "@types/react@npm:17.0.19"
+  version: 17.0.21
+  resolution: "@types/react@npm:17.0.21"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 369578687b39d66fafcb2e41b9e12a0aa0dda8db5661b68d4c9bd7679d3da96515c69905b1a882f2da01988104dca30d400811e1488ed146ac98d246e8e67695
+  checksum: c3f0c465a2d680c17ff7fa5dc4ec2a796044f710f37b7917960c4eedcb5dfab502da3df4aee24f0f57a5a8600fabd3f0085fe2ebf00c4870df70d2ce02a3982f
   languageName: node
   linkType: hard
 
@@ -982,11 +1024,11 @@ __metadata:
   linkType: hard
 
 "@typescript-eslint/eslint-plugin@npm:^4.18.0":
-  version: 4.29.2
-  resolution: "@typescript-eslint/eslint-plugin@npm:4.29.2"
+  version: 4.31.1
+  resolution: "@typescript-eslint/eslint-plugin@npm:4.31.1"
   dependencies:
-    "@typescript-eslint/experimental-utils": 4.29.2
-    "@typescript-eslint/scope-manager": 4.29.2
+    "@typescript-eslint/experimental-utils": 4.31.1
+    "@typescript-eslint/scope-manager": 4.31.1
     debug: ^4.3.1
     functional-red-black-tree: ^1.0.1
     regexpp: ^3.1.0
@@ -998,66 +1040,66 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 5ea5fc49a7569cb4a636ae71c5521908e74d3e504a6898977a67bba0a50756ebff63446f81424a8c427629095b6fa1bd014fdf8bd541a459bf5e6461890bfb2c
+  checksum: 67d835b148426f5e44a6e02675138f1e4c1f7bad5712c064ee0516d7442454e7b3d17dda00d732bd119ff9e103a15e97e56d0d1d7b85dd0b318d1d0f14c542e5
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:4.29.2":
-  version: 4.29.2
-  resolution: "@typescript-eslint/experimental-utils@npm:4.29.2"
+"@typescript-eslint/experimental-utils@npm:4.31.1":
+  version: 4.31.1
+  resolution: "@typescript-eslint/experimental-utils@npm:4.31.1"
   dependencies:
     "@types/json-schema": ^7.0.7
-    "@typescript-eslint/scope-manager": 4.29.2
-    "@typescript-eslint/types": 4.29.2
-    "@typescript-eslint/typescript-estree": 4.29.2
+    "@typescript-eslint/scope-manager": 4.31.1
+    "@typescript-eslint/types": 4.31.1
+    "@typescript-eslint/typescript-estree": 4.31.1
     eslint-scope: ^5.1.1
     eslint-utils: ^3.0.0
   peerDependencies:
     eslint: "*"
-  checksum: c92c7ae0c8395f06f77367b73c2a65de4f703d1fea54372ba7792eba0356e2e1f4d2102ca1a03f27ecad6e43e414d3b67cc227931a28c341d92a039a6e0ffd7d
+  checksum: 66602b6ca21f33aaedfa87b9c214383bdc4c8b077f29f852d79a1ee4a8879ac4098c0a5a38a813c70200f6c54b22d86cceee27998299e05607a10c707a8da4d8
   languageName: node
   linkType: hard
 
 "@typescript-eslint/parser@npm:^4.18.0":
-  version: 4.29.2
-  resolution: "@typescript-eslint/parser@npm:4.29.2"
+  version: 4.31.1
+  resolution: "@typescript-eslint/parser@npm:4.31.1"
   dependencies:
-    "@typescript-eslint/scope-manager": 4.29.2
-    "@typescript-eslint/types": 4.29.2
-    "@typescript-eslint/typescript-estree": 4.29.2
+    "@typescript-eslint/scope-manager": 4.31.1
+    "@typescript-eslint/types": 4.31.1
+    "@typescript-eslint/typescript-estree": 4.31.1
     debug: ^4.3.1
   peerDependencies:
     eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a836810bf6611cc1d66aa8d99fefd865e56f75d1bd49387f36d90c339f43c236894d7f7b7cdb343d389f95d592a1db3f4f0b096f8be9641d4164f1ccb0046212
+  checksum: 08895d5abb12fb68338185b128e9fd04e1e5191453f119b370bdf8f1441d83b9c5f3abc788beaa4eb2aa511b0447867599a7f079993b829895d2c1428067d891
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:4.29.2":
-  version: 4.29.2
-  resolution: "@typescript-eslint/scope-manager@npm:4.29.2"
+"@typescript-eslint/scope-manager@npm:4.31.1":
+  version: 4.31.1
+  resolution: "@typescript-eslint/scope-manager@npm:4.31.1"
   dependencies:
-    "@typescript-eslint/types": 4.29.2
-    "@typescript-eslint/visitor-keys": 4.29.2
-  checksum: 136c22579df2a3ad550f0e8b92d0b18b61facda27364715d1db9721c12aa079191f7917396eeb89fe72f98c17a4d2ec6494fee4dc95bffbc91d6f93df06f1efe
+    "@typescript-eslint/types": 4.31.1
+    "@typescript-eslint/visitor-keys": 4.31.1
+  checksum: f315cd60fcd20a7ca58d3bdcffb4195dce994ed13ad408ed5c6dcbed85d2bb5cedebf2f4e0beabba4b7412ab2cde7f0eae4ce573bf4910827db3345050cc77b5
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:4.29.2":
-  version: 4.29.2
-  resolution: "@typescript-eslint/types@npm:4.29.2"
-  checksum: 31e4438afcb2aed8c24d9aeb8d65f46ea2bea6b35f796b77de399977b39516a515f8307f8596fff3568b9852664d72d03fd58f55cc346c66d5841c10f230fa5a
+"@typescript-eslint/types@npm:4.31.1":
+  version: 4.31.1
+  resolution: "@typescript-eslint/types@npm:4.31.1"
+  checksum: fed05a16f02f6d874e7c5ea8709c8d5ea66b8195eff8da0fb368b2ff8a4d1dc8b7c010790eae253165ae46de483bc68bbab3760494cb832e9ab3e8cf5323148b
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:4.29.2":
-  version: 4.29.2
-  resolution: "@typescript-eslint/typescript-estree@npm:4.29.2"
+"@typescript-eslint/typescript-estree@npm:4.31.1":
+  version: 4.31.1
+  resolution: "@typescript-eslint/typescript-estree@npm:4.31.1"
   dependencies:
-    "@typescript-eslint/types": 4.29.2
-    "@typescript-eslint/visitor-keys": 4.29.2
+    "@typescript-eslint/types": 4.31.1
+    "@typescript-eslint/visitor-keys": 4.31.1
     debug: ^4.3.1
     globby: ^11.0.3
     is-glob: ^4.0.1
@@ -1066,17 +1108,17 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 74cc09a05ee5b26948ec0f8054397b8f6f43b57169e04ae404a6573a48f58ca321cabb4332f9779a294890b623802b4fa8d9c637771652ef1f9c57aa95157508
+  checksum: b002cc277f8562d70bcf8c4657c6633a2720ba45a2517fbeef81b45e16bd0882814046edcbb4ca353f3a8fdf3bb02730f616bf4f9aab1eaa46df3835c63830d0
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:4.29.2":
-  version: 4.29.2
-  resolution: "@typescript-eslint/visitor-keys@npm:4.29.2"
+"@typescript-eslint/visitor-keys@npm:4.31.1":
+  version: 4.31.1
+  resolution: "@typescript-eslint/visitor-keys@npm:4.31.1"
   dependencies:
-    "@typescript-eslint/types": 4.29.2
+    "@typescript-eslint/types": 4.31.1
     eslint-visitor-keys: ^2.0.0
-  checksum: 30e1eef4f29e52193441240c2dfcc583d19691657bda4c93494cac7c728db47182b76d742239ad36323b5d5289073aaf88defd0e309c01405abd422ef272c53b
+  checksum: f3428057300390f01c0f5e9644cf9a61e1b5d20ee1112208a9eb3f45f6b68aad38025d043897a5805a104b1b934b92f6ea0f75a73d8d4a225d14e37dae9b7c96
   languageName: node
   linkType: hard
 
@@ -1120,12 +1162,12 @@ __metadata:
   linkType: hard
 
 "@yarnpkg/fslib@npm:^2.4.0, @yarnpkg/fslib@npm:^2.5.0":
-  version: 2.5.1
-  resolution: "@yarnpkg/fslib@npm:2.5.1"
+  version: 2.5.2
+  resolution: "@yarnpkg/fslib@npm:2.5.2"
   dependencies:
     "@yarnpkg/libzip": ^2.2.2
     tslib: ^1.13.0
-  checksum: 05c8c6f6fa53ffdc2569373449fe1bef19fd0cc65f924e73cb4eb7aabc4c26697734ff831bae8ed3ada723ba2e3d99327929de7149bb72d1757e682338d71f2a
+  checksum: 5449697cf7af2f1d920ec1de30c52668adc36af156bf40c6b14ead07cf1f879416a4b40ab5e588bfb1eb27085522cc1718e7468bbdbb1a9cdeb687608ac8360b
   languageName: node
   linkType: hard
 
@@ -1308,14 +1350,14 @@ __metadata:
   linkType: hard
 
 "ajv@npm:^8.0.1":
-  version: 8.6.2
-  resolution: "ajv@npm:8.6.2"
+  version: 8.6.3
+  resolution: "ajv@npm:8.6.3"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: 9969d6c0e6b601c4a1254d01acf1ccd419e5dabeb4651f2fbe7269d4ae5e30c281af758839a0cbf6f2bf4830600fa8bc909232af634b97c4ceb798f9a2b65cb4
+  checksum: d9abd69cbafc06bb38484aac957aa5857f1c4ba65ab86863a78c9aafa04dc67141f57ff1b75569371ba409068a668812fecbf22a5f90b7e083c18f659ae80779
   languageName: node
   linkType: hard
 
@@ -1348,9 +1390,9 @@ __metadata:
   linkType: hard
 
 "ansi-regex@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "ansi-regex@npm:5.0.0"
-  checksum: cbd9b5c9dbbb4a949c2a6e93f1c6cc19f0683d8a4724d08d2158627be6d373f0f3ba1f4ada01dce7ee141f2ba2628fbbd29932c7d49926e3b630c7f329f3178b
+  version: 5.0.1
+  resolution: "ansi-regex@npm:5.0.1"
+  checksum: c944e1229f022a2071f7477ea425964328c577d2c752083fe564ea0513b6d733c9ec65102f6d4d2b54cba0cb2dc969648b60d567abeff13dc95ecc0b9b97737d
   languageName: node
   linkType: hard
 
@@ -1397,12 +1439,12 @@ __metadata:
   linkType: hard
 
 "are-we-there-yet@npm:~1.1.2":
-  version: 1.1.5
-  resolution: "are-we-there-yet@npm:1.1.5"
+  version: 1.1.7
+  resolution: "are-we-there-yet@npm:1.1.7"
   dependencies:
     delegates: ^1.0.0
     readable-stream: ^2.0.6
-  checksum: 2d6fdb0ddde9b8cb120b6851b42c75f6b6db78b540b579a00d144ad38cb9e1bdf1248e5454049fcf5b47ef61d1a6f2ea433a8e38984158afd441bc1e0db7a625
+  checksum: 2f2301155887bba5217cadd2a8aeffbc9716bd6339353950732bf3f2df6bbbec2b8a1291066a985719e30dd2a3eb873e9d81ed7962d2c46f9ac182dd265f97ed
   languageName: node
   linkType: hard
 
@@ -1491,7 +1533,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"assert@npm:2.0.0, assert@npm:^2.0.0":
+"assert@npm:2.0.0":
   version: 2.0.0
   resolution: "assert@npm:2.0.0"
   dependencies:
@@ -1541,19 +1583,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"available-typed-arrays@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "available-typed-arrays@npm:1.0.4"
-  checksum: 9474a48bed7a4bfa5ea9389acc73da5e321fac5fc299b9ba58ee9fd41d6489b6f92663a76d1b723e80c06dfe340c6b3b9f2b08762db009c53ce891e68fb0a61c
+"available-typed-arrays@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "available-typed-arrays@npm:1.0.5"
+  checksum: d08c9a44c1b5963395418ad32aff318eb70f368336338d2a6d81e5bcca2bc51ddd29103be15c0c468de7eb2df525af3f3dbc1fdc9a905161771967f305ee2a95
   languageName: node
   linkType: hard
 
 "axios@npm:^0.21.1":
-  version: 0.21.1
-  resolution: "axios@npm:0.21.1"
+  version: 0.21.4
+  resolution: "axios@npm:0.21.4"
   dependencies:
-    follow-redirects: ^1.10.0
-  checksum: 864fb7b5d077d236737f10adca53bf451a93f35a15271f56fba8da07265a02d26b7d881b935a6697dc6adb0549ea3e56d2eecb403edaa3bb78f6479901c10f69
+    follow-redirects: ^1.14.0
+  checksum: e6d42b269b599d36eb13be0671c237781f32e6ae72be824297c55a3e1ce63b22ba4f46bad5ab28da7d3bae50a72637d55c792cf803be1cf9de6a8bcd6d0dcc1a
   languageName: node
   linkType: hard
 
@@ -1837,9 +1879,10 @@ __metadata:
   linkType: hard
 
 "cacache@npm:^15.0.5":
-  version: 15.2.0
-  resolution: "cacache@npm:15.2.0"
+  version: 15.3.0
+  resolution: "cacache@npm:15.3.0"
   dependencies:
+    "@npmcli/fs": ^1.0.0
     "@npmcli/move-file": ^1.0.1
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -1857,7 +1900,7 @@ __metadata:
     ssri: ^8.0.1
     tar: ^6.0.2
     unique-filename: ^1.1.1
-  checksum: e7d6a93c34a409abb6050e4e09a103e859f0b53f592772a714e9e828f735cee8974cb36bd3e2d08fd78c2198d6d4b6005d0f1b3974e891a2ea4bd0ef02c80593
+  checksum: 3ababe9fa2b32ba6a65b3c6efd2d373be6640c379ac54ef3b837b284b8d1eb3c20601f31460c6391c651684e2cd02791ae175834f1ae059f869dad49014f31a4
   languageName: node
   linkType: hard
 
@@ -1908,9 +1951,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001202, caniuse-lite@npm:^1.0.30001219, caniuse-lite@npm:^1.0.30001228":
-  version: 1.0.30001251
-  resolution: "caniuse-lite@npm:1.0.30001251"
-  checksum: 6d7d4b93bdaa4d7859b830c5afdfa40ef2cc15a88edfae446c6ded1ae77ae4de50b5b5ba63c4a56ecdde5a530f26252ef56b86abbe7aa0dda5de8f1d793a454e
+  version: 1.0.30001257
+  resolution: "caniuse-lite@npm:1.0.30001257"
+  checksum: 2d39f401d745845da6435ff98cc93bd8c247746287e299d0b28baf16374069ea3a42d78890fbefc51cc4c1cd475b00cc99a4ad7a75643eeba336adc917164026
   languageName: node
   linkType: hard
 
@@ -2106,9 +2149,9 @@ __metadata:
   linkType: hard
 
 "colorette@npm:^1.2.2":
-  version: 1.3.0
-  resolution: "colorette@npm:1.3.0"
-  checksum: d3bcd778d0f0cb81fc1367168f494b9a9998109f6aa4a2e8f8b1d3a43107b3a1d43e00a569f687ad57ae0d536b8767ccec6354a69ae3d1d3e0bee91ab500f8e5
+  version: 1.4.0
+  resolution: "colorette@npm:1.4.0"
+  checksum: 7ef8e1ca16ca7ae4659722ecd103ff89388e1e1e4100ee41e892ad880364a2f8bb9aacbce6c96aa572f25e56a45a2ea7008ff69b8182bc6baf383cd269b963c0
   languageName: node
   linkType: hard
 
@@ -2244,9 +2287,9 @@ __metadata:
   linkType: hard
 
 "core-util-is@npm:^1.0.2, core-util-is@npm:~1.0.0":
-  version: 1.0.2
-  resolution: "core-util-is@npm:1.0.2"
-  checksum: 089015ee3c462dfceba70faa1df83b42a7bb35db26dae6af283247b06fe3216c65fccd9f00eebcaf98300dc31e981d56aae9f90b624f8f6ff1153e235ff88b65
+  version: 1.0.3
+  resolution: "core-util-is@npm:1.0.3"
+  checksum: 19a443100f5ff5a16d286c876826edcec713512fcb823b4d817bf8187e711568393ed0ef771dfcaa95a998450b9c055ae3fd4590ad399a6b6153af8ee9b9330f
   languageName: node
   linkType: hard
 
@@ -2362,9 +2405,9 @@ __metadata:
   linkType: hard
 
 "csstype@npm:^3.0.2":
-  version: 3.0.8
-  resolution: "csstype@npm:3.0.8"
-  checksum: e15233592a2c580fd72c4346a5c921044b8f4f29bcb81628a81199c4d6a91eb8f8e4875f440ef9c990e85f179a3370f3b842fe55e4743119ad0ce712519e7123
+  version: 3.0.9
+  resolution: "csstype@npm:3.0.9"
+  checksum: e5d6ebc4581d09537e620b78b6741b4b1ececc0eb3fec065be1d59d42685954276847969b9c3652e835553a33dd8a7995bbd5cc834c4142375de8b417a433880
   languageName: node
   linkType: hard
 
@@ -2424,9 +2467,9 @@ __metadata:
   linkType: hard
 
 "deep-is@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "deep-is@npm:0.1.3"
-  checksum: 3de58f86af4dec86c8be531a5abaf2e6d8ea98fa2f1d81a3a778d0d8df920ee282043a6ef05bfb4eb699c8551df9ac1b808d4dc71d54cc40ab1efa5ce8792943
+  version: 0.1.4
+  resolution: "deep-is@npm:0.1.4"
+  checksum: ea3c723e345f8548be29bf1acab0056867fb8c24b7286cfb2035b4afd2bdbad48c02fdc079c8725b0c60305aa9d6a17f90fec1ebf7444130b4282860482a5a72
   languageName: node
   linkType: hard
 
@@ -2567,9 +2610,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.723":
-  version: 1.3.814
-  resolution: "electron-to-chromium@npm:1.3.814"
-  checksum: 3e688a890321426f1781090ada726d73326685a43e3d94c30f7baedc970f4cb9cbc3a9cfe1b3af7538b0c3bcefef96a098fc3cd3d57ce43393f547d68e922074
+  version: 1.3.840
+  resolution: "electron-to-chromium@npm:1.3.840"
+  checksum: 19285217ddb336eed6abbedb7c69ea186356a26a34a12a85b0dd026ab8117d609e9dec35a3b50c6a94f0659b03a2ce06aa864ca6c75c1e0c2baba6a04a198518
   languageName: node
   linkType: hard
 
@@ -2708,27 +2751,28 @@ __metadata:
   linkType: hard
 
 "es-abstract@npm:^1.18.0-next.1, es-abstract@npm:^1.18.0-next.2, es-abstract@npm:^1.18.2, es-abstract@npm:^1.18.5":
-  version: 1.18.5
-  resolution: "es-abstract@npm:1.18.5"
+  version: 1.18.6
+  resolution: "es-abstract@npm:1.18.6"
   dependencies:
     call-bind: ^1.0.2
     es-to-primitive: ^1.2.1
     function-bind: ^1.1.1
     get-intrinsic: ^1.1.1
+    get-symbol-description: ^1.0.0
     has: ^1.0.3
     has-symbols: ^1.0.2
     internal-slot: ^1.0.3
-    is-callable: ^1.2.3
+    is-callable: ^1.2.4
     is-negative-zero: ^2.0.1
-    is-regex: ^1.1.3
-    is-string: ^1.0.6
+    is-regex: ^1.1.4
+    is-string: ^1.0.7
     object-inspect: ^1.11.0
     object-keys: ^1.1.1
     object.assign: ^4.1.2
     string.prototype.trimend: ^1.0.4
     string.prototype.trimstart: ^1.0.4
     unbox-primitive: ^1.0.1
-  checksum: 653852de37204d4609642c037281316b2edc8417b15d1f6c71e906cd7f3caa50d14a8ae6876cac544af8a2078dd2246a73cfb46f089db56ebceab107ed2ef9fd
+  checksum: 92b511e051c7d3fe6582d2472f09b9ad1b8679c04503177e3e2787520746bba3a5331d2b8f4f19a3311714501bffca664b3df5542f30b3d42d9ab863a6a70209
   languageName: node
   linkType: hard
 
@@ -2810,8 +2854,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-import@npm:^2.22.1":
-  version: 2.24.1
-  resolution: "eslint-plugin-import@npm:2.24.1"
+  version: 2.24.2
+  resolution: "eslint-plugin-import@npm:2.24.2"
   dependencies:
     array-includes: ^3.1.3
     array.prototype.flat: ^1.2.4
@@ -2827,10 +2871,10 @@ __metadata:
     pkg-up: ^2.0.0
     read-pkg-up: ^3.0.0
     resolve: ^1.20.0
-    tsconfig-paths: ^3.10.1
+    tsconfig-paths: ^3.11.0
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0
-  checksum: c4b9b861467b141e582caea457262393c95dec179889931f250f47eb053b580d981b555791b9a58e217b951485026f2141cec8a9464beab120865451b46926fc
+  checksum: 21e1eb2f1bea8742d983650322c247caaa52ba68d242094f12d2d8b0f5bfe9e0f7e78c0629d9c243789bcea2704bbcf9c9189be7c3a033138a2ec291338aa197
   languageName: node
   linkType: hard
 
@@ -2850,12 +2894,13 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-react@npm:^7.22.0":
-  version: 7.24.0
-  resolution: "eslint-plugin-react@npm:7.24.0"
+  version: 7.25.1
+  resolution: "eslint-plugin-react@npm:7.25.1"
   dependencies:
     array-includes: ^3.1.3
     array.prototype.flatmap: ^1.2.4
     doctrine: ^2.1.0
+    estraverse: ^5.2.0
     has: ^1.0.3
     jsx-ast-utils: ^2.4.1 || ^3.0.0
     minimatch: ^3.0.4
@@ -2867,7 +2912,7 @@ __metadata:
     string.prototype.matchall: ^4.0.5
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7
-  checksum: 256e25dc8dde4664361b4a47ee452065444491fb5e694b52f9c5f56b8d8bd25c6e7ac660d722b234c7fdc7d29a1dffebdc30c9b7eee4f840d883da922882460a
+  checksum: c5e68bfb0020f2630d84bb5ef1166ac4b96751884b2daba1961cf12600670394ffcfa52273bfd73bb557bd6463a444cc11948ee0df3789d20551b5664da5775d
   languageName: node
   linkType: hard
 
@@ -3137,18 +3182,18 @@ __metadata:
   linkType: hard
 
 "fast-safe-stringify@npm:^2.0.4":
-  version: 2.0.8
-  resolution: "fast-safe-stringify@npm:2.0.8"
-  checksum: 2198ef6c4917ac6ad7a3cff8b80abc2762c89a0c700548459288fce45598a2488c0ae393cd456b4212a8259fed9d1630303106efe4ae3b1c35dab2fb66526cdd
+  version: 2.1.1
+  resolution: "fast-safe-stringify@npm:2.1.1"
+  checksum: 79c9940151284bcd46d5a46c6e93f3037aca0d151f65fa20dac6d914aeb755393dc1c7ef124f4813921c47b8c629af7638e765c2bfeb0127fad2a9f32c676b64
   languageName: node
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.12.0
-  resolution: "fastq@npm:1.12.0"
+  version: 1.13.0
+  resolution: "fastq@npm:1.13.0"
   dependencies:
     reusify: ^1.0.4
-  checksum: 55e042f29c21ba619458ae54c7d2dca201a352b26b95f1e2b620bdfc05bca9b2c72546ace603346c2ac4aeb877b5372de984e999ec455dff4f49e84c95d814d4
+  checksum: 2dd6a9dbab06bdd0463abaa78e4868f642a292e041abbd01a55b20cce03539a6866ef8f4f25f62dae4bb6de57bc1832d34c6bd8ae6c43428946ecf073d6741ae
   languageName: node
   linkType: hard
 
@@ -3243,18 +3288,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "fluid-app@workspace:."
   dependencies:
-    "@fluidframework/aqueduct": ^0.45.4
+    "@fluidframework/aqueduct": ^0.47.1
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/container-definitions": ^0.39.4
-    "@fluidframework/container-loader": ^0.45.4
+    "@fluidframework/container-loader": ^0.47.1
     "@fluidframework/core-interfaces": ^0.39.4
     "@fluidframework/driver-definitions": ^0.39.4
-    "@fluidframework/map": ^0.45.4
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/routerlicious-driver": ^0.45.4
-    "@fluidframework/sequence": ^0.45.4
-    "@fluidframework/server-services-utils": ^0.1028.1
-    "@fluidframework/view-interfaces": ^0.45.4
+    "@fluidframework/map": ^0.47.1
+    "@fluidframework/protocol-definitions": ^0.1024.1
+    "@fluidframework/routerlicious-driver": ^0.47.1
+    "@fluidframework/sequence": ^0.47.1
+    "@fluidframework/server-services-utils": ^0.1030.0
+    "@fluidframework/view-interfaces": ^0.47.1
     "@types/eslint": ^7
     "@types/eslint-plugin-prettier": ^3
     "@types/ioredis": ^4
@@ -3293,13 +3338,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.10.0":
-  version: 1.14.2
-  resolution: "follow-redirects@npm:1.14.2"
+"follow-redirects@npm:^1.14.0":
+  version: 1.14.4
+  resolution: "follow-redirects@npm:1.14.4"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: 5bc2beb11b166b085f140e2fa211aa2243899ba2886c7ad9477ec5c59ad36059b4bcda0356c4af8c90dc25fa3f6f0c280741b2a01de9b5ff331669e25e76b8e4
+  checksum: 93def3c22eba16caa4ff6f6956ccfda5a50e889545b1ba0046194dd8e368ff79ba6ef681b06e6dc7032b50bc93ca59e9441aa8143cb26f43f40a20bbd6374639
   languageName: node
   linkType: hard
 
@@ -3428,6 +3473,16 @@ fsevents@~2.3.1:
   dependencies:
     pump: ^3.0.0
   checksum: c71c5625f4573a33823371da253b4183df6bdb28cb678d03bab9b5f91626d92d6f3f5ae2404c5efdc1248fbb82204e4dae4283c7ff3cc14e505754f9f748f217
+  languageName: node
+  linkType: hard
+
+"get-symbol-description@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "get-symbol-description@npm:1.0.0"
+  dependencies:
+    call-bind: ^1.0.2
+    get-intrinsic: ^1.1.1
+  checksum: 18f90e08b5f8ef01ec109a50b0ef44d24382439388678e82808f0699ea57863eb0242b805f12db5afed2447d90f3db36ea2fd676d9776eb57844ebda4a285db7
   languageName: node
   linkType: hard
 
@@ -3859,8 +3914,8 @@ fsevents@~2.3.1:
   linkType: hard
 
 "ioredis@npm:^4.24.2, ioredis@npm:^4.24.6":
-  version: 4.27.8
-  resolution: "ioredis@npm:4.27.8"
+  version: 4.27.9
+  resolution: "ioredis@npm:4.27.9"
   dependencies:
     cluster-key-slot: ^1.1.0
     debug: ^4.3.1
@@ -3873,7 +3928,7 @@ fsevents@~2.3.1:
     redis-errors: ^1.2.0
     redis-parser: ^3.0.0
     standard-as-callback: ^2.1.0
-  checksum: 9ca9c9652e8f62a4501a88089c890806ee429bcfdaa00091efcf579cbe1ad0b48cadd33f16fcea827070ea2ead8af516568f5004050728b51b46b4050780702f
+  checksum: 3b33cf9b5e3ba531468722e6c24bcf61afb342ec087fc2a70ea9c06e3095076341898ca36e6b860699346b5611b528651769d3815483bcaab4fbf877dc311059
   languageName: node
   linkType: hard
 
@@ -3943,7 +3998,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-callable@npm:^1.1.4, is-callable@npm:^1.1.5, is-callable@npm:^1.2.3":
+"is-callable@npm:^1.1.4, is-callable@npm:^1.1.5, is-callable@npm:^1.2.4":
   version: 1.2.4
   resolution: "is-callable@npm:1.2.4"
   checksum: 57680330ce65115efc87e82e1b85238e1abaef5c385e98742449a57205e9693be7371f29b41439ded26d790f864e9bde82367371eac4d98edca82413c1489c0a
@@ -4056,7 +4111,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-regex@npm:^1.1.3":
+"is-regex@npm:^1.1.4":
   version: 1.1.4
   resolution: "is-regex@npm:1.1.4"
   dependencies:
@@ -4073,7 +4128,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-string@npm:^1.0.5, is-string@npm:^1.0.6":
+"is-string@npm:^1.0.5, is-string@npm:^1.0.7":
   version: 1.0.7
   resolution: "is-string@npm:1.0.7"
   dependencies:
@@ -4091,16 +4146,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-typed-array@npm:^1.1.3, is-typed-array@npm:^1.1.6":
-  version: 1.1.7
-  resolution: "is-typed-array@npm:1.1.7"
+"is-typed-array@npm:^1.1.3, is-typed-array@npm:^1.1.7":
+  version: 1.1.8
+  resolution: "is-typed-array@npm:1.1.8"
   dependencies:
-    available-typed-arrays: ^1.0.4
+    available-typed-arrays: ^1.0.5
     call-bind: ^1.0.2
     es-abstract: ^1.18.5
     foreach: ^2.0.5
     has-tostringtag: ^1.0.0
-  checksum: eb833d61ff7f5a0483c0f5a106bb35d312465139ea30ddc7ab6252de87b4697ecb3540f375fb0376f05dafbc8c474cabef90890c390d20285d22825cb1752acb
+  checksum: 9a2c226de87c57bb592ad2eaaadef213846336918fc4f6a5ae91adaa51debec40fc7218b58d1fd68c9a1b5973a3563ef5dec7403f34d42e15cc7f1a38a4ce340
   languageName: node
   linkType: hard
 
@@ -4225,17 +4280,6 @@ fsevents@~2.3.1:
   bin:
     json5: lib/cli.js
   checksum: df41624f9f40bfacc546f779eef6d161a3312fbb6ec1dbd69f8c4388e9807af653b753371ab19b6d2bab22af2ca7dde62fe03c791596acf76915e1fc4ee6fd88
-  languageName: node
-  linkType: hard
-
-"json5@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "json5@npm:2.2.0"
-  dependencies:
-    minimist: ^1.2.5
-  bin:
-    json5: lib/cli.js
-  checksum: 07b1f90c2801dc52df2b0ac8d606cc400a85cda79130e754780fa2ab9805d0fb85a0e61b6a5cdd68e88e5d0c8f9109ec415af08283175556cdccaa8563853908
   languageName: node
   linkType: hard
 
@@ -4705,8 +4749,8 @@ fsevents@~2.3.1:
   linkType: hard
 
 "minipass-fetch@npm:^1.3.2":
-  version: 1.3.4
-  resolution: "minipass-fetch@npm:1.3.4"
+  version: 1.4.1
+  resolution: "minipass-fetch@npm:1.4.1"
   dependencies:
     encoding: ^0.1.12
     minipass: ^3.1.0
@@ -4715,7 +4759,7 @@ fsevents@~2.3.1:
   dependenciesMeta:
     encoding:
       optional: true
-  checksum: c1a3d2b7a6082641601648ba309d1f878aaf6cb3f39f1468981dfe1fd30b96de8a0926128d4c2bff24aced21aff599f6fff8611a0084641d171063c6099d855d
+  checksum: 02e03f0f7071bdd8496129ff4aafb971fea8de5ffc316cd3d81270a94769f58521ee7c0d41d223976f7f57a1fc46f976d05508d795e374ac57750c993a889966
   languageName: node
   linkType: hard
 
@@ -4747,11 +4791,11 @@ fsevents@~2.3.1:
   linkType: hard
 
 "minipass@npm:^3.0.0, minipass@npm:^3.1.0, minipass@npm:^3.1.1, minipass@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "minipass@npm:3.1.3"
+  version: 3.1.5
+  resolution: "minipass@npm:3.1.5"
   dependencies:
     yallist: ^4.0.0
-  checksum: d12b95a845f15950bce7a77730c89400cf0c4f55e7066338da1d201ac148ece4ea8efa79e45a2c07c868c61bcaf9e996c4c3d6bf6b85c038ffa454521fc6ecd5
+  checksum: 5021a73fb5c0cfa2452d5ef9f22d7d477498ec76de2449072242293fb0e3a765fad53e8e692aa0d43f373d4f1e41e60f41f6aaea18c4d685fc829a088771ced2
   languageName: node
   linkType: hard
 
@@ -4858,15 +4902,19 @@ fsevents@~2.3.1:
   linkType: hard
 
 "next@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "next@npm:11.1.0"
+  version: 11.1.2
+  resolution: "next@npm:11.1.2"
   dependencies:
-    "@babel/runtime": 7.12.5
+    "@babel/runtime": 7.15.3
     "@hapi/accept": 5.0.2
-    "@next/env": 11.1.0
-    "@next/polyfill-module": 11.1.0
-    "@next/react-dev-overlay": 11.1.0
-    "@next/react-refresh-utils": 11.1.0
+    "@next/env": 11.1.2
+    "@next/polyfill-module": 11.1.2
+    "@next/react-dev-overlay": 11.1.2
+    "@next/react-refresh-utils": 11.1.2
+    "@next/swc-darwin-arm64": 11.1.2
+    "@next/swc-darwin-x64": 11.1.2
+    "@next/swc-linux-x64-gnu": 11.1.2
+    "@next/swc-win32-x64-msvc": 11.1.2
     "@node-rs/helper": 1.2.1
     assert: 2.0.0
     ast-types: 0.13.2
@@ -4904,11 +4952,11 @@ fsevents@~2.3.1:
     stream-browserify: 3.0.0
     stream-http: 3.1.1
     string_decoder: 1.3.0
-    styled-jsx: 4.0.0
+    styled-jsx: 4.0.1
     timers-browserify: 2.0.12
     tty-browserify: 0.0.1
     use-subscription: 1.5.1
-    util: 0.12.3
+    util: 0.12.4
     vm-browserify: 1.1.2
     watchpack: 2.1.1
   peerDependencies:
@@ -4917,6 +4965,15 @@ fsevents@~2.3.1:
     react: ^17.0.2
     react-dom: ^17.0.2
     sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
   peerDependenciesMeta:
     fibers:
       optional: true
@@ -4926,7 +4983,7 @@ fsevents@~2.3.1:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: a9ce2a33c98f777cab81212b0e1fe3dbf08a00307dd7597b0a9babc46574abf3a08f9261d071004dda49c2967b982705946c2f3db885b57d8770482f0688a395
+  checksum: 689e8a4b5b9a195de94a926c63e42f9762e1b3ff24427657727b7449bce21ef34723a5155d453c0ae480491d37e0a7816c2f74b31ca283fa69b1b72341c6cd04
   languageName: node
   linkType: hard
 
@@ -5523,11 +5580,11 @@ fsevents@~2.3.1:
   linkType: hard
 
 "prettier@npm:^2.2.1":
-  version: 2.3.2
-  resolution: "prettier@npm:2.3.2"
+  version: 2.4.1
+  resolution: "prettier@npm:2.4.1"
   bin:
     prettier: bin-prettier.js
-  checksum: 4fd89a7f6a12b13456d359fba2b1dd0fc0a17cf33f8f15953ab9f43b21ea9b09b5a2861d63b558ca0577274ce606d390e70628cf93e26d19d6cb7f19c9eebc31
+  checksum: d72ebe33441651cdb334d05d8d180bedbb6f8ca9db47163719b9763f3f471d27b9dc86b9f2c9383773681ff836eb5951acd1809871077c9313609f7b7e05554e
   languageName: node
   linkType: hard
 
@@ -5695,6 +5752,13 @@ fsevents@~2.3.1:
   version: 0.2.1
   resolution: "querystring@npm:0.2.1"
   checksum: 59d27ec60ed6f9cd4d8ddf6413c1b8dc624ff3f148ed085267e714c08d931d3dae987bfd1ecc5d75cf8d6708bc1d081341b8745c4383c0e8525c8eb3125959cd
+  languageName: node
+  linkType: hard
+
+"querystringify@npm:^2.1.1":
+  version: 2.2.0
+  resolution: "querystringify@npm:2.2.0"
+  checksum: 6235036be3aedff7919dfc06b23f759264915c5794c6352d52a917401d40d2b9bb43b1d82e4e5be983e469aa320e06992aefc218192f6fa1d9eba4f54dc4786c
   languageName: node
   linkType: hard
 
@@ -5939,10 +6003,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"requires-port@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "requires-port@npm:1.0.0"
+  checksum: 0db25fb2ac9b4f2345a350846b7ba99d1f25a6686b1728246d14f05450c8f2fc066bdfae4561b4be2627c184a030a27e17268cfefdf46836e271db13734bc49e
+  languageName: node
+  linkType: hard
+
 "resolve-alpn@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "resolve-alpn@npm:1.2.0"
-  checksum: 9c1ba482c1ff3b0361602dfe600369d94c9650d49bf825b8d65732663d725f997638f293a74cfa04af88e1d79b723d1680a27d77be4fe10495df8b1ade71c352
+  version: 1.2.1
+  resolution: "resolve-alpn@npm:1.2.1"
+  checksum: d009cb9e77362c480d771f0159abcb011ddaabba32912c50d802d7132439f1eb2bdd6f5e6159fb630f142ed9e0d2c034d0bed8e0dea6ce9e04c14a6a225ec738
   languageName: node
   linkType: hard
 
@@ -6214,9 +6285,9 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "signal-exit@npm:^3.0.0":
-  version: 3.0.3
-  resolution: "signal-exit@npm:3.0.3"
-  checksum: f8f3fec95c8d1f9ad7e3cce07e1195f84e7a85cdcb4e825e8a2b76aa5406a039083d2bc9662b3cf40e6948262f41277047d20e6fbd58c77edced0b18fab647d8
+  version: 3.0.4
+  resolution: "signal-exit@npm:3.0.4"
+  checksum: 2ba76bf4fd7cf6a6efa99abcb9d11437e071d350c1ee47e9e9943234d324097db9bb3f162eec6852afe1f3097c2d9dbcfcf7543d110945a602fc444eb4521b44
   languageName: node
   linkType: hard
 
@@ -6630,9 +6701,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-jsx@npm:4.0.0":
-  version: 4.0.0
-  resolution: "styled-jsx@npm:4.0.0"
+"styled-jsx@npm:4.0.1":
+  version: 4.0.1
+  resolution: "styled-jsx@npm:4.0.1"
   dependencies:
     "@babel/plugin-syntax-jsx": 7.14.5
     "@babel/types": 7.15.0
@@ -6644,7 +6715,10 @@ resolve@^2.0.0-next.3:
     stylis-rule-sheet: 0.0.10
   peerDependencies:
     react: ">= 16.8.0 || 17.x.x || 18.x.x"
-  checksum: db3ea7abc3065331f7a214068ab1ec15ee10f146b44efaf036e811c556dd4f8e1171a6289ac7b5444e78b19547a47a9a24c6ca8fe29eb387b5743ee1818b8179
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+  checksum: 7e4636e7751834f1712c0a6fde6dbc6b584e64f0ff2b1c8f772ac9ca8323759361f24521c5cb4abacecfda463e25ea30d107c6a4486e91fc417f64bd555ffab1
   languageName: node
   linkType: hard
 
@@ -6737,8 +6811,8 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "tar@npm:^6.0.2, tar@npm:^6.1.2":
-  version: 6.1.10
-  resolution: "tar@npm:6.1.10"
+  version: 6.1.11
+  resolution: "tar@npm:6.1.11"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -6746,7 +6820,7 @@ resolve@^2.0.0-next.3:
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: dfc35416b38945ad5d068fe6e9aa145cae93241f8ad680929a516a34b37a2f513ca25bbbea698451eb8983f27ce6f0ade0407f9329c0cc7c5a06f3e2e97ece29
+  checksum: f6cd9b0d7cfc2d715f28aa9911d244d91762dd905079988b1d549ea2c147281d7c9ab4adb590535665a80d5478518a0a8e8b7a9295b81043a9a1c180684f3a25
   languageName: node
   linkType: hard
 
@@ -6843,14 +6917,15 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^3.10.1":
-  version: 3.10.1
-  resolution: "tsconfig-paths@npm:3.10.1"
+"tsconfig-paths@npm:^3.11.0":
+  version: 3.11.0
+  resolution: "tsconfig-paths@npm:3.11.0"
   dependencies:
-    json5: ^2.2.0
+    "@types/json5": ^0.0.29
+    json5: ^1.0.1
     minimist: ^1.2.0
     strip-bom: ^3.0.0
-  checksum: cfc0f728f94bf50dafcaec0083aba88649d3f2a58c860308da9d12cdd0757486a5e7236e6a1d23364bb3258bdaa379a026b1d2db23cd9ef28926a9fb3e7e121f
+  checksum: b25aa1a9d4d3ad9ecaaaa2f22cfefc0441395486382de61ee348ab170f5b7cbc4bebf61f6333ef8a9e783f4b5fee49227137f2662f8569056360c8f9a147c2fd
   languageName: node
   linkType: hard
 
@@ -6992,6 +7067,16 @@ typescript@~4.2.3:
   languageName: node
   linkType: hard
 
+"url-parse@npm:^1.5.3":
+  version: 1.5.3
+  resolution: "url-parse@npm:1.5.3"
+  dependencies:
+    querystringify: ^2.1.1
+    requires-port: ^1.0.0
+  checksum: 9f440756395112a22867c80fb8f7542099f69943090f0b5f6cfdd91c45b72ef28ec1fb44c1fc79fbaac000050262180efe6205bce688c150d22ede373ff0219f
+  languageName: node
+  linkType: hard
+
 "url@npm:^0.11.0":
   version: 0.11.0
   resolution: "url@npm:0.11.0"
@@ -7029,30 +7114,7 @@ typescript@~4.2.3:
   languageName: node
   linkType: hard
 
-"util@npm:0.12.3":
-  version: 0.12.3
-  resolution: "util@npm:0.12.3"
-  dependencies:
-    inherits: ^2.0.3
-    is-arguments: ^1.0.4
-    is-generator-function: ^1.0.7
-    is-typed-array: ^1.1.3
-    safe-buffer: ^5.1.2
-    which-typed-array: ^1.1.2
-  checksum: 684f2f586db12c86b2c2800e5d4963fe2e95a85ece1e52f25344e54c29d62e985c716ec53b817970121e0ea47f99a971299998848e35a5d1c5953e182852d6fe
-  languageName: node
-  linkType: hard
-
-"util@npm:^0.11.0":
-  version: 0.11.1
-  resolution: "util@npm:0.11.1"
-  dependencies:
-    inherits: 2.0.3
-  checksum: f05afc3d9a284eff28017d8bd474d56fbd27e7a5ad81f44720341b02ae5554ac9c06d0d08034aaf537d56116624232123054e58ec3873133144bda3b521de9ef
-  languageName: node
-  linkType: hard
-
-"util@npm:^0.12.0":
+"util@npm:0.12.4, util@npm:^0.12.0":
   version: 0.12.4
   resolution: "util@npm:0.12.4"
   dependencies:
@@ -7063,6 +7125,15 @@ typescript@~4.2.3:
     safe-buffer: ^5.1.2
     which-typed-array: ^1.1.2
   checksum: 6e3cbc15468436de8aa7bbc50ea1354b738ece2330ef4da417d08893d1105985ac1cc0dd1ea86ef855494e01dd000d7f866c802537afe8751f0c319d16ceccd0
+  languageName: node
+  linkType: hard
+
+"util@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "util@npm:0.11.1"
+  dependencies:
+    inherits: 2.0.3
+  checksum: f05afc3d9a284eff28017d8bd474d56fbd27e7a5ad81f44720341b02ae5554ac9c06d0d08034aaf537d56116624232123054e58ec3873133144bda3b521de9ef
   languageName: node
   linkType: hard
 
@@ -7155,16 +7226,16 @@ typescript@~4.2.3:
   linkType: hard
 
 "which-typed-array@npm:^1.1.2":
-  version: 1.1.6
-  resolution: "which-typed-array@npm:1.1.6"
+  version: 1.1.7
+  resolution: "which-typed-array@npm:1.1.7"
   dependencies:
-    available-typed-arrays: ^1.0.4
+    available-typed-arrays: ^1.0.5
     call-bind: ^1.0.2
     es-abstract: ^1.18.5
     foreach: ^2.0.5
     has-tostringtag: ^1.0.0
-    is-typed-array: ^1.1.6
-  checksum: 7c22766b4652df5b810d345539dca4f279e5ec415da8bd6dd91ca9783390746a842e661bb9e80095a59dc46904aa2ea0fb16faf4ca30cabcc9496545604ad5f0
+    is-typed-array: ^1.1.7
+  checksum: 994dc7567db723e5df2accf52eb73774da4f43f1e9ecc327565ee2c3da6c9a3c042662880fe7f15c03aee1eb1e57caf317aa87c145b830e43666984929dc798b
   languageName: node
   linkType: hard
 
