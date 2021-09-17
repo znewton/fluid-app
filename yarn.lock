@@ -117,50 +117,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/aqueduct@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/aqueduct@npm:0.47.1"
-=======
-"@fluidframework/aqueduct@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/aqueduct@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/aqueduct@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/aqueduct@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-<<<<<<< HEAD
-    "@fluidframework/container-loader": ^0.47.1
-    "@fluidframework/container-runtime": ^0.47.1
-    "@fluidframework/container-runtime-definitions": ^0.47.1
+    "@fluidframework/container-loader": 0.48.0-37952
+    "@fluidframework/container-runtime": 0.48.0-37952
+    "@fluidframework/container-runtime-definitions": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": ^0.47.1
-    "@fluidframework/datastore-definitions": ^0.47.1
-    "@fluidframework/map": ^0.47.1
-    "@fluidframework/request-handler": ^0.47.1
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-    "@fluidframework/synthesize": ^0.47.1
-    "@fluidframework/view-interfaces": ^0.47.1
+    "@fluidframework/datastore": 0.48.0-37952
+    "@fluidframework/datastore-definitions": 0.48.0-37952
+    "@fluidframework/map": 0.48.0-37952
+    "@fluidframework/request-handler": 0.48.0-37952
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+    "@fluidframework/synthesize": 0.48.0-37952
+    "@fluidframework/view-interfaces": 0.48.0-37952
     uuid: ^8.3.1
-  checksum: f2d1d0aebbd4654abcd076d4961e0a3938a57da7f7f1155199ad2f7058c930a6066f2cf1a4c757f3ca331c75c748961f0bc943973dec938e0db8735f7451afbf
-=======
-    "@fluidframework/container-loader": 0.47.0-35740
-    "@fluidframework/container-runtime": 0.47.0-35740
-    "@fluidframework/container-runtime-definitions": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": 0.47.0-35740
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/map": 0.47.0-35740
-    "@fluidframework/request-handler": 0.47.0-35740
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-    "@fluidframework/synthesize": 0.47.0-35740
-    "@fluidframework/view-interfaces": 0.47.0-35740
-    uuid: ^8.3.1
-  checksum: e1051ff2d40310c02fcc00092b7da0823372f304bdc98f78e57258f6222c68b0ca21fdb08c1f440168d01d8e2c40b4f1b5b86129228fe40a7ae3e8ea29908f95
->>>>>>> 48e2da9... use pre-release packages
+  checksum: 56e63d4d8a05764a50a034d59f03919d8eacf3bd32cedde930f19332eef9516c2e0cce1cd5ec4cece8c6eafbde9ad74e4e7638a7130b175be28bc9bd2cc21f0b
   languageName: node
   linkType: hard
 
@@ -197,145 +174,78 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/container-loader@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/container-loader@npm:0.47.1"
-=======
-"@fluidframework/container-loader@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/container-loader@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/container-loader@npm:0.48.0-37952, @fluidframework/container-loader@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/container-loader@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-<<<<<<< HEAD
-    "@fluidframework/container-utils": ^0.47.1
+    "@fluidframework/container-utils": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.47.1
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/driver-utils": 0.48.0-37952
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.47.1
-=======
-    "@fluidframework/container-utils": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": 0.47.0-35740
->>>>>>> 48e2da9... use pre-release packages
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     abort-controller: ^3.0.0
     double-ended-queue: ^2.1.0-0
     lodash: ^4.17.21
     uuid: ^8.3.1
-<<<<<<< HEAD
-  checksum: e5874918a6a2b2f27863f0cdd959dfa249aa426981df0471a0824216e90213f1e9428b80d224ddd583d552b9d80a901e05012070f096b5d419600fd5b4210852
+  checksum: ba55e2e31bc671703748cbed2a0f2f3551635a986844d5483f85311885da0d4a0b9a4e9ecf44865f065cc75d2e8a632569b7fbb550451e94928000fbc48d05f0
   languageName: node
   linkType: hard
 
-"@fluidframework/container-runtime-definitions@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/container-runtime-definitions@npm:0.47.1"
-=======
-  checksum: 4e97351054cd92816a85f90e95a6ed8ee6783a461e99afee822fe6a1bf3c68d42df2c343be622a8dc1f19b756856e6678e90bffa9f5af8748fa60fec81a37603
-  languageName: node
-  linkType: hard
-
-"@fluidframework/container-runtime-definitions@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/container-runtime-definitions@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/container-runtime-definitions@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/container-runtime-definitions@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
     "@fluidframework/protocol-definitions": ^0.1024.0
-<<<<<<< HEAD
-    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
     "@types/node": ^12.19.0
-  checksum: 5713e597e2ec4faee6583a8532282a302382566c9d4b9099aefdb1beef9d458f2a53b8c90c4181e67a0fc5818a6c322d260dcda3cadca4db8b73bb375ec49c24
+  checksum: 4ebbda18b349c68e2a064c710b5a9f56d6efa626f360391a23a3e402b1856c3c1731e8d7533baaa6e8ca50860ee6f468ad2d89d9cd736fb4e21b6ac5bff01385
   languageName: node
   linkType: hard
 
-"@fluidframework/container-runtime@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/container-runtime@npm:0.47.1"
-=======
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@types/node": ^12.19.0
-  checksum: 8a0fd5c02b429ef2fd0bbeb09d1b4745569919ebc7d190ad16475e3a6aff0ec7be8496370d6688b9481344b44775fb15d5792c2204026f30465e24affd0f9822
-  languageName: node
-  linkType: hard
-
-"@fluidframework/container-runtime@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/container-runtime@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/container-runtime@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/container-runtime@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-<<<<<<< HEAD
-    "@fluidframework/container-runtime-definitions": ^0.47.1
-    "@fluidframework/container-utils": ^0.47.1
+    "@fluidframework/container-runtime-definitions": 0.48.0-37952
+    "@fluidframework/container-utils": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": ^0.47.1
+    "@fluidframework/datastore": 0.48.0-37952
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.47.1
-    "@fluidframework/garbage-collector": ^0.47.1
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/driver-utils": 0.48.0-37952
+    "@fluidframework/garbage-collector": 0.48.0-37952
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-    "@fluidframework/telemetry-utils": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     double-ended-queue: ^2.1.0-0
     uuid: ^8.3.1
-  checksum: c533dd41e59029eb0ddc9e245b61f0db672c8c148aadf0be0f086aada7e2f0ecb234118471bbdc01deea5e35c155a82da145d6dd127696180618bf3b091a4320
+  checksum: 518cd855a9a940eeaa48beba2059e56556ce3c8f38c5331ed8a8c8cf69ea67ad512d5ff891fd962ca2e0fc09001f7ffb5fb3eab1e00581daea84691d1029010f
   languageName: node
   linkType: hard
 
-"@fluidframework/container-utils@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/container-utils@npm:0.47.1"
-=======
-    "@fluidframework/container-runtime-definitions": 0.47.0-35740
-    "@fluidframework/container-utils": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore": 0.47.0-35740
-    "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/garbage-collector": 0.47.0-35740
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-    double-ended-queue: ^2.1.0-0
-    uuid: ^8.3.1
-  checksum: a521c8c22d8ebf9342c3bb38b9c46c37bcabac7362c9fb6ec5bfed91fd1909aaed97f263cfc3a42439d2c0fae8b92dd29c54cc41c04db6bc3852840db3a4254e
-  languageName: node
-  linkType: hard
-
-"@fluidframework/container-utils@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/container-utils@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/container-utils@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/container-utils@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/protocol-definitions": ^0.1024.0
-<<<<<<< HEAD
-    "@fluidframework/telemetry-utils": ^0.47.1
-  checksum: db22ac5b429194b456a78e9107642fe0da49b39327fa590ab2af9f5c611ed95e6526c263b24f87a87e938d1eebf409f76e79ed427157a3483265fdd58c47a480
-=======
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-  checksum: a4dc954714577072b93bc5ca2f671f447abd24c002a5e6cc69a6a493850a6f84495644d984c07ad6b153b6106286b3cbe1fbe6155733fe874b192051a1b633f0
->>>>>>> 48e2da9... use pre-release packages
+    "@fluidframework/telemetry-utils": 0.48.0-37952
+  checksum: c8d395d093f5c09f1d254c3a9fbebfcba7224adffd0e07594d0d1c78f55622ec8b0fd1c17473a518a0eea88b16d81cf8b78f602b894a95b9abb3b900b99df922
   languageName: node
   linkType: hard
 
@@ -346,104 +256,56 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/datastore-definitions@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/datastore-definitions@npm:0.47.1"
-=======
-"@fluidframework/datastore-definitions@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/datastore-definitions@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/datastore-definitions@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/datastore-definitions@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/protocol-definitions": ^0.1024.0
-<<<<<<< HEAD
-    "@fluidframework/runtime-definitions": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
     "@types/node": ^12.19.0
-  checksum: 3ccd126cd01166a5e3660d54ac284d949e41f9bac28f4f9a755e1ea05b4f00f43befda4b9508cb949240f470af458e80f310c5a7a96c120e3ce1f7dd7a382357
+  checksum: b17b2a1af9513f3238482435686ab72feb98f8ca0677fb0d8735ca3a9e09a106e17722aacb66c0b5ec165cd1a0957cbc9a7db655dbfde5971ce5f66b8876094f
   languageName: node
   linkType: hard
 
-"@fluidframework/datastore@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/datastore@npm:0.47.1"
-=======
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@types/node": ^12.19.0
-  checksum: db05298255cce398683c6dd3dc1835d0ee11d2f0b8af77ca727e2473b527028f060039b8d668faa4a3f9dda28650b3ba9000a530b53bdf43998bf86ad6de3aef
-  languageName: node
-  linkType: hard
-
-"@fluidframework/datastore@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/datastore@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/datastore@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/datastore@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-<<<<<<< HEAD
-    "@fluidframework/container-utils": ^0.47.1
+    "@fluidframework/container-utils": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/datastore-definitions": 0.48.0-37952
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.47.1
-    "@fluidframework/garbage-collector": ^0.47.1
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/driver-utils": 0.48.0-37952
+    "@fluidframework/garbage-collector": 0.48.0-37952
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-    "@fluidframework/telemetry-utils": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     lodash: ^4.17.21
     uuid: ^8.3.1
-  checksum: 4135df724202250b5e58a17b2e68cea8a9ed4c1cbdba3a1643d5f3def2757da9068cdde9226aa256979d0a8668a2afa4e06d3d10537bf9dc28d73ed1c38617e8
+  checksum: 23544170ea6cf4cdc33ca093659b308e6f66abf49890fd5da8046e8bb88229dc5833608f0f8658cafa8c43f07f4cd3198fed4398ad3d757f70e725cc6e1644d8
   languageName: node
   linkType: hard
 
-"@fluidframework/driver-base@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/driver-base@npm:0.47.1"
-=======
-    "@fluidframework/container-utils": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/garbage-collector": 0.47.0-35740
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-    lodash: ^4.17.21
-    uuid: ^8.3.1
-  checksum: 6be18f8098014b78e2228ef829a2547a2bd5374d91fb32780539ed77c1d4ee60b4b64192c5892c637032b32d9aa22866b7e8fe2d960feebd9461bb401aaa333a
-  languageName: node
-  linkType: hard
-
-"@fluidframework/driver-base@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/driver-base@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/driver-base@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/driver-base@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/driver-definitions": ^0.39.6
-<<<<<<< HEAD
-    "@fluidframework/driver-utils": ^0.47.1
+    "@fluidframework/driver-utils": 0.48.0-37952
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.47.1
-  checksum: 4e4d719dcfcf5a806dd5ed9e8067b794347ccdeb9772956e8a2b54553135880543119134e8cd9344b7b335836af81984d5ea8085388ff3534331808e28d7cec8
-=======
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-  checksum: 9464218e3bc8e1fbf4c6e95463b2e2cd6671d4d3dd82814789684cd1334869f48741364c18d564b9d8d03114a3ddcccf3a8f4187215e92726e6aced8edcdf66b
->>>>>>> 48e2da9... use pre-release packages
+    "@fluidframework/telemetry-utils": 0.48.0-37952
+  checksum: 9fd555440ad939f2917b8cc40a2c2f7e23166587e30548fea3da01d4d2c59a1c45ef45c5118a0fbcfa4432a8644f9307ed523bd3ae27559b825e1be58b61a382
   languageName: node
   linkType: hard
 
@@ -458,57 +320,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/driver-utils@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/driver-utils@npm:0.47.1"
-=======
-"@fluidframework/driver-utils@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/driver-utils@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/driver-utils@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/driver-utils@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
     "@fluidframework/driver-definitions": ^0.39.6
-<<<<<<< HEAD
-    "@fluidframework/gitresources": ^0.1030.0
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/gitresources": ^0.1031.0-37526
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.47.1
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     uuid: ^8.3.1
-  checksum: b05aa592ccff07da7c7709b95dcdc7b02e7c9c5554f732892b2a80c2b05c72c7577156109cae89fe3a25827d41790f5529b4c8643796f08a1f433b3a897bc2fb
+  checksum: 3b15528f018abe57ff4942e0381a1b674beb0a91c3b1cde12ab17de2425d994ab7c87cebb63acfe821b4ac2ca6393ccb36cc267d7d03769c0eb8c541264acde5
   languageName: node
   linkType: hard
 
-"@fluidframework/garbage-collector@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/garbage-collector@npm:0.47.1"
+"@fluidframework/garbage-collector@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/garbage-collector@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/runtime-definitions": ^0.47.1
-  checksum: 4b8ae6305eb673b467ab98982c3634b09a4a354ab5d41320c6bf7c8d85e66fff03e5ac188ee5c58621873619ae579001b52803bdb7764afdb53ef3b56b471ea0
-=======
-    "@fluidframework/gitresources": ^0.1030.0-0
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-    uuid: ^8.3.1
-  checksum: 47189bfce783f0fb7b1d3ec557f63a9c99cec63a19b04b1318c512436ae093c4045f3614895a796ff7fc640e82cd716b2893186756138ac22725f38987716885
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+  checksum: 928492d549d2b34cd3338c7d610ad27f9e2c8a917a6a221f1c7ad2f5c6b0cdb39bc177dbfc8c3415c733b3352118f7dc3bdd00bf3a1236c3567c5dd6e3143ea8
   languageName: node
   linkType: hard
 
-"@fluidframework/garbage-collector@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/garbage-collector@npm:0.47.0-35740"
-  dependencies:
-    "@fluidframework/common-definitions": ^0.20.1
-    "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-  checksum: 24f01c0aaf39d53b27e636ac89a964865272bab4752f8225dff81910ae78149e1489235782f4166013a8736c6574af1b7b52f95ae2637bb71dda31717e08cfb8
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/gitresources@npm:0.1031.0-37950, @fluidframework/gitresources@npm:^0.1031.0-37526":
+  version: 0.1031.0-37950
+  resolution: "@fluidframework/gitresources@npm:0.1031.0-37950"
+  checksum: cf4fc093511a8a97a22f68bce13de58ab846e0a2e0139d3c50f2b895b491824fd3ca944e6797bc2148051f2e6d7a821cb9142dbc9adb0d4af16a36262f2a0593
   languageName: node
   linkType: hard
 
@@ -519,64 +362,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/map@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/map@npm:0.47.1"
-=======
-"@fluidframework/map@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/map@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/map@npm:0.48.0-37952, @fluidframework/map@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/map@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
-<<<<<<< HEAD
-    "@fluidframework/datastore-definitions": ^0.47.1
-    "@fluidframework/driver-utils": ^0.47.1
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/datastore-definitions": 0.48.0-37952
+    "@fluidframework/driver-utils": 0.48.0-37952
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/shared-object-base": ^0.47.1
+    "@fluidframework/shared-object-base": 0.48.0-37952
     path-browserify: ^1.0.1
-  checksum: b5d0550a18d779e336a22dfc9d7db13e26285c5e40cf6ced7157afbdfd716714802c0e84ab04b8aca90a8c65f48170dbede43785514abcca3125efe80d1769a2
+  checksum: c5be6ce231bd2b1ba2cb18d0e7af9f2bb07c659f98b0ad4f4004504e61c9fb279426baf355a82124895d5e9ac5d5a28ce765dcb0e668f0013c2ff49fc4f32916
   languageName: node
   linkType: hard
 
-"@fluidframework/merge-tree@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/merge-tree@npm:0.47.1"
-=======
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/shared-object-base": 0.47.0-35740
-    path-browserify: ^1.0.1
-  checksum: f699c1ca5a1fbed8fd02a1f74932dae39f472b1f73394358e2bf5512e4c960ec6aad49b59e503b9eb10523d965cbab5ea1e71ab5f84e11e3a970a674a8080e1f
-  languageName: node
-  linkType: hard
-
-"@fluidframework/merge-tree@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/merge-tree@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/merge-tree@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/merge-tree@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
-<<<<<<< HEAD
-    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/datastore-definitions": 0.48.0-37952
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": ^0.47.1
-  checksum: 89601c7f45fd5c33c81fd5a1b680337d5be1da0e02db779b456e69becfe0a1bbcce40ffc6883150ea2a493d788da3d3f1dec74a5bbf7ab5c218fe6c2c10e76f6
-=======
-    "@fluidframework/datastore-definitions": 0.47.0-35740
+    "@fluidframework/telemetry-utils": 0.48.0-37952
+  checksum: f2f6e6c9fb844aaa90b04fa53592522ad524988f1e83b2a2d69906a45366fb403c1c361e985c963090e64ea5f04e0a6bc21946a628f63bf558008794c4fb0f53
+  languageName: node
+  linkType: hard
+
+"@fluidframework/protocol-base@npm:0.1031.0-37950, @fluidframework/protocol-base@npm:^0.1031.0-37526":
+  version: 0.1031.0-37950
+  resolution: "@fluidframework/protocol-base@npm:0.1031.0-37950"
+  dependencies:
+    "@fluidframework/common-utils": ^0.32.1
+    "@fluidframework/gitresources": 0.1031.0-37950
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-  checksum: fe16e79f78fa06a110159b78834c29ca0b25ff0d5a0afe32d94a7b831fb942ccb2394a966070cd7e6a101c56aeedcb6b7289ab7bdd2474ee7dc3ea4cc37d06cd
->>>>>>> 48e2da9... use pre-release packages
+    lodash: ^4.17.21
+  checksum: 9a67dc458aff13fcbf5dd28aad919a29aed3d77d71e3f9baa33f14dc7d04271be357330009d44e8a8a4757627bc5c77382137f219847fd8afea1340c35cbbc88
   languageName: node
   linkType: hard
 
@@ -601,85 +427,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/request-handler@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/request-handler@npm:0.47.1"
+"@fluidframework/request-handler@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/request-handler@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/container-runtime-definitions": ^0.47.1
+    "@fluidframework/container-runtime-definitions": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-  checksum: fc781b8d27da6fe0369315b381ee36d0441f8453ab2c3faa721bb555e21f2f24ebca81c2c25783a526f34ac71fd355e2abaf04e8e2bc505d1515815372fbaf84
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+  checksum: 1430ad8e5786ac4f41e6341cfd68bbcb101c780ae5d40839da810795f71f1cc43326c2561807a5476ce0392f0c20782344dad31b47b8aba0ec9e44bde82f543e
   languageName: node
   linkType: hard
 
-"@fluidframework/routerlicious-driver@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/routerlicious-driver@npm:0.47.1"
+"@fluidframework/routerlicious-driver@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/routerlicious-driver@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/driver-base": ^0.47.1
+    "@fluidframework/driver-base": 0.48.0-37952
     "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": ^0.47.1
-    "@fluidframework/gitresources": ^0.1030.0
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/driver-utils": 0.48.0-37952
+    "@fluidframework/gitresources": ^0.1031.0-37526
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/server-services-client": ^0.1030.0
-    "@fluidframework/telemetry-utils": ^0.47.1
-=======
-"@fluidframework/request-handler@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/request-handler@npm:0.47.0-35740"
-  dependencies:
-    "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/container-runtime-definitions": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-  checksum: 6f59435815399ca52e13d1abd103a6e289fced0e74d3b0bd5a3d9cc637a44e334b7630c13330cbe964036afbd0f81eb9cf5d5c656086d5358b7177848453bdb6
-  languageName: node
-  linkType: hard
-
-"@fluidframework/routerlicious-driver@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/routerlicious-driver@npm:0.47.0-35740"
-  dependencies:
-    "@fluidframework/common-definitions": ^0.20.1
-    "@fluidframework/common-utils": ^0.32.1
-    "@fluidframework/driver-base": 0.47.0-35740
-    "@fluidframework/driver-definitions": ^0.39.6
-    "@fluidframework/driver-utils": 0.47.0-35740
-    "@fluidframework/gitresources": ^0.1030.0-0
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/server-services-client": ^0.1030.0-0
-    "@fluidframework/telemetry-utils": 0.47.0-35740
->>>>>>> 48e2da9... use pre-release packages
+    "@fluidframework/server-services-client": ^0.1031.0-37526
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     axios: ^0.21.1
     json-stringify-safe: 5.0.1
     socket.io-client: ^2.4.0
     url-parse: ^1.5.3
     uuid: ^8.3.1
-<<<<<<< HEAD
-  checksum: e91e0cd76da5efe9dfadb07ae0b81f2490c94706ccab4fa49c334c74b43b26d7e37dc6aad26f60b360aa27afffa3cbab0620c5048cc1ee847e8b1601d7e99278
+  checksum: 1ca27487b0cd708ecbd390ec5dafc243eb62fce58de27cbaacc1e30e5632071b5d43a4562ef59b5d51a08f10f6b93d1b1e241a2c3bfddc848f3739758490fa25
   languageName: node
   linkType: hard
 
-"@fluidframework/runtime-definitions@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/runtime-definitions@npm:0.47.1"
-=======
-  checksum: 4dec0963222c082fd4138fedb2b4413fefbc4d8599144df4f752dbe6f446770fc78bbee1615c6309c5fdee1aaeb7787fdbcd7c49030421fbdcaeb87019cae24e
-  languageName: node
-  linkType: hard
-
-"@fluidframework/runtime-definitions@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/runtime-definitions@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/runtime-definitions@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/runtime-definitions@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
@@ -688,83 +474,44 @@ __metadata:
     "@fluidframework/driver-definitions": ^0.39.6
     "@fluidframework/protocol-definitions": ^0.1024.0
     "@types/node": ^12.19.0
-<<<<<<< HEAD
-  checksum: 89081ec224a5500fbe056a5b2cdfa81dbb870ce0d887afd90a401c029289ee7e711ae9a4f93ddf5eaa391a00a2805e646d233148a23dd74d78bf95a28b6437fe
+  checksum: aa688deb71c52f3f35e4b4a96df5c14243322b5620bd3accc735d338a8fc7e963f2740f3143be3c137b37547245f4f4ade0f057ee4b6bcb1a5da315ffb8a033a
   languageName: node
   linkType: hard
 
-"@fluidframework/runtime-utils@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/runtime-utils@npm:0.47.1"
-=======
-  checksum: 30e856c377cc3e88b53bf6c0c349f04670f5e2b1827595f1ed31bdbdad825f9017e85fb086fd4130f150a870edd9c13dbffd1a1032eda00c21a8233e526e5589
-  languageName: node
-  linkType: hard
-
-"@fluidframework/runtime-utils@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/runtime-utils@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/runtime-utils@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/runtime-utils@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
-<<<<<<< HEAD
-    "@fluidframework/container-runtime-definitions": ^0.47.1
+    "@fluidframework/container-runtime-definitions": 0.48.0-37952
     "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": ^0.47.1
-    "@fluidframework/garbage-collector": ^0.47.1
-    "@fluidframework/protocol-base": ^0.1030.0
+    "@fluidframework/datastore-definitions": 0.48.0-37952
+    "@fluidframework/garbage-collector": 0.48.0-37952
+    "@fluidframework/protocol-base": ^0.1031.0-37526
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.47.1
-  checksum: 8a01bda8aca4586a1ef3c0b9e89ff4507d3f68974d9ae91aba92be5900906fd911b8b5e79ef61083ec7d4a381ee8a5538a66d876a84e9ba0c05b966008f67444
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+  checksum: 1ddcf44c50a2f07fdb87d6cc49cde2872613ae30b3910ec6341968dc7c6c2e3f618029ee80891065fdea39d9c83f3ffb67f067e4dc48970c2b619961011e7e90
   languageName: node
   linkType: hard
 
-"@fluidframework/sequence@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/sequence@npm:0.47.1"
-=======
-    "@fluidframework/container-runtime-definitions": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.7
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/garbage-collector": 0.47.0-35740
-    "@fluidframework/protocol-base": ^0.1030.0-0
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-  checksum: 11012886d686be8eeb599161510122579b1b81e800779a39bef27fa96581a6368891448c43fe13e05d05e89abb4a0460a87510f591a03cae908c3a9e807da5c6
-  languageName: node
-  linkType: hard
-
-"@fluidframework/sequence@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/sequence@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/sequence@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/sequence@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/core-interfaces": ^0.39.7
-<<<<<<< HEAD
-    "@fluidframework/datastore-definitions": ^0.47.1
-    "@fluidframework/merge-tree": ^0.47.1
+    "@fluidframework/datastore-definitions": 0.48.0-37952
+    "@fluidframework/merge-tree": 0.48.0-37952
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-    "@fluidframework/shared-object-base": ^0.47.1
-    "@fluidframework/telemetry-utils": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+    "@fluidframework/shared-object-base": 0.48.0-37952
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     uuid: ^8.3.1
-  checksum: 68dec27b38fb92c1c8d9c0b1312c64669a3b96610b6abb5f40fcd21d0fe711a60a1f7a229b6686ae1dc7aac375f1649f1678932f4ce65827a43f4f5751542d00
-=======
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/merge-tree": 0.47.0-35740
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-    "@fluidframework/shared-object-base": 0.47.0-35740
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-    uuid: ^8.3.1
-  checksum: 734bc2229ce4b40e1d308e1b0bac654a1df5cd62c2e600147ed1e24420f204ebca39714d131ba0857d56208f7826995eb9c4b11ba5df24ed0fa0449022e1f871
->>>>>>> 48e2da9... use pre-release packages
+  checksum: 6a65f8b93b8aa179d876bdc426c17e0bc9e97e883c42ca0bfa366bc027e333e549d0cf6e0738cae387185087e221248748225c42c203751e0a89b21c2e8cc392
   languageName: node
   linkType: hard
 
@@ -783,6 +530,24 @@ __metadata:
     sillyname: 0.1.0
     uuid: ^8.3.1
   checksum: 9396df72fcf72d81023dced8f7027417fcc38d5ad614991706286f289133e5e9e530c0d0700cbad7a5ac0845d7595ee3bb191a4ea57e6a9ae32d0b8672931a93
+  languageName: node
+  linkType: hard
+
+"@fluidframework/server-services-client@npm:^0.1031.0-37526":
+  version: 0.1031.0-37950
+  resolution: "@fluidframework/server-services-client@npm:0.1031.0-37950"
+  dependencies:
+    "@fluidframework/common-utils": ^0.32.1
+    "@fluidframework/gitresources": 0.1031.0-37950
+    "@fluidframework/protocol-base": 0.1031.0-37950
+    "@fluidframework/protocol-definitions": ^0.1024.0
+    axios: ^0.21.1
+    debug: ^4.1.1
+    jsrsasign: ^10.2.0
+    jwt-decode: ^3.0.0
+    sillyname: 0.1.0
+    uuid: ^8.3.1
+  checksum: cb336bb4ec44d03b033cac739d68884d87117fa7b4150848ca209482a1a729cc4be8eae1d1fcdd9b1c68ada155248a3080129a68922b19e25b9bd1211e4df736
   languageName: node
   linkType: hard
 
@@ -834,98 +599,53 @@ __metadata:
   languageName: node
   linkType: hard
 
-<<<<<<< HEAD
-"@fluidframework/shared-object-base@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/shared-object-base@npm:0.47.1"
-=======
-"@fluidframework/shared-object-base@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/shared-object-base@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/shared-object-base@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/shared-object-base@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     "@fluidframework/container-definitions": ^0.39.8
     "@fluidframework/core-interfaces": ^0.39.7
-<<<<<<< HEAD
-    "@fluidframework/datastore": ^0.47.1
-    "@fluidframework/datastore-definitions": ^0.47.1
+    "@fluidframework/datastore": 0.48.0-37952
+    "@fluidframework/datastore-definitions": 0.48.0-37952
     "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": ^0.47.1
-    "@fluidframework/runtime-utils": ^0.47.1
-    "@fluidframework/telemetry-utils": ^0.47.1
+    "@fluidframework/runtime-definitions": 0.48.0-37952
+    "@fluidframework/runtime-utils": 0.48.0-37952
+    "@fluidframework/telemetry-utils": 0.48.0-37952
     uuid: ^8.3.1
-  checksum: 2ec398e9e1bc7c2634e057ab216349e4aeb2166eae3ca1eff59a8fef82b22a104aebf13570f19a79783f87784f1c1b22687091857f5fa2c4ae673b32d0f0dd82
+  checksum: b1b0edce966f0d73aa9000ffc79a470d7a6f24ca31413af4bdadc86e083591f70d5bfe3743caeaf55af3a5311ab2fc9bbe04f5e95de774984adcecb80db79d45
   languageName: node
   linkType: hard
 
-"@fluidframework/synthesize@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/synthesize@npm:0.47.1"
+"@fluidframework/synthesize@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/synthesize@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/core-interfaces": ^0.39.7
-  checksum: 26b5c691a25f4cf9bd854b84bd8a9f9cb89c4d5d80410f4762fd6ee4b3d18b43bba95cc4d2dcae0556e96656009db2bba6cee26285e0f2904c33b9d6d304c394
+  checksum: 6b82c70882b1c0e0259c4a6bcea364bdf2f1fbd00b7405bf4b8ce7baafc36c8066dcb1277452ce2bbde54dc90e7be0c098971fad4e2f961fc8f9ca4e3fb1e3ce
   languageName: node
   linkType: hard
 
-"@fluidframework/telemetry-utils@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/telemetry-utils@npm:0.47.1"
-=======
-    "@fluidframework/datastore": 0.47.0-35740
-    "@fluidframework/datastore-definitions": 0.47.0-35740
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/runtime-definitions": 0.47.0-35740
-    "@fluidframework/runtime-utils": 0.47.0-35740
-    "@fluidframework/telemetry-utils": 0.47.0-35740
-    uuid: ^8.3.1
-  checksum: cef1a0f52fcb78e6ca0a45b320cc4416752b999aad2a42c406cd9a780b043e29dce24ea0abe24205e07b489ed2b1f88fe66fbc55769ae8fce9b601f147ceaa2b
-  languageName: node
-  linkType: hard
-
-"@fluidframework/synthesize@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/synthesize@npm:0.47.0-35740"
-  dependencies:
-    "@fluidframework/core-interfaces": ^0.39.7
-  checksum: fa5f7abe69340257ff5690d573789f45da6a33d92c6cc178633c35f49d344ea2c0ba16a61aa4151fc5805c7c0db84cb68b4896b0498f13a6c747684b7b5d1897
-  languageName: node
-  linkType: hard
-
-"@fluidframework/telemetry-utils@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/telemetry-utils@npm:0.47.0-35740"
->>>>>>> 48e2da9... use pre-release packages
+"@fluidframework/telemetry-utils@npm:0.48.0-37952":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/telemetry-utils@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/common-utils": ^0.32.1
     debug: ^4.1.1
     events: ^3.1.0
     uuid: ^8.3.1
-<<<<<<< HEAD
-  checksum: cb4d02e44000fe59a22a70edfa7d07d05cff092c7ad6266231b364959926cd5f2220343419e15173b590d40bc547be53bece6bbc6f04d0ad398c0bd7a8bace9e
+  checksum: c7aa72f44b4387b50657bf451fbb788419fcd850057304b34b368e53a3a325c4a8f8d3ceb72f41cafdd25bd9ce40762de72dbdd98d50fd0e8cc448d750bbac5d
   languageName: node
   linkType: hard
 
-"@fluidframework/view-interfaces@npm:^0.47.1":
-  version: 0.47.1
-  resolution: "@fluidframework/view-interfaces@npm:0.47.1"
+"@fluidframework/view-interfaces@npm:0.48.0-37952, @fluidframework/view-interfaces@npm:^0.48.0-37886":
+  version: 0.48.0-37952
+  resolution: "@fluidframework/view-interfaces@npm:0.48.0-37952"
   dependencies:
     "@fluidframework/core-interfaces": ^0.39.7
-  checksum: 5ae51c2cf81b7e41336380a25893b4d19d47907e916b0d48d99e2375083a56476704e31d85a07accfadddd0ada781f86f0fd365d4d15e571cc0083a325671bef
-=======
-  checksum: 19e610de8b70763609947042a03463f0035413f03f494db8ade1b04f51759b12f074afdeac718e23f54bd72526f397282c444e064c50ade8b8e2d2612d38ba31
-  languageName: node
-  linkType: hard
-
-"@fluidframework/view-interfaces@npm:0.47.0-35740":
-  version: 0.47.0-35740
-  resolution: "@fluidframework/view-interfaces@npm:0.47.0-35740"
-  dependencies:
-    "@fluidframework/core-interfaces": ^0.39.7
-  checksum: 08330ac7fe07ea7cae5194b9df99cebc77a1d7b8ea018627333f0649fb372adfc72403e2b87e3fb3a901f5db058637be775e6e185e16b60e19b1e68a2074634c
->>>>>>> 48e2da9... use pre-release packages
+  checksum: 2081740c1edc801216c58de59214e344480d1cbab561a81e44ffe22d37f5cd0bd27bf91da050416a41a4a4c8cb7d5e67107973f372766fcdce659863f473268d
   languageName: node
   linkType: hard
 
@@ -1203,19 +923,11 @@ __metadata:
   linkType: hard
 
 "@types/ioredis@npm:^4":
-<<<<<<< HEAD
-  version: 4.27.3
-  resolution: "@types/ioredis@npm:4.27.3"
-  dependencies:
-    "@types/node": "*"
-  checksum: bb11be30e941a4e4614b8836dc3d11297b552a5c54a882680cd497690c386e80fafc7ef2a486cca214b41d8f4489f6a1d3376a388702ace5466d22665dc27655
-=======
   version: 4.27.1
   resolution: "@types/ioredis@npm:4.27.1"
   dependencies:
     "@types/node": "*"
   checksum: 9d146ba2ac02c6873079de5790d211937ff67e28a22593001849ea8a1a9d19cd34116c9673aea5e77fca8ad0dc426d8a1c57e3f7d11c97d1dee01edff2338b23
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -1257,28 +969,16 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-<<<<<<< HEAD
-  version: 16.9.1
-  resolution: "@types/node@npm:16.9.1"
-  checksum: b9b9ee7e36004b09d56bf69703957ec4721f2e12f5d258bf2d92155e7d760ca1d73a04fe679856ef4d67fa56015bca71e9485c36ea99f04bc727c7a23cd91329
-=======
   version: 16.7.9
   resolution: "@types/node@npm:16.7.9"
   checksum: 10d9a603d0a73ef7efb8f5f8c9c2f97517aba106f25e78cf0bf34be26e1fc15607a952aae31d443186c7b1e364c31af81d298b9d5e1c9e182c3c3e2e9613b66c
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
 "@types/node@npm:^12.19.0":
-<<<<<<< HEAD
-  version: 12.20.25
-  resolution: "@types/node@npm:12.20.25"
-  checksum: b21813173a451fa5c82c5d2f888ba1df6c64781fd24de759f4c1410d1b1829c5bd5e4a85b09fb3fb6b93e64dd51f9bd11b00f01b44848f2e6e12590cea96e95f
-=======
   version: 12.20.22
   resolution: "@types/node@npm:12.20.22"
   checksum: ae08a0f2835a9afc37d26931c65c8d6bc7cbdde07eff00b6fff14f837f035aeb9f97c6c0599dbc67e0535035c209b6eb3ecf99491667c4211281f3033cd49720
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -1290,15 +990,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^14.14.35":
-<<<<<<< HEAD
-  version: 14.17.16
-  resolution: "@types/node@npm:14.17.16"
-  checksum: 9df075e5362f19286a54199dbc5d5dbcb72a172f1bdc3f2173e0685bf6a51f732d10bc2bc914f385e01333fa617590e01ae68036ee96c82f3534fd8d3d9d3c53
-=======
   version: 14.17.13
   resolution: "@types/node@npm:14.17.13"
   checksum: fd38d5d47a66a5836bf7218cd3ed968bceef6520317cd7f737c2c48182cff624bebaa5c25f22522bee4f51debf4bafd1237cd05c6eb301e96ffdae0533825c00
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -1367,19 +1061,11 @@ __metadata:
   linkType: hard
 
 "@typescript-eslint/eslint-plugin@npm:^4.18.0":
-<<<<<<< HEAD
-  version: 4.31.1
-  resolution: "@typescript-eslint/eslint-plugin@npm:4.31.1"
-  dependencies:
-    "@typescript-eslint/experimental-utils": 4.31.1
-    "@typescript-eslint/scope-manager": 4.31.1
-=======
   version: 4.30.0
   resolution: "@typescript-eslint/eslint-plugin@npm:4.30.0"
   dependencies:
     "@typescript-eslint/experimental-utils": 4.30.0
     "@typescript-eslint/scope-manager": 4.30.0
->>>>>>> 48e2da9... use pre-release packages
     debug: ^4.3.1
     functional-red-black-tree: ^1.0.1
     regexpp: ^3.1.0
@@ -1391,20 +1077,6 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-<<<<<<< HEAD
-  checksum: 67d835b148426f5e44a6e02675138f1e4c1f7bad5712c064ee0516d7442454e7b3d17dda00d732bd119ff9e103a15e97e56d0d1d7b85dd0b318d1d0f14c542e5
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/experimental-utils@npm:4.31.1":
-  version: 4.31.1
-  resolution: "@typescript-eslint/experimental-utils@npm:4.31.1"
-  dependencies:
-    "@types/json-schema": ^7.0.7
-    "@typescript-eslint/scope-manager": 4.31.1
-    "@typescript-eslint/types": 4.31.1
-    "@typescript-eslint/typescript-estree": 4.31.1
-=======
   checksum: fde01908e64dfa8d9167e34082afd02a4277ce5dfbd6bd746d1902b9f3a7670397a522125757ac9ed94146c64ed0ab2378310abc756f187b35536c55307cb5ea
   languageName: node
   linkType: hard
@@ -1417,70 +1089,27 @@ __metadata:
     "@typescript-eslint/scope-manager": 4.30.0
     "@typescript-eslint/types": 4.30.0
     "@typescript-eslint/typescript-estree": 4.30.0
->>>>>>> 48e2da9... use pre-release packages
     eslint-scope: ^5.1.1
     eslint-utils: ^3.0.0
   peerDependencies:
     eslint: "*"
-<<<<<<< HEAD
-  checksum: 66602b6ca21f33aaedfa87b9c214383bdc4c8b077f29f852d79a1ee4a8879ac4098c0a5a38a813c70200f6c54b22d86cceee27998299e05607a10c707a8da4d8
-=======
   checksum: e7e8ffb72ac5b5cc2eb33a54f5cdb73d77cc8dfdffac93fe43e905d518efad1b7670596c6beaae66d30c55333f93ed60aed89d060c9a4850f8328d6cbeb68303
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
 "@typescript-eslint/parser@npm:^4.18.0":
-<<<<<<< HEAD
-  version: 4.31.1
-  resolution: "@typescript-eslint/parser@npm:4.31.1"
-  dependencies:
-    "@typescript-eslint/scope-manager": 4.31.1
-    "@typescript-eslint/types": 4.31.1
-    "@typescript-eslint/typescript-estree": 4.31.1
-=======
   version: 4.30.0
   resolution: "@typescript-eslint/parser@npm:4.30.0"
   dependencies:
     "@typescript-eslint/scope-manager": 4.30.0
     "@typescript-eslint/types": 4.30.0
     "@typescript-eslint/typescript-estree": 4.30.0
->>>>>>> 48e2da9... use pre-release packages
     debug: ^4.3.1
   peerDependencies:
     eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-<<<<<<< HEAD
-  checksum: 08895d5abb12fb68338185b128e9fd04e1e5191453f119b370bdf8f1441d83b9c5f3abc788beaa4eb2aa511b0447867599a7f079993b829895d2c1428067d891
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/scope-manager@npm:4.31.1":
-  version: 4.31.1
-  resolution: "@typescript-eslint/scope-manager@npm:4.31.1"
-  dependencies:
-    "@typescript-eslint/types": 4.31.1
-    "@typescript-eslint/visitor-keys": 4.31.1
-  checksum: f315cd60fcd20a7ca58d3bdcffb4195dce994ed13ad408ed5c6dcbed85d2bb5cedebf2f4e0beabba4b7412ab2cde7f0eae4ce573bf4910827db3345050cc77b5
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/types@npm:4.31.1":
-  version: 4.31.1
-  resolution: "@typescript-eslint/types@npm:4.31.1"
-  checksum: fed05a16f02f6d874e7c5ea8709c8d5ea66b8195eff8da0fb368b2ff8a4d1dc8b7c010790eae253165ae46de483bc68bbab3760494cb832e9ab3e8cf5323148b
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/typescript-estree@npm:4.31.1":
-  version: 4.31.1
-  resolution: "@typescript-eslint/typescript-estree@npm:4.31.1"
-  dependencies:
-    "@typescript-eslint/types": 4.31.1
-    "@typescript-eslint/visitor-keys": 4.31.1
-=======
   checksum: 9ff021cc4844d859edaf5adf71d05cbc5b6d96f3bca5557ddab3523a1bd5dbba62741629a611916a251c7910d6a8499fe45be6b4d2d6387b0f441d95aaa7843f
   languageName: node
   linkType: hard
@@ -1508,7 +1137,6 @@ __metadata:
   dependencies:
     "@typescript-eslint/types": 4.30.0
     "@typescript-eslint/visitor-keys": 4.30.0
->>>>>>> 48e2da9... use pre-release packages
     debug: ^4.3.1
     globby: ^11.0.3
     is-glob: ^4.0.1
@@ -1517,19 +1145,6 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-<<<<<<< HEAD
-  checksum: b002cc277f8562d70bcf8c4657c6633a2720ba45a2517fbeef81b45e16bd0882814046edcbb4ca353f3a8fdf3bb02730f616bf4f9aab1eaa46df3835c63830d0
-  languageName: node
-  linkType: hard
-
-"@typescript-eslint/visitor-keys@npm:4.31.1":
-  version: 4.31.1
-  resolution: "@typescript-eslint/visitor-keys@npm:4.31.1"
-  dependencies:
-    "@typescript-eslint/types": 4.31.1
-    eslint-visitor-keys: ^2.0.0
-  checksum: f3428057300390f01c0f5e9644cf9a61e1b5d20ee1112208a9eb3f45f6b68aad38025d043897a5805a104b1b934b92f6ea0f75a73d8d4a225d14e37dae9b7c96
-=======
   checksum: dc63e2070198ffedb0042fcf6b389831c0bf212978ea07b86aa20c51e98c75add74ba5ba2fac13c53d2a7726df8cc9bd0c43d4c2e795fd6800df6c61e30567e9
   languageName: node
   linkType: hard
@@ -1541,7 +1156,6 @@ __metadata:
     "@typescript-eslint/types": 4.30.0
     eslint-visitor-keys: ^2.0.0
   checksum: 2b2c25659c396215f0a92d6e7e13ee4c51cf90c60b408cbfb5e85f840907e729f2edf850fffdde613e59eb1bfe1ebc1402f29b26734157256b72ccde79a7ca05
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -2374,15 +1988,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001202, caniuse-lite@npm:^1.0.30001219, caniuse-lite@npm:^1.0.30001228":
-<<<<<<< HEAD
-  version: 1.0.30001257
-  resolution: "caniuse-lite@npm:1.0.30001257"
-  checksum: 2d39f401d745845da6435ff98cc93bd8c247746287e299d0b28baf16374069ea3a42d78890fbefc51cc4c1cd475b00cc99a4ad7a75643eeba336adc917164026
-=======
   version: 1.0.30001252
   resolution: "caniuse-lite@npm:1.0.30001252"
   checksum: 582b612da175ca08f90ee387eaeaf1c1f539c3910992f4739339461a75d66f7f53ce27724b1655ac747d5440e3528662e21b53f5b4c254bd699e3978e8fda2d9
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -3039,15 +2647,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.3.723":
-<<<<<<< HEAD
-  version: 1.3.840
-  resolution: "electron-to-chromium@npm:1.3.840"
-  checksum: 19285217ddb336eed6abbedb7c69ea186356a26a34a12a85b0dd026ab8117d609e9dec35a3b50c6a94f0659b03a2ce06aa864ca6c75c1e0c2baba6a04a198518
-=======
   version: 1.3.824
   resolution: "electron-to-chromium@npm:1.3.824"
   checksum: 7227d516988386aa26c2fa5576a6ddde0dd9adb8992cc9383e2928cb05a46790b982175000b7e43809e2892837741321e39a453542452f489e9fc4aeb3889336
->>>>>>> 48e2da9... use pre-release packages
   languageName: node
   linkType: hard
 
@@ -3723,33 +3325,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "fluid-app@workspace:."
   dependencies:
-<<<<<<< HEAD
-    "@fluidframework/aqueduct": ^0.47.1
+    "@fluidframework/aqueduct": ^0.48.0-37886
     "@fluidframework/common-definitions": ^0.20.1
     "@fluidframework/container-definitions": ^0.39.4
-    "@fluidframework/container-loader": ^0.47.1
+    "@fluidframework/container-loader": ^0.48.0-37886
     "@fluidframework/core-interfaces": ^0.39.4
     "@fluidframework/driver-definitions": ^0.39.4
-    "@fluidframework/map": ^0.47.1
+    "@fluidframework/map": ^0.48.0-37886
     "@fluidframework/protocol-definitions": ^0.1024.1
-    "@fluidframework/routerlicious-driver": ^0.47.1
-    "@fluidframework/sequence": ^0.47.1
+    "@fluidframework/routerlicious-driver": ^0.48.0-37886
+    "@fluidframework/sequence": ^0.48.0-37886
     "@fluidframework/server-services-utils": ^0.1030.0
-    "@fluidframework/view-interfaces": ^0.47.1
-=======
-    "@fluidframework/aqueduct": 0.47.0-35740
-    "@fluidframework/common-definitions": ^0.20.1
-    "@fluidframework/container-definitions": ^0.39.4
-    "@fluidframework/container-loader": 0.47.0-35740
-    "@fluidframework/core-interfaces": ^0.39.4
-    "@fluidframework/driver-definitions": ^0.39.4
-    "@fluidframework/map": 0.47.0-35740
-    "@fluidframework/protocol-definitions": ^0.1024.0
-    "@fluidframework/routerlicious-driver": 0.47.0-35740
-    "@fluidframework/sequence": 0.47.0-35740
-    "@fluidframework/server-services-utils": ^0.1028.1
-    "@fluidframework/view-interfaces": 0.47.0-35740
->>>>>>> 48e2da9... use pre-release packages
+    "@fluidframework/view-interfaces": ^0.48.0-37886
     "@types/eslint": ^7
     "@types/eslint-plugin-prettier": ^3
     "@types/ioredis": ^4
