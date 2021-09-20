@@ -13,5 +13,5 @@ export const generateToken = (
         serviceConfig.tenantSecret,
         scopes || [],
         userId ? { id: userId } : undefined,
-        60 // lifetime in seconds
+        60 * 60 // lifetime in seconds
     );
